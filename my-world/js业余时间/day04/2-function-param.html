@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>param</title>
+	<script type="text/javascript">
+		var p1={
+			name:"tarry",
+			davir:function( key){
+				console.log(this);
+				console.log(this.name+"拿着"+key+"去开车");
+			}
+		}
+		//p1.davir("悍马车钥匙");
+		var p2={
+			name:"driver",
+			SubstituleDriving:function(method,key){
+					method.call(p2,key);
+			}
+		}
+		p2.SubstituleDriving(p1.davir,"悍马车钥匙");
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

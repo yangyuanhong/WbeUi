@@ -1,0 +1,15 @@
+ .Frames{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: #000;
+} 
+.mytanks{
+        background-image: url(../images/mytank.png);
+        width:32px;
+        height:32px; 
+        position: absolute;
+        left: 200px;
+        bottom: 0px;
+        background-position-y: 32px;
+        }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数组</title>
+    <script>
+        
+        var sum_pairs=function(ints, s){
+    //your code here
+            var array=[],arrs=[];
+        one:for(var i=0;i<ints.length;i++){
+              for(var j=i+1;j<ints.length;j++){
+                  if(ints[i]+ints[j]==s){
+                      var arr=[];
+                      arr.push(ints[i]);
+                      arr.push(ints[j]);
+                      if(i==j-1){
+                          array.unshift(arr);
+                      }
+                      array.push(arr);
+                  }
+              }
+            }   
+            if(array.length==0){
+                arrs=undefined;
+            }
+            arrs=array[0];
+            return arrs;
+    }
+        // var sum_pairs=function(ints,s){
+        //     var index=-1;
+        //     var indexs=0;
+        //     var num;
+        //     var array=undefined;
+        //     one:for(var i=0;i<ints.length;i++){
+        //       for(var j=i+1;j<ints.length;j++){
+        //           if(ints[i]+ints[j]==s){
+        //              index=i;
+        //              num=j-i;
+        //              if(num==1){
+        //                  indexs=i;
+        //                  break one;
+        //              }
+        //           }
+        //       }
+        //     }   
+
+
+        // }
+    console.log(sum_pairs([10,5,2,3,7,5],10));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

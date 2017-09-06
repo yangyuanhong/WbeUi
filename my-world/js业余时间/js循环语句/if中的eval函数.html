@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>if中()内的函数</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            var y=1;
+            if(function f(){}){
+                y+=typeof f;
+            }
+            console.log(y);//1undefined
+            //等价于下面代码
+            var k=1;
+            if(1){
+                eval(function foo(){});
+                k+=typeof foo;
+            }
+            console.log(k);//1undefined
+            //注意！上面代码和以下代码不同。
+            var g=1;
+            if(1){
+                function fo(){};
+                g+=typeof fo;
+            }
+            console.log(g);//1function
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

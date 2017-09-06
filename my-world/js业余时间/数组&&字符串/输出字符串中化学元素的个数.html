@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>输出化学元素</title>
+    <script>
+        function parseMolecule(formula){
+            var arr=formula.match(/[A-Z]([a-z]?)/g);
+            var obj={};
+            arr.forEach(function(ele,index,arr){
+                obj[ele]=0;
+            });
+            var str= formula.substring(formula.indexOf("(")+1,formula.indexOf(")"));
+            console.log(str);
+            for(var i=1;i<formula[formula.indexOf(")")+1]-0;i++){
+                str+=str;
+            }
+            console.log(str);
+            // console.log(obj);
+        }
+        
+        parseMolecule("K4[ON(SO3)2]2");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

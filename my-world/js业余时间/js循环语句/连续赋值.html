@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>关于连续赋值的坑</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            var a={n:1};
+            var b=a;    
+            a.x=a={n:2};    
+            console.log(a.x);
+            console.log(b);
+            // console.log(a==b.x);
+            
+            // //源代码中
+            // var a={n:1};
+            // //首先a指向内存中的{n:1};
+            // var b=a;
+            // //b指向内存中的{n:1}
+            // a.x=a={n:2};
+            // //首先对a.x进行（左）查找，不存在，那就先赋个undefined.
+            // //此时内存的{n:1}变化为
+            // {n:1,x=undefined}
+            // /*然后进行右查找，右查找是个赋值表达式a={n:2},得先处理这个赋值表达式。此时
+            //   此时的情况可以类比为
+            //  内存中的{n:1,x=undefined}中的x=还需要等待进一步的处理的赋值表达式a={n:2}*/
+            //  /*重要的是，此时的a.x已经指向了内存中的{n:1,x=undefined}中的x,目前他正等待被赋值
+            //  所以，下面在处理表达式a={n:2}的时候，即使a发生了指向的变化，但也不再影响此刻的a.x了，因为已经对
+            //  a.x进行了指向的确定，只不过他现在正在等待被赋值。
+            //  */
+            //  a={n:2}
+            // //  指针a,被重新赋值，此刻a的指向变化了，此时内存中如下
+            // //a:指向
+            // {n:2}
+            // //b指向
+            // {n:1,x=undefined}
+            // //因为赋值操作符的返回值，是返回右边的部分
+            // // 也就是说赋值表达式a={n:2}的返回值如下
+            // {n:2};
+            // //所以{n:1,x=undefined}的属性x=内存中的{n:2}
+            // /*翻译成人话就是：
+
+            // - 内存中对象 {n:1,x:指针}的属性x是一个指正，指向内存中的{n: 2}
+
+            // - 变量a，指向内存中的{n: 2}
+
+            // - 变量b，指向内存中的{n:1,x=指针}*/
+
+            // // console.log(typeof(undefined));
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

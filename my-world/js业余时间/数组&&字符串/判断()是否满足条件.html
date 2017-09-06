@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>判断()</title>
+    <script>
+        var mas={
+            "(":")",
+            "[":"]",
+            "{":"}"
+        }
+        function validParentheses(parens){
+            //TODO 
+            var stack=[];
+            if(parens.length%2!=0)return false;
+            for(var i=0;i<parens.length;i++){
+                var el=parens[i];
+
+                if(mas[el]){
+                    stack.push(mas[el]);
+                }else{
+                    if(el!==stack.pop()){
+                        return false;
+                    }
+                }
+            }
+            return stack.length===0;
+            
+        }
+        console.log(validParentheses("(())((()())())"));
+        //
+        // /[(][)]/正则表达式，表示();/[(]/表示(
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

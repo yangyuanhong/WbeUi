@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>菱形</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            /*
+                diamond(3)
+                        *
+                       ***
+                        *
+            */
+            function diamond(n){
+                var a="\n";
+
+                if(n<=0||n%2==0){return null;}
+                for(var i=1;i<=n;i++){
+                    if(i%2==0){continue;}
+                    for(var k=n-i;k>=0;k--){
+                        document.write("&nbsp;");
+                    }
+                    for(var j=1;j<=i;j++){
+                        
+                        document.write("*");
+                    }
+                    document.write("<br/>")
+                }
+                // return "";
+                }
+            diamond(9);
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

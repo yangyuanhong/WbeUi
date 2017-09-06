@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>星期判断</title>
+	<script type="text/javascript">
+	   function whileXing(){
+		   	 while(true){
+		    	var vlue= prompt("请输入1~7之间的数或者输入break退出:");
+		    	if (vlue=="break") {
+		    		break;
+		    	}
+		    	if (vlue==1) {
+		    		alert("今天是星期一！");
+		    	}else if (vlue==2) {
+		    		alert("今天是星期二！");
+		    	}else if (vlue==3) {
+		    		alert("今天是星期三！");
+		    	}else if (vlue==4) {
+		    		alert("今天是星期四！");
+		    	}else if (vlue==5) {
+		    		alert("今天是星期五！");
+		    	}else if (vlue==6) {
+		    		alert("今天是星期六！");
+		    	}else if (vlue==7) {
+		    		alert("今天是星期日！");
+		    	}
+		    }
+	   }
+	   function switchXing(){
+	   		while(true){
+	   			var vlue= prompt("请输入1~7之间的数或者输入break退出:");
+	   			var flag=0;
+	   			if (vlue=="break") {
+	   				break;
+	   			}
+
+	   			switch(+vlue){
+	   				case 1:
+                   		flag = "今天是星期一！";
+                   		break;
+                   	case 2:
+                   		flag = "今天是星期二！";
+                   		break;
+                    case 3:
+                   		flag = "今天是星期三！";
+                   		break;
+                   	case 4:
+                   		flag = "今天是星期四！";
+                   		break;
+                   	case 5:
+                   		flag = "今天是星期五！";
+                   		break;
+                   	case 6:
+                   		flag = "今天是星期六！";
+                   		break;
+                   	default :
+                   		flag = "今天是星期日！";
+	   			}
+	   			alert(flag);
+	   		}
+	   }
+	</script>
+</head>
+<body>
+	<div>
+		<button onclick="whileXing();">w判断</button>
+		<button onclick="switchXing();">s判断</button>
+	</div>
+</body>
+</html>

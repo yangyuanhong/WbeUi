@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>test</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            // console.log(Boolean(0));
+            // console.log(Boolean(1));
+            // console.log(Boolean(""));
+            // console.log(Boolean("briup"));
+            // console.log(Boolean(NaN));
+            // console.log(Boolean(null));
+            // console.log(Boolean(undefined));
+            // var a=null;
+            // console.log(a);
+            // console.log(null instanceof Object);
+            // console.log(true-1);
+            // console.log(null-true);
+            // console.log(1-undefined);
+            // console.log(null==undefined);
+            // console.log(null||undefined);
+            // var a ="hello";
+            // var b;
+            // var val=a?a:b;
+            // console.log(val);
+            // var a="abcdgrsfsafewsf\n";
+            // // console.log(-1/0);
+            // console.log(a.substr(-4,4));
+            // console.log(a.substr(0,a.length-4));
+            // console.log(a.replace(/\S/g,"#"));
+            // var arr=[1,2,3];
+            // console.log(arr[0]);
+            // console.log("2"*"2");
+            // console.log(4%2);
+            // console.log(null+"");
+            // console.log("null");
+            // console.log([0,1,2,3,4].reduce(function(previousValue,currentValue,index,array){
+            //     return previousValue+currentValue;
+            // }));
+            // var total=[8,1,2,3].reduce(function(a,b){
+            //     return a+b;
+            // });
+            // console.log(total);
+            // var flattened=[[0,1],[2,3],[4,5]].reduce(function(a,b){
+            //     return a.concat(b);
+            // });
+            // console.log(flattened);
+            // var a=[1,2,3];
+            // console.log(a.concat(4,5));
+            // console.log([3,2,1].reduce(Math.pow));
+            // console.log(typeof String('A'));
+            // console.log(Array.isArray(Array.prototype));
+            // console.log(typeof Array.prototype);
+            // var x=[].reverse;
+            // console.log(x());
+            //    console.log(2==[2]);
+            //    console.log(1<2<3);
+            //    console.log(3<2<1);
+            // console.log(3.toString());
+            // console.log(3..toString());
+            //    console.log([]==[]);
+            // console.log("1 2 3".replace(/\d/g,parseInt));
+            // var o={};
+            // console.log(o.length);
+            
+            // function add(){
+            //     console.log("add");
+            // }
+            // add();
+            
+            // var add=function(){
+            //     console.log("aad");
+            // };
+            // add();
+            // var a={
+            //     name:"terry",
+            //     age:12
+            // }
+            // console.log(a.constructor);
+            // console.log(a["age"]);
+            // var student=new Object();
+            // student.study=function(){
+            //     window.alert("开始学习了");
+            // }
+            // study();
+            // var a=1;
+            // run(a);
+            // function run(foo){
+            //     console.log(foo);
+            //     function foo(){
+            //         alert(123);
+            //     }
+            //     foo=2;
+            //     console.log(foo);
+            // }
+            // var a = "12a12b"
+            // console.log(parseInt(a));
+            // console.log(Number(a));
+            // function test(){   
+            //         console.log(a); 	
+            //         console.log(foo());  
+            //     var a =1; 
+            //         function foo(){  
+            //         return 2;   
+            //         } 
+            //     }
+            //     test();
+            // add(10);
+            // function add(i) { var k = i+10; alert(k); } ;
+            // function add(i) { var k = i+20; alert(k); } ;
+            // var a;
+            // console.log(a);
+            // console.log(typeof a);
+            // console.log(null);
+            // console.log(typeof null);
+            // var x=1;
+            // if(function f(){}){
+            //     // console.log(typeof f);
+            //     x+=typeof f;
+            //     // console.log(x);
+            // }
+            // x;
+            // console.log(x);
+            //console.log(!isNaN(false));
+            // var a=function(){this.x="实例属性"};
+            // a.prototype.x="prototype";
+            // var t=new a();
+            // console.log(t.x);//实例属性
+            // delete(t.x);
+            // console.log(t.x);//原型属性
+            // var a=function(){};
+            // a.x="类属性";
+            // var t =new a();
+            // console.log(t.x);//
+            // var a=function(){
+            //     var x="a";//内部属性、私有属性
+            //     this.z="c";//实例属性
+            // }
+            // a.y="b";//类属性
+            // a.prototype.m="d";//原型属性
+
+            // var t1=new a();
+            // var t2=new a();
+            // console.log(t1.x);//undefined
+            // console.log(t2.x);//undefined
+            // console.log(t1.y);//undefined
+            // console.log(t2.y);//undefined
+            // console.log(t1.z);//"c"
+            // console.log(t2.z);//"c"
+            // console.log(t1.m);//"d"
+            // console.log(t2.m)//"d"
+            // console.log(a.x);//undefined
+            // console.log(a.y);//"b"
+            // console.log(a.z);//undefined
+            // console.log(a.m);//undefined
+            // var BaseClass=new Function();
+            // var Class2=BaseClass;
+            // BaseClass.f1=function(){
+            //     console.log("BaseClass ' s static method");
+            // }
+            // Class2.f2=function(){
+            //     console.log("Class2's static method");
+            // }
+            // BaseClass.f1();
+            // BaseClass.f2();
+            // Class2.f1();
+            // Class2.f2();
+            // console.log(BaseClass==Class2);
+            // function BaseClass(){
+            // this.method1=function(){
+            //         console.log(' Defined by the "this" instance method');
+            //     }
+            // };
+            // BaseClass.sayHello=function(){
+            //     console.log();
+            // }
+            // var instance1=new BaseClass();
+            // instance1.sayHello();
+            // var BaseClass=function(){
+            //     this.method1=function(){
+            //         alert('  Defined by the "this" in the instance method');
+            //     }
+            // };
+            // var instance1=new BaseClass();
+            // BaseClass.prototype.method1=function(){
+            //     alert(' Defined by the prototype instance method');
+            // }
+            // instance1.method1=function(){
+            //     alert(' Defined directly in the instance method');
+            // }
+            
+            // instance1.method1();
+            // var BaseClass=function(){
+            //     var method1=function(){
+            //         console.log("Internal method");
+            //     }
+            //     var method2=function(){
+            //         console.log("call Internal method");
+            //         method1();
+            //     }
+            //     this.method3=function(){
+            //         method2();
+            //     }
+            // };
+            // var instance1=new BaseClass();
+            // BaseClass.staticMethod=function(){
+            //     console.log("这是一个静态方法");
+            // }
+            // BaseClass.prototype.sayHello=function(){
+            //     console.log("这是一个实例方法");
+            // }
+            // // instance1.staticMethod();
+            // // BaseClass.prototype.sayHello();
+            // instance1.constructor.staticMethod();
+            // instance1.method1();//会报错
+            // instance1.method3();//会先后调用
+            // console.log("123555545".search(/(\d)\1{2}/));
+            // var name="0";
+            // var obj={
+            //     0:"terry"
+            // }
+            // console.log(obj);
+            // var num = Math.pow(2, 100);
+            // var reconstruct = [];
+            // while(num > 0) {
+            //     reconstruct.unshift(num % 10);
+            //     num = Math.floor(num / 10);
+            //     console.log(num);
+            // }
+            // function toFixed(x) {
+            //     if (Math.abs(x) < 1.0) {
+            //         var e = parseInt(x.toString().split('e-')[1]);
+            //         if (e) {
+            //             x *= Math.pow(10,e-1);
+            //             x = '0.' + (new Array(e)).join('0') + x.toString().substring(2);
+            //         }
+            //     } else {
+            //         var e = parseInt(x.toString().split('+')[1]);
+            //         if (e > 20) {
+            //             e -= 20;
+            //             x /= Math.pow(10,e);
+            //             x += (new Array(e+1)).join('0');
+            //         }
+            //     }
+            //     return x;
+            // }
+            // var a=Math.floor(131151201344081895336534324866/Math.pow(10,21));
+            // console.log(a);
+            // console.log(toFixed(a));
+            // console.log("()()()".replace(/[(][)]/g,"1"));
+            // var level=10,i,j;
+            // var yh=new Array();
+            // for(i=0;i<level;i++)
+            // {
+            // yh[i]=new Array();
+            // }
+            // for(i=0;i<level;i++)
+            // {
+            //     for(j=0;j<=i;j++)
+            //     {
+
+            //     if(i==j||j==0)
+            //     {
+            //     yh[i][j]=1;
+            //     }
+            //     else
+            //     {
+            //     yh[i][j]=yh[i-1][j]+yh[i-1][j-1];
+            // }
+            // document.write(yh[i][j]+" ");
+            // if(i==j)document.write("<br>");
+
+            // }//end loop j
+            // }//end loop i
+            // var arr=[1,2,3];
+            // console.log(arr[-2]);
+            // console.log(Math.random(10,0));
+            // var str="hello";
+            // for(var i=0;i<str.length;i++){
+            //     console.log(str[i]);
+            // }
+            // var arr=["ab","b","c",false,null,1,2];
+            // var str=arr.join("");
+            // console.log(str);
+            // var ars=str.split("");
+            // console.log(ars);
+            // var strs=JSON.stringify(arr);
+            // console.log(strs);
+            // JSON.parse
+            // function add(a,b){
+            //     return a+b;
+            // }
+            // function del(a,b){
+            //     return a-b;
+            // }
+
+            // function callMethod(method,arr){
+            //     return arguments[0](arguments[1],arguments[2]);
+            // }
+            // var result = callMethod(add,1,2);	//result = 3
+            // console.log(result);
+            // var result = callMethod(del,1,2);	//result = -1
+            // console.log(result);
+            // function removeWithoutCopy(arr, item) {
+            // var ars=arr.filter(function(ele,index){return ele!=item;})
+            // arr.length=ars.length;
+            // for(var i=0;i<ars.length;i++){
+            //     arr[i]=ars[i];
+            // }
+            // return arr;
+            // }
+            // console.log(removeWithoutCopy([1, 2, 2, 3, 4, 2, 2],2));
+            // function append(arr, item) {
+            //     for(var ars=[],i=0;i<arr.length;i++){
+            //         ars.push(arr[i]);
+            //     }
+            //     ars[arr.length]=item;
+            //     return ars;
+            // }
+            // console.log(append([1, 2, 3, 4],10));
+            // function duplicates(arr) {
+            //     var ars=[];
+            //     arr.forEach(function(ele,index){
+            //         if(arr.some(function(ls,indexs){if(ele==ls&&index!=indexs)return true;return false;}))
+            //             {
+            //                 if(ars.every(function(eles){return eles!=ele;}))
+            //                 ars.push(ele);
+            //             }
+            //     });
+            //     return ars;
+            // }
+            // console.log(duplicates([1, 2, 4, 4, 3, 3, 1, 5, 3]));
+        //     var arr=[{
+        //         id:1002,
+        //         name:"terry",
+        //         age:18
+        //     },{
+        //         id:1001,
+        //         name:"larry",
+        //         age:19
+        //     },{
+        //         id:1003,
+        //         name:"jacke",
+        //         age:16
+        //     }
+        // ];
+        // var ars=[];
+        // arr.forEach(function(ele,index){
+        //     ars.push(ele.name);
+        // });
+        // console.log(ars);
+        // function count(start, end) {
+        //     function dadian(){
+        //         var counts=start;
+        //         console.log(counts);
+                
+        //         var int = setInterval(function(){
+        //             console.log(counts);
+        //             counts++;
+        //             if(counts>end){
+        //                 clearInterval(int);
+        //             }  
+        //         },1000); 
+                 
+                    
+        //         //    console.log(counts);
+                    
+                    
+                
+        //     }
+        //     return dadian();
+        // }
+        //  count(1,10);
+
+        // function count(start, end) {
+        // //立即输出第一个值
+        // console.log(start++);
+        //     var timer = setInterval(function(){
+        //         if(start <= end){
+        //             console.log(start++);
+        //         }else{
+        //             clearInterval(timer);
+        //         }
+        //     },100);
+        //     //返回一个对象
+        //     return {
+        //         cancel : function(){
+        //             clearInterval(timer);
+        //         }
+        //     };
+        // }
+        // var stus = [{
+		// 	name:"terry",
+		// 	age:12,
+		// 	salary:3500,
+		// 	toString:function(){
+		// 		return 2;
+		// 	}
+		// },{
+		// 	name:"larry",
+		// 	age:17,
+		// 	salary:14500,
+		// 	toString:function(){
+		// 		return 21;
+		// 	}
+		// },{
+		// 	name:"tom",
+		// 	age:19,
+		// 	toString:function(){
+		// 		return 11;
+		// 	}
+		// }];
+        // var result = stus.filter(function(item){
+        //     return item.age>15;
+        // });
+        // console.log("年龄大于15岁的学生有："+result);
+        //         function isBigEnough(element, index, array) {
+        //             return (element >= 10);
+        //         }
+        //         var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
+        // // 12, 130, 44
+        //         console.log(filtered);
+        // function add(a,b){
+		// alert(a+b);
+        // }
+        // // add(1,2);
+        // // window.add(1,2);
+        // // new add(1,2);
+        // // add.call(this,1,2);
+        // // add.apply(this,[1,2]);
+       
+        // // var b=add;
+        // // b(1,2);
+        // Object.prototype.add=add;
+        // //  var a=[];
+        // //  a.add(1,2);
+        // // [].add(1,2);
+        //     // /a/.add(1,2);
+
+        // function b(mothd,c,d){
+        //     return mothd(c,d);
+        // }
+        // b(add,1,2);
+        // var a = 0;
+        // var obj1 = {a:1};
+        // var obj2 = {a:2};
+
+        // function test(){
+        //     var a = 3;
+        //     console.log(this.a+","+a);
+        // }
+        // test();
+        // obj1.test = test;
+        // obj1.test();
+        // obj2.test = test;
+        // obj2.test();
+        // var show = test;
+        // show();	
+        // var stus = [{
+		// 	name:"terry",
+		// 	age:12,
+		// 	salary:3500,
+		// 	toString:function(){
+		// 		return 2;
+		// 	}
+		// },{
+		// 	name:"larry",
+		// 	age:17,
+		// 	salary:14500,
+		// 	toString:function(){
+		// 		return 21;
+		// 	}
+		// },{
+		// 	name:"tom",
+		// 	age:19,
+		// 	salary:5500,
+		// 	toString:function(){
+		// 		return 11;
+		// 	}
+        // }];
+        // function getComparator(key){
+		// 	return function(a,b){
+        //         var i=getKey(a);
+        //         var j=getKey(b);
+        //         return i-j;
+        //         }
+        //         function getKey(item){
+        //             console.log(item[key])
+        //         return item[key];
+        //     }
+        // }
+        // stus.sort(getComparator("name"));	//按照姓名排序
+        // stus.sort(getComparator("age"));	//按照年龄排序
+        // stus.sort(getComparator("salary"));	//按照薪资排序
+
+        // function getComparator(key){
+        //     stus.sort(function(a,b){
+        //         var i=getKey(a);
+        //         var j=getKey(b);
+        //         return i-j;
+        //     });
+        //     function getKey(item,key){
+        //         return item[key];
+        //     }
+        // }
+        // console.log(stus);
+        // function Student(id,name,age){
+        //     this.id=id;
+        //     this.name=name;
+        //     this.age=age;
+        //     Student.prototype.number++;
+        // }
+        // Student.prototype.number=0;
+        // var s1 = new Student();
+        // var s2 = new Student();
+        // var s3 = new Student();
+        // var s4 = new Student();
+        // console.log(s4.number);
+        // function Animal(name,age){
+		// 	this.name=name;
+		// 	this.age=age;
+		// }
+		// Animal.prototype.sayName=function(){
+		// 	console.log(this.name);
+		// };
+		// Animal.prototype.sayAge=function(){
+		// 	console.log(this.age);
+		// };
+		// function Dog(name,age,weight){
+		// 	Animal.call(this,name,age);
+		// 	this.weight=weight;
+		// }	
+		// Dog.prototype=new Animal();
+		// Dog.constructor=Dog;
+		// Dog.prototype.lookDoor=function(){
+		// 	console.log(this.weight);
+		// }
+		// function Bird(name,age,color){
+		// 	Animal.call(this,name,age);
+		// 	this.color=color;
+		// }
+		// Bird.prototype=new Animal();
+		// Bird.constructor=Bird;
+		// Bird.prototype.fly=function(){
+		// 	console.log("我会飞");
+		// }
+
+        // var dog=new Dog("金毛",12,48);
+        // dog.sayAge();
+        // console.log(dog);
+        // dog.sayName();
+        // dog.lookDoor();
+        // var bird=new Bird("八哥",12,"黄色");
+        // bird.fly();
+        // bird.sayAge();
+        // bird.sayName();
+        // function functionFunction(str) {
+        //     return function f(){
+        //         return "Hello"+", "+"world";
+        //     };
+        // }
+        // console.log(functionFunction('Hello')("world"));
+
+    //     function makeClosures(arr,fn){
+            
+    //         return fn(arr[i]);
+    //     }
+    //     console.log(makeClosures([1, 2, 3], function (x) { 
+	// return x * x; }));
+        // function partial(fn,str1,str2){
+        //     var result=function(num){
+        //         return fn(str1,str2,num);
+        //     }
+        //     return result;
+        // }
+        // var sayIt = function(greeting, name, punctuation){
+        //          return greeting + ', ' + name + (punctuation || '!');
+        //           };
+        //   console.log(partial(sayIt, 'Hello', 'Ellie')('!!!'));
+        // function useArguments() {
+        //     for(var i=0,arrs=[];i<arguments.length;i++){
+        //         arrs.push(arguments[i]);
+        //     }
+	    //     return arrs.reduce(function(a,b){return a+b;});
+        // }
+        // console.log(useArguments(1, 2, 3, 4));
+        // function createModule(str1, str2) {
+        //     var a={};
+        //     a.greeting=str1;
+        //     a.name=str2;
+        //     a.sayIt=function(){
+        //         return this.greeting+","+this.name;
+        //     }
+        //     return a;
+            
+        // }
+        // console.log(createModule("tarry", "larry").saylt());
+    //     function valueAtBit(num, bit) {
+    //         var n="";
+    //         function parser(nums){
+    //             var s=nums%2;
+    //             if(nums<1)return n;
+    //             // console.log(s);
+    //             n+=s;
+    //             nums=Math.floor(nums/2);
+    //             return parser(nums);
+    //         }
+    //         return parser(num)[bit-1]-0;
+    //     }
+    //    console.log(valueAtBit(128,8));
+            // function base10(str) {
+            //     // var num=str.split("").reverse().reduce(function(a,b){return +a+(+b)});
+            //     var num=str.split("").reverse().reduce(function(a,b,index){
+            //         return a+b*Math.pow(2,index);
+            //     },0);
+                
+            //     return num;
+            // }
+            // console.log(base10('11000000'));
+            // var num = 0;	
+            // var max = 10;
+            // function incrementNum(){
+            //     num ++;
+            //     if(num < max){
+            //         alert(num);
+            //         setTimeout(incrementNum,500);
+            //     }else{
+            //         alert("Done"+num);
+            //     }
+            // }
+            // setTimeout(incrementNum,500);
+                // var x=0,y=0,z=0;
+                // for(var i=0;i<5;i++){
+                //     y=2*x+1;
+                //     x=z;
+                //     z=3*x+1;
+                //     x=y;
+                //     console.log(x);
+                //     console.log(y);
+                //     console.log(z);
+                // }
+                // console.log([].reduce(Math.pow));
+                // console.log(Array.isArray(Array.prototype));
+                // function sidEffecting(arr){
+                //     arr[0]=arr[2];
+                // }
+                // function bar(a,b,c){
+                //     c=10;
+                //     sidEffecting(a,b,c);//
+                //     return a+b+c;
+                // }
+                // console.log(bar(1,1,1));
+                
+                // var x=[].reverse;
+                // console.log(x());
+                // function f(){}
+                // var a=f.prototype,b=Object.getPrototypeOf(f);
+                // console.log(a);
+                // console.log(b);
+                // var str="1 2 3";
+                // console.log(str[4]);
+                // console.log(str.replace(/\d/g,parseInt));
+                // console.log([,,,].join(", "));
+                // console.log([1,"terry",3].includes("terry"));
+                // const bar =['a','b','c'];
+                // console.log(Array.from(bar));
+                // console.log(Array.from("foo"));
+                // let s=new Set(['foo',window]);
+                // console.log(Array.from(s));
+                //['foo',window]
+                // console.log(Array.from({length:5}));
+                // var arr=['alpha','beta','copy','delta'];
+                // var result=['alpha','beta','copy','delta'].copyWithin(1,2,3);
+                // var results=['alpha', 'bravo', 'charlie', 'delta'].copyWithin(2, 0);
+                // console.log(arr);
+                // console.log(result);
+                // console.log(results);
+                var arr=new Array(4);
+                // var arr=[];
+                arr.push(undefined,undefined,undefined,undefined);
+                for(var key in arr){
+                    console.log(key);
+                    console.log(arr[key]);
+                }
+                // for(var i=0;i<arr.length;i++){
+                //     console.log(arr[i]);
+                // }
+                // console.log(arr);
+                // console.log(undefined==undefined);
+                // console.log(undefined===undefined);
+                
+                // var a;
+                // a=2;
+                // console.log(a);
+                // var a;
+                // console.log(a);
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

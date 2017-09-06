@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>switch</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            function showCase(value){
+                switch(value){
+                    case 'A':
+                        console.log('Case A');
+                        break;
+                    case 'B':
+                        console.log('Case B');
+                        break;
+                    case undefined:
+                        console.log('undefined');
+                        break;
+                    default:
+                        console.log('Do not know!');
+                        break;
+                        
+                }
+            }
+           showCase(new String('A'));
+            //switch 中使用全等操作符，value为一个对象，所有输出Do not know!
+            showCase(String('A'));
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

@@ -1,0 +1,180 @@
+header{
+    height: 50px;
+    padding: 15px 10px;
+    background-color: #282828; 
+}
+header>div{
+    height: 50px;
+}
+header>div{
+    float: left;
+    margin-right: 10px;
+}
+header>div:first-child{
+    width: 50px;
+}
+header>div select{
+    width: 80px;
+    height: 50px;
+    background-color: #282828;
+    border: 0;
+    color: #f7f7f7;
+    -moz-appearance: none;
+}
+header .search{
+    width: 472px;
+    border-radius: 5px;
+    background-color: #505052;
+}
+header .search img{
+    float: left;
+    margin-right: 10px;
+}
+header .search input{
+    width: 300px;
+    height: 50px;
+    background-color: transparent;
+    border: 0;
+    color: #9a9a9c;
+    font-size: 2.7em;
+}
+nav {
+    height: 72px;
+    background-color: #282828;
+
+}
+nav ul{
+    display: flex;
+    margin: 0 20px 0 0;
+    align-items: center;
+}
+nav ul li{
+    flex: 1;
+    line-height: 67px;
+    font-size: 2em;
+    cursor:pointer;
+    margin-right: 40px;
+    text-align: center;
+    
+}
+nav ul li:last-child{
+    flex: 2;
+    text-align: right;
+}
+.big{
+    background-color: #f1f1f1;
+    position: relative;
+    overflow: hidden;
+}
+.big .long{
+    width: 3000px;
+    position: relative;
+    overflow: hidden;
+}
+.big .long .biu{
+    width: 750px;
+    float: left;
+    overflow: hidden;
+}
+.big .long .biu .cenont{
+    width: 625px;
+    margin: 10px auto 0;
+    overflow: hidden;
+}
+.big .long .biu .cenont>div{
+    float: left;
+    width: 190px;
+    height: 285px;
+    margin-right: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+.big .long .biu .cenont div>p{
+    margin: 10px auto;
+}
+.big .long .biu .cenont div>.zhi{
+    width: 60px;
+    height: 0px;
+    border: 1px solid #000000;
+    margin: 0 auto;
+}
+.big .long .biu .cenont div:last-child{
+    margin-right: 0;
+}
+.big .but{
+    width: 220px;
+    margin: 13px auto 10px;
+}
+.big .but button{
+    width: 30px;
+    margin-right: 25px;
+    border: 2.5px solid #b2b2b2;
+    border-radius: 4px;
+}
+.big .but button:last-child{
+    margin-right: 0;
+}
+.list{
+    height: 93px;
+    display: flex;
+}
+.list>div{
+    flex: 1;
+    color: #000;
+    font-size: 2.8em;
+    text-align: center;
+    line-height: 93px;
+    border-bottom: 2px solid #f0eff5;
+
+}
+.list>div:last-child{
+    flex: 2;
+    text-align: right;
+    padding-right: 30px;
+}
+.si{
+    overflow: hidden;
+}
+.si .one{
+    display: flex;
+}
+.si .one>div{
+    flex: 1;
+    color: #000;
+    font-size: 2em;
+    border-bottom: 2px solid #aaaaaa;
+}
+.si .one>div p{
+    margin-top: 10px;
+}
+.si .one>div.op{
+    flex: 2.4;
+}
+.si .one>div:last-child{
+    text-align: right;
+    padding: 30px;
+}
+.les{
+    height: 100px;
+    color: #000;
+    font-size: 1.8em;
+    padding: 0 20px;
+    border-bottom: 2px solid #aaaaaa;
+}
+.les span{
+    line-height: 100px;
+}
+.les span:last-child{
+    float: right;
+}
+footer{
+    display: flex;
+    padding: 0 60px;
+    background-color: #272727;
+}
+footer>div{
+    flex: 1;
+}

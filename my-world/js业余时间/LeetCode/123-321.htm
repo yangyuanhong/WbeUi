@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>123-321</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            var reverse = function(x){
+                var rul=0;
+                var sum=0;
+                var s=1;
+                if(x<0){
+                    x=-x;
+                    s=-1;
+                }
+                var j=x.toString().length-1;
+                for(var i=0;i<x.toString().length;i++){
+                    rul=Math.floor(x/Math.pow(10,i)%10);
+                    //console.log(rul);
+                   // console.log(j);
+                    sum+=(rul*Math.pow(10,j))
+                    j--;
+                }
+                    //rul +=as;
+                return sum*s;
+               // console.log(Math.floor(x/Math.pow(10,1)%10));
+            };
+        var rul=reverse(prompt("请输入要倒序的数"));
+        alert(rul);
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

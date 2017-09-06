@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>object-access-propety</title>
+	<script type="text/javascript">
+		var Coc = {
+			name: "vicky",
+			age: 19,
+			gender: "女",
+			add: function(a,b){
+				alert(a+b);
+			},
+			SayName: function(c,d){
+				console.log(this.name);
+			}
+		}
+		var key = "age";
+		console.log(Coc.name);
+		console.log(Coc.age);
+		console.log(Coc[key]);
+		for(var key in Coc){
+				 var vul=Coc[key];
+				console.log(key+"--"+vul);
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

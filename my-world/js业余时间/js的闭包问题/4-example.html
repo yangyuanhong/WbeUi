@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>外部函数所有局部变量都在闭包内，即使这个变量声明在内部函数定义之后</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            function sayAlice(){
+                var sayAlice=function(){alert(alice);}
+                //Local variable that ends up within closure 
+                var alice ='hello Alice';
+                return sayAlice;
+            }
+            var hellAlice=sayAlice();
+            hellAlice();//弹出"Hello Alice"的窗口。即使局部变量声明在函数sayAlert之后，局部变量任然可以被访问到 
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

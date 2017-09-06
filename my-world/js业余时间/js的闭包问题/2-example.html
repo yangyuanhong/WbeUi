@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>多个函数绑定同一个闭包，因为他们定义在同一个函数内</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            function setupSomeGlobals(){
+                //local variable that ends up within closure
+                var num=666;
+                //Store some references to function as global varial
+                gAlertNumber=function(){ alert(num);}
+                gIncreaseNumber=function (){ num++;}
+                gSetNumber=function(x) {num=x;}
+            }
+            setupSomeGlobals();//为三个全局变量赋值
+            gAlertNumber();
+            gIncreaseNumber();
+            gAlertNumber();
+            gSetNumber(12);
+            gAlertNumber();
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

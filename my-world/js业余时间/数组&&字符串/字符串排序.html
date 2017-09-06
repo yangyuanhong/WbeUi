@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>根据权重来排序</title>
+    <script>
+        /*
+            Example:
+                "56 65 74 100 99 68 86 180 90" ordered by numbers weights
+                 becomes: "100 180 90 56 65 74 68 86 99"
+                 "103 123 4444 99 2000"=>"2000 103 123 4444 99"
+                 "2000 10003 1234000 44444444 9999 11 11 22 123"=>"11 11 2000 10003 22 123 1234000 44444444 9999"
+
+                When two numbers have the same "weight", let us class them as if they 
+                were strings and not numbers: 100 is before 180 because its 
+                "weight" (1) is less than the one of 180 (9) and 180 is before 90 since,
+                having the same "weight" (9) it comes before as a string.
+        */
+        // function orderWeight(strng) {
+        // // your code
+        //     var arr=strng.split(" ");
+        //     var as=[];
+        //     // console.log(arr);
+        //     var obj={};
+        //     var arrs=arr.map(sums);
+            
+        //     console.log(arrs);
+        //     arrs.forEach(function(item,index){
+        //         if(JSON.stringify(obj).search("s"+item)==-1){
+        //             obj["s"+item]= arr[index];
+        //         }else{
+        //             as.push(arr[index])
+        //             obj["s"+item]=as;
+        //         }
+                
+        //     });
+        //     console.log(obj);
+        //     arrs.sort(function(a,b){return a-b;});
+        //    var result=[];
+        //     arrs.forEach(function(item){
+        //         result.push(obj["s"+item]);
+        //     });
+        //     // console.log(result);
+        // }
+        function orderWeight(str){
+            function sums(v){
+                return v.split("").reduce(function(pre,cur){
+				return (pre-0)+(cur-0);
+				});
+            }
+            function compareASCII(a,b){  
+                var i=0;  
+                while(true){  
+                    var c1 = a.charCodeAt(i);  
+                    var c2 = b.charCodeAt(i);  
+                    if(!c1){  
+                        return -1;  
+                    }  
+                    if(!c2){  
+                        return 1;  
+                    }  
+                    if(c1 < c2){  
+                        return -1;  
+                    }  
+                    if(c1 > c2){  
+                        return 1;  
+                    }  
+                    i++;  
+                }  
+            }  
+            return str.split(" ").sort(function(a,b){
+                var n1=sums(a);
+                var n2=sums(b);
+                if(n1>n2){
+                    return 1;
+                }
+                else if(n1<n2){
+                    return -1;
+                }else{
+                    return compareASCII(a,b);
+                }
+            }).join(" ");
+        }
+        //大神的代码
+
+        function orderWeights(strng) {
+            return strng.split(" ").sort(function f(a, b){ 
+                return eval(a.split("").join("+")) - eval(b.split("").join("+")) + ([a, b].sort()[1] == a ? 0.1 : -0.1);
+            }).join(" ");
+        }
+        //大神的代码
+        function digitSum(str) {
+            return str.split('').reduce(function(s, e) { 
+                return s + parseInt(e); 
+            }, 0);
+            }
+            function orderWeight(str) {
+                return str.split(' ').sort(function(a, b) {
+                    return digitSum(a) - digitSum(b) || a.localeCompare(b);
+                }).join(' ');
+            }
+        console.log(orderWeight("2000 10003 1234000 44444444 9999 11 11 22 123"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

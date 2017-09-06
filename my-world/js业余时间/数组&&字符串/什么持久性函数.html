@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>给你一个数</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            /*
+            persistence(39) === 3 // because 3*9 = 27, 2*7 = 14, 1*4=4
+                       // and 4 has only one digit
+            persistence(999) === 4 // because 9*9*9 = 729, 7*2*9 = 126,
+                                    // 1*2*6 = 12, and finally 1*2 = 2
+            persistence(4) === 0 // because 4 is already a one-digit number
+            */
+            //方法如下
+            var count=0;
+            function persistence(num) {
+                //code me
+                if(num<10){return count;}
+                var str=num+"";
+                var arr=str.split("");
+                var nums=1;
+                for(var i=0;i<arr.length;i++){
+                    nums=nums*arr[i];
+                }
+                count++;
+                return persistence(nums);
+             }
+             console.log(persistence(25));
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

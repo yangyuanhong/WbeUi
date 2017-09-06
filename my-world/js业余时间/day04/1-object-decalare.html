@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>object-decalare</title>
+	<script type="text/javascript">
+		
+		var jack = new Object();
+
+		jack.name = "larry";
+		jack.age  = 18;
+		jack.id   = 1001;
+		jack.add  =function(a,b){
+			alret(a+b);
+		}
+		jack.SayName = function(){
+			alret(this.name);
+		}
+		console.log(jack);
+
+		var Larry ={
+			name : "larry",
+			age: 12,
+			address: "四川",
+			del: function (a,b){
+				alret(a-b)
+			},
+			bug : function(i,j){
+				alret(i*j);
+			}
+		}
+		console.log(Larry);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

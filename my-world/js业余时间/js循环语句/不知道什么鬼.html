@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8">
+      <title>经典面试题</title>
+      <script type="text/javascript">
+//该段代码期望实现效果如下：点击p标签，弹出该p标签位置序号。请问上述代码能否实现该需求，如果不能，应该如何实现？
+               /* function onMyLoad(){
+                     var arr = document.getElementsByTagName("p");
+                     for(var i = 0; i < arr.length; i++){
+                            arr[i].onclick = function(){
+                                  alert(i);
+                            }
+                     }
+                }*/
+                //解决方案，
+                /*方法一：增加若干个对应的闭包域空间(采用匿名函数实现)专门用来存储原先需要引用的内容(下标值)，
+                只限基本数据类型（基本数据类型值传递，对象类型引用传递）
+                function onMyLoad(){
+                     var arr = document.getElementsByTagName("p");
+                     for(var i = 0; i < arr.length; i++){
+                            (function(arg){
+                                    arr[i].onclick = function(){
+                                  alert(arg);
+                              }
+                            })(i);
+                            
+                     }    
+                }*/
+                /*方案二：将下标作为对象属性(name:"i",value:i的值)添加到每个数组项(p对象)中
+                
+                function onMyLoad(){
+                     var arr = document.getElementsByTagName("p");
+                     for(var i = 0; i < arr.length; i++){
+                           arr[i].i=i;
+                            arr[i].onclick = function(){
+                                  alert(this.i);
+                            }
+                        }
+                }*/
+                /*方案三：增加若干个对应的闭包域空间来存储下标。新增的匿名闭包空间内完成事件绑定。
+                绑定的函数中的fuction scope中的closure对象的引用arg是指向将其返回的匿名函数的私有变量arg
+                
+                function onMyLoad(){
+                     var arr = document.getElementsByTagName("p");
+                     for(var i = 0; i < arr.length; i++){
+                            arr[i].onclick = (function(arg){
+                                  return function(){
+                                        alert(arg);
+                                  }
+                            })(i);
+                     }
+                }*/
+                function onMyLoad(){
+                      "use strict";
+                     var arr = document.getElementsByTagName("p");
+                     for(var i = 0; i < arr.length; i++){
+                           let j=i;
+                            arr[i].onclick = function(){
+                                  alert(j);
+                            }
+                     }
+                }
+       </script>
+</head>
+<body onload="onMyLoad()">
+          <p>0</p>
+          <p>1</p>
+          <p>2</p>
+          <p>3</p>
+          <p>4</p>
+</body>
+</html>

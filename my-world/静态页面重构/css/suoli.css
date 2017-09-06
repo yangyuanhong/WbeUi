@@ -1,0 +1,241 @@
+body,ul{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    font-family: "楷体";
+}
+li{
+    float: left;
+    list-style: none;    
+}
+header,footer,nav{
+    display: block;
+    /*块级展示  */
+}
+header{
+    height: 105px;
+    background-color: #000000;
+}
+header div.bog{
+    width: 984px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+header div.bog div.leftss {
+    float: left;
+    width: 593px;
+    height: 105px;
+}
+header div.bog div.leftss div{
+    height: 58px;
+}
+header div.bog div.leftss nav{
+    height: 47px;
+    width: 100%;
+}
+header div.bog div.leftss nav ul li{
+    margin-right: 15px;
+}
+header div.bog div.leftss nav ul li>a{
+    color: #fefefe;
+}
+header div.bog div.leftss nav ul li:last-child{
+    margin-right: 0;
+}
+.leftss nav ul li>select{
+    border: 0;
+    background-color: #000000;
+    color: #fefefe;
+}
+header div.bog div.rghtss{
+    float: right;
+    width: 333px;
+    height: 105px;
+}
+.rghtss p{
+    color: #fefefe;
+}
+.rghtss .xia{
+    width: 333px;
+    height: 40px;
+    padding: 5.3px 0 5.3px 0;
+}
+.rghtss .xia div{
+    float: right;
+}
+.rghtss .xia input{
+    width: 175px;
+    height: 35.2px;
+    float: right;
+    background-color: #000000;
+    border: 2px solid #424242;
+    border-right: 0;
+}
+aside{
+    background-color: #ffffff;
+    overflow: hidden;
+}
+aside div{
+    width: 1179px;
+    height: 520px;
+    margin: 0 auto;
+}
+div.tuijian{
+    background-color: #ffffff;
+    padding-top: 47px;
+    height: 41px;
+}
+div.tuijian .bog{
+    width: 955px;
+    height: 41px;
+    margin: 0 auto;
+    font-size: 1.5em;
+}
+div.tuijian .bog .rds{
+    height: 41px;
+    float: left;
+}
+div.tuijian .bog .rks{
+    float: right;
+}
+.centnts>div.bogss{
+    width: 972px;
+    margin: 0 282px;
+    overflow: hidden;
+    
+}
+.centnts .bogss>div{
+    float: left;
+    width: 234px;
+    height: 274px;
+    margin: 0 9px 56px 0;
+}
+.xinwen .wai{
+    width: 952px;
+    padding-left: 124px;
+    padding-right: 124px;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: #f0f1f3;
+}
+.xinwen .wai .tops{
+    width: 952px;
+    overflow: hidden;
+}
+.xinwen .wai .tops>div{
+    float: left;
+    width: 286px;
+}
+.xinwen .wai .boum{
+    overflow: hidden;
+}
+.xinwen .wai .boum>div{
+    width: 286px;
+    height: 84px;
+    float: left;
+    margin: 0 30px 8px 0;
+}
+.xinwen .wai .boum>div>div{
+    float: left;
+}
+.xinwen .wai .boum p{
+    font-size: 0.6em;
+    color: #595959;
+}
+.xinwen .wai .boum p:first-of-type{
+    margin-top: 0;
+}
+.xinwen .wai .boum>div div:last-of-type{
+    width: 160px;
+    margin-left: 10px;
+}
+.bcmpan{
+    width: 1000px;
+    height: 227px;
+    margin: 0 auto;
+}
+.bcmpan .tops{
+    overflow: hidden;
+    padding-left: 60px;
+}
+.bcmpan .tops>div{
+    float: left;
+    width: 50%;
+    height: 76px;
+}
+.bcmpan .xia>div{
+    float: left;
+    height: 112px;
+    margin-right: 10px;
+}
+.contact-way{
+    background-color: #000000;
+    padding: 30px 176px 0 176px;
+    height: 265px;
+    border-bottom: 1px solid #333438;
+    color: #ffffff;
+}
+.contact-way .bog{
+    width: 700px;
+    overflow: hidden;
+    float: right;
+}
+.contact-way .bog>div{
+    float: left;
+    width: 160px;
+    overflow: hidden;
+}
+.contact-way h5{
+    color: #808183;
+}
+.contact-way .bog>div ul{
+    width: 158px;
+}
+.contact-way .bog>div ul li{
+    float: none;
+}
+.contact-way .bog>div ul li>a{
+    color: #ffffff;
+    font-size: 0.8em;
+}
+.contact-way .lefds{
+    width: 200px;
+    height: 295px;
+    float: left;
+}
+.contact-way .bog button{
+    width: 142px;
+    height: 40px;
+    border: 0;
+    background-color: #424243;
+}
+footer {
+    height: 103px;
+    padding: 0 200px 0 200px;
+    font-size: 0.8em;
+    background-color: #1f2024;
+}
+footer>div.rthes{
+    float: left;
+    width: 630px;
+    height: 103px;
+}
+footer>div.ssdf{
+    float: right;
+}
+footer>div.rthes>.topss{
+    height: 40.8px;
+    margin-top: 20px;
+    width: 630px;
+}
+footer>div.rthes>.topss>div,footer .rthes .bouts>div{
+    float: left;
+    margin-right: 10px;
+}
+footer .rthes .bouts{
+    height: 42.2px;
+    width: 630px;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>el元素事件处理程序的闭包</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            function assignHandler(){
+                var el=document.getElementById('demo');
+                var id=el.id;
+                el.onclick=function(){
+                    consolo.log(id);
+                }
+                el=null;
+            }
+            assignHandler();
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

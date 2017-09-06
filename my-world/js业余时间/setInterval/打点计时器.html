@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>打点计时器</title>
+    <script>
+        function count(start, end) {
+            function dadian(){
+                var counts=start;
+                console.log(counts);
+                var int = setInterval(function(){
+                    counts++;
+                    console.log(counts);
+                    cancel(counts);
+                },100); 
+                function cancel(){
+                    if(counts>=end){
+                        clearInterval(int);
+                    }  
+                }
+            }
+            return dadian();
+        }
+
+        //大神代码
+        function counts(start, end) {
+        //立即输出第一个值
+        console.log(start++);
+            var timer = setInterval(function(){
+                if(start <= end){
+                    console.log(start++);
+                }else{
+                    clearInterval(timer);
+                }
+            },100);
+            //返回一个对象
+            return {
+                cancel : function(){
+                    clearInterval(timer);
+                }
+            };
+        }
+        count(1,10);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

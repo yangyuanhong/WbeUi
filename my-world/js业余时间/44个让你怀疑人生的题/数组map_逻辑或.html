@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>数组-map-||</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            function isOdd(num){
+                return num % 2==1;
+            }
+            function isEven(num){
+                return num % 2==0;
+            }
+            function isSane(num){
+                return isEven(num)||isOdd(num);
+            }
+            var values=[7,4,'13',-9,Infinity];
+            console.log(values.map(isSane));
+            //逻辑或，有真则真，同假才假
+            //7-->isSane(num)-->isEven(num)返回false-->isOdd(num)返回true-->true
+            //4-->isSane(num)-->isEvan(num)返回true-->true
+            //"13"-->isSane(num)--isEvan(num)返回false-->isOdd(num)返回true--true
+            //-9-->isSane(num)-->isEvan(num)返回false--isOdd(num)返回false-->false
+            //infinity同-9；
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

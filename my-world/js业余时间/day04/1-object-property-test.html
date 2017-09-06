@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>object-property-test</title>
+	<script type="text/javascript">
+		var Cocs = {
+			name: "vicky",
+			age: 19,
+			gender: "女",
+			add: function(a,b){
+				alert(a+b);
+			},
+			SayName: function(c,d){
+				console.log(this.name);
+			}
+		}
+		console.log("---in---");
+		console.log("name" in Cocs);
+		console.log("toString" in Cocs);
+		console.log("---own---");
+		console.log(Cocs.hasOwnProperty("name"));
+		console.log(Cocs.hasOwnProperty("toString"));
+		console.log("---enum---");
+		console.log(Cocs.propertyIsEnumerable("name"));
+		console.log(Cocs.propertyIsEnumerable("toString"));
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

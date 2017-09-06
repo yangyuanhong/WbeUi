@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>匿名函数</title>
+    <script>
+        var a=(function (foo){
+            return typeof foo.bar;
+        })({
+            foo:{
+                bar:1
+            }
+        });
+      /* // console.log(a);
+        //1.拆分一下
+        var a={foo:{bar:1}}
+        (function (foo){return typeof foo.bar;})(a);
+        //再简化
+        var a={foo:{bar:1}}
+        var foo=a;
+        typeof foo.bar
+        //再简化，用a将foo替代掉
+        var a={foo:{bar:1}}
+        typeof a.bar
+        //现在就清楚了，无法直接通过a访问bar属性，只有通过a.foo.bar才成立，所以答案是A
+        */
+
+
+       var b= (function f(){
+            function f(){
+                return 1;
+            }return f();
+            function f(){
+                return 2;
+            }
+        })();
+        console.log(b);
+        /*
+        1）形式类似于第8题，中间多了个return
+        2）正常来说，return会导致跳出函数，所以后边的语句不会执行
+        3）但是，此处因为两个函数都是普通声明的函数，会被优先解析，所以第二个函数是在return前执行的；所以答案还是B
+        */
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

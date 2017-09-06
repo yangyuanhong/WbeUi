@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>arguments</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            function add(n1,n2){
+                return n1+n2;
+            }
+            function add(n1,n2,n3){
+                return n1+n2+n3;
+            }
+            console.log(add(1,2));
+            //NaN,js中调用方法采用就近原则；
+            //而由于该方法没有传入n3，所以结果是NaN
+
+            //js中没有方法重载,怎么解决上面这个问题？
+
+            //arguments
+            function f1(){
+                var sum=0;
+                for(var i=0;i<arguments.length;i++){
+                    sum+=arguments[i];
+                }
+                return sum;
+            }
+            console.log(f1(1,2,3,4,5));
+            //利用arguments，计算例子加上数字的和
+            function ff(name){
+                var sum=0;
+                for(var i=1;i<arguments.length;i++){
+                    sum+=arguments[i];
+                }
+                return arguments[0]+sum;
+            }
+            console.log(ff("列子",1,2,3,4,5));//列子15
+            //姓名，年龄
+            function test(name,age){
+                if(!age){
+                    age=18;
+                }
+                console.log("名字是"+name+"年龄是"+age);
+            }
+            test("小明");//名字是小明年龄是18
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

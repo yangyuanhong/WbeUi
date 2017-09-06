@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tripledouble</title>
+    <script>
+        function tripledouble(num1, num2) {
+            //code me
+            var str1=num1+"";
+            var str2=num2+"";
+            if(str1.length<1){return 0;}
+            if((str1.search(/(\d)\1{2}/))!=-1){
+                var tripl=str1.substr(str1.search(/(\d)\1{2}/),2);
+                if((num2+"").search(tripl)!=-1){
+                    return 1;
+                }
+            }
+                var triplstr=str1.substr(str1.search(/(\d)\1{2}/)+2);
+                return tripledouble(triplstr,str2-0);
+            
+        }
+
+        //大神代码
+        function tripledoubles(num1,num2){
+            return +/(\d)\1{2}.*\s.*\1{2}/g.test(num1+" "+num2)?1:0;
+        }
+        console.log(tripledoubles(1222355545, 185855345));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>正则表达式.exec</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            function captureOne(re,str){
+                var match=re.exec(str);
+                // console.log(match[1]);
+                return match&&match[1];
+            }
+            var numRe=/num=(\d+)/ig,
+            wordRe=/word=(\w+)/i,
+            a1=captureOne(numRe,"num=1"),
+            a2=captureOne(wordRe,"word=1"),
+            a3=captureOne(numRe,"NUM=2"),
+            a4=captureOne(wordRe,"WORD=2");
+            console.log(a1===a2,a3===a4);//true false
+            console.log(a1,a2,a3,a4);//1 1 null 2
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

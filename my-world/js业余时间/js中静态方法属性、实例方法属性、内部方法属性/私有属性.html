@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>静态方法等</title>
+    <script>
+        //1.私有类型：私有，即只能自己使用，
+        (function(){
+            var a="私有属性";
+            console.log(a);//私有的属性
+        })
+        console.log(a);//error a没有定义
+
+        //2.实例属性：即属于实例对象才能访问
+            var a=function(){
+                this.x="实例属性";
+            }
+            var t1=new a();
+            var t2=new a();
+
+            //t1和t2各有一个x，各自改变互不影响
+
+        //3.原型属性
+            var a=function(){this.x="实例属性"};
+            a.prototype.x="prototype";
+            var t=new a();
+            console.log(t.x);//实例属性
+            delete(t.x);
+            console.log(t.x);//原型属性
+            //说明先会访问实例属性，没有实例属性就会访问原型属性
+        //4.类属性
+            var a=function(){};
+            a.x="类属性";
+            var t =new a();
+            console.log(t.x);//undefined
+
+        //5.类属性综合案列
+
+            var a=function(){
+                var x="a";//内部属性、私有属性
+                this.z="c";//实例属性
+            }
+            a.y="b";//类属性
+            a.prototype.m="d";//原型属性
+
+            var t1=new a();
+            var t2=new a();
+            console.log(t1.x);//undefined
+            console.log(t2.x);//undefined
+            console.log(t1.y);//undefined
+            console.log(t2.y);//undefined
+            console.log(t1.z);//"c"
+            console.log(t2.z);//"c"
+            console.log(t1.m);//"d"
+            console.log(t2.m)//"d"
+            console.log(a.x);//undefined
+            console.log(a.y);//"b"
+            console.log(a.z);//undefined
+            console.log(a.m);//undefined
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

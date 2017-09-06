@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>object-construct</title>
+	<script type="text/javascript">
+		
+		var o=new Object();
+
+		console.log(o.constructor);
+
+		var Pson= function(name){
+			this.name=name;
+		}
+		var posn=new Pson("terry");
+		console.log(posn.constructor);
+
+		var date=new Date();
+		console.log(date.toString());
+		console.log(date.toLocaleString());
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>找出缺失的数</title>
+    <script>
+        var findMissing=function(list){
+            var n=0,m=list.length;
+            var a=list[1]-list[0],b=list[m-1]-list[m-2];
+            if(a>b) return list[0]+b;
+            if(a<b) return list[m-1]-a;
+            if(a==b){
+                for(var i=2;i<m-2;i++){
+                    if(list[i+1]-list[i]!=a){
+                        return list[i]+a;
+                    }
+                }
+            }
+        }
+        console.log(findMissing([1,3,5,9,11,13,15,17]));
+        console.log(findMissing([-10,-8,-6,-2,0,2,4,6,8,10]));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

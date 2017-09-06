@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>this小例子</title>
+    <script>
+        // var obj={
+        //     i:"test",
+        //     m:function(){
+        //         alert(this.i);//test
+        //         function B(){
+        //             alert(this.i);//输出undefined,this指向window;
+        //         }
+        //         B();
+        //     }
+        // }
+        // obj.m();
+
+        var obj={
+            i:"test",
+            m:function(){
+                alert(this.i);//指向obj对象，值test
+                function B(){
+                    var i=1;
+                    alert(this.i);//指向window，undefined
+                }
+                B();//
+            }
+        }
+        obj.m();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

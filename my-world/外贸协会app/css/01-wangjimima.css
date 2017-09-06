@@ -1,0 +1,29 @@
+body{
+    width: 750px;
+    margin: 50px auto;
+    font-size: 2em;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+
+}
+input,button{
+    height: 50px;
+    border: 1px solid #ededed;
+    border-radius: 5px;
+}
+input:first-child,.thre{
+    width: 70%;
+    
+}
+.one{
+    width: 50%;
+}
+button{
+    background-color: #f57129;
+    width: 150px;
+    border:  0;
+    margin: 50px auto;
+    color: #fff;
+    font-size: 0.8em;
+}

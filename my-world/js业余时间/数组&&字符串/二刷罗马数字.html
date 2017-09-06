@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>罗马数字</title>
+    <script>
+        function solution(roman){
+        // complete the solution by transforming the 
+        // string roman numeral into an integer  
+            var res=0;
+            for(var i=roman.length-1;i>=0;i--){
+                var c=roman.charAt(i);
+                switch(c){
+                    case 'I':
+                        res+=(res>=5?-1:1);
+                        break;
+                    case 'V':
+                        res+=5;
+                        break;
+                    case 'X':
+                        res+=10*(res>=50?-1:1);
+                        break;
+                    case 'L':
+                        res+=50;
+                        break;
+                    case 'C':
+                        res+=100*(res>=500?-1:1);
+                        break;
+                    case 'D':
+                        res+=500;
+                        break;
+                    case 'M':
+                        res+=1000;
+                        break;
+                }
+            }
+            return res;
+        }
+        console.log(solution("MDCLXVI"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

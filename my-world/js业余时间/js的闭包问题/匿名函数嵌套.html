@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>写一个mul函数，使用方法如下</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+      <script>
+            console.log(mul(2)(3)(4));
+            console.log(mul(4)(3)(4));
+
+            function mul(x){
+                return function (y){
+                  return function (z){
+                    return x*y*z;
+                  };
+                };
+            }
+      </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

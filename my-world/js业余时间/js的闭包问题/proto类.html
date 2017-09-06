@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>prototype类</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            function Myobject(name,message){
+                this.name=name.toString();
+                this.message=message.toString();
+            }
+            Myobject.prototype.getName=function(){
+                return this.name;
+            };
+            Myobject.prototype.getMessage=function(){
+                return this.message;
+            };
+
+            function Myobjects(name,message){
+                this.name=name.toString;
+                this.message=message.toString;
+            }
+            (function(){
+                this.getName=function(){
+                    return this.name;
+                };
+                this.getMessage=function(){
+                    return this.message;
+                };
+            }).call(Myobject.prototype);
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

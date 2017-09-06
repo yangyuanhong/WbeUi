@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1~100之间的累加</title>
+	<script type="text/javascript">
+		function forAcc(){
+			var sum=0;
+			for(var i=1;i<=100;i++){
+				sum+=i;
+			}
+			document.write(sum);
+		}
+		function whileAcc(){
+			var i=1;
+			var sum=0;
+			while(i<=100){
+				sum+=i;
+				i++;
+			}
+			document.write(sum);
+		}
+		function doWhileAcc(){
+			var i=1;
+			var sum=0;
+			do{
+				sum+=i;
+				i++;
+			}while(i<=100);
+			document.write(sum);
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<button onclick="forAcc();">for累加</button>
+		<button onclick="whileAcc();">w累加</button>
+		<button onclick="doWhileAcc();">dw累加</button>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Given a string, find the length of the longest substring without repeating characters.</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>   
+           var lengthOfLongestSubstring = function(s) {
+                    if(s.length==0){ return 0;}
+                    var longstr= [];
+                    var index=1; 
+                       while(s.length>1){
+                            for(var j=1;j<s.length-1;j++){
+                                if(s.charAt(0)==s.charAt(j)){
+                                longstr[index]=s.substring(0,j);
+                                s=s.substring(j);
+                                alert(longstr);
+                                alert(s);
+                                break;
+                                }
+                        }
+                        index++;
+                       }
+
+                          
+
+                    var longstrs=longstr[0];
+                        for(var i=1;i<longstr.length;i++){
+                            if(longstrs.length<longstr[i].length){
+                                longstrs=longstr[i];
+                            }
+                        }
+                    return longstrs.length;
+                };
+                function lengthOfLongestSubstringD(s) {
+                    const map = {};
+                    var left = 0;
+                    
+                    return s.split('').reduce((max, v, i) => {
+                        left = map[v] >= left ? map[v] + 1 : left;
+                        map[v] = i;
+                        return Math.max(max, i - left + 1);
+                    }, 0);
+                    }
+                // var num=lengthOfLongestSubstring("adabcdsdds");
+                //     console.log(num);
+                // var un="abscdsew";
+                // console.log(un.split(''));
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

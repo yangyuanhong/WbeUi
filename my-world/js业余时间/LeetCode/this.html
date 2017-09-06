@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+           /* var a=10;
+            var foo={
+            a:20,
+            bar:function(){
+                var a=30;
+                return this.a;
+                }
+            }
+            foo.bar()
+            //20
+            (foo.bar)()
+            //20
+            (foo.bar=foo.bar)()
+            //10
+            (foo.bar,foo.bar)()
+            //10*/
+
+            function greeting(name) { 
+                var text = 'Hello ' + name; // local variable     
+                    // 每次调用时，产生闭包，并返回内部函数对象给调用者    
+                     return function() { 
+                        alert(text); 
+                    } 
+                } 
+                var sayHello=greeting("Closure");
+                 sayHello();  // 通过闭包访问到了局部变量text
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

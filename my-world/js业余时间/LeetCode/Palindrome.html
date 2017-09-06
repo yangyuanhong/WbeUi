@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>判断一个数是否是对称数</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            //将一个数的右半边顺序输出
+                var reverse = function(x){
+                var rul=0;
+                var sum=0;
+                var n=Math.round(x.toString().length/2);
+                // console.log(n);
+                var j=n-1;
+                for(var i=0;i<n;i++){
+                    rul=Math.floor(x/Math.pow(10,i)%10);
+                   // console.log(rul);
+                    sum+=(rul*Math.pow(10,j))
+                    j--;
+                }
+                return sum;
+            };
+            //将一个数的左半边顺序输出
+            var  rlefts =function(x){
+                var rul=Math.floor(x.toString().length/2);
+                return Math.floor(x/Math.pow(10,rul));
+
+            }
+            //判断一个数是不是对称数
+            var isPalindrome = function(x){  
+                var rlust=reverse(x);
+                if(rlust==x){
+                    return false;
+                }
+                var ruls=rlefts(x);
+                //console.log(ruls);
+                if(rlust==ruls)
+                return true;        
+            };
+            //论坛大神的代码
+             function isPalindromes(x){
+                if (x<0 || (x!=0 && x%10==0)) return false;
+                var  rev = 0;
+                while (x>rev){
+                    rev = rev*10 + x%10;
+                    x = x/10;
+                }
+                return (x==rev || x==rev/10);
+            }
+           // console.log(Math.floor(x/10));
+            //赋值方法
+            function assignment(){
+                for(var i=0;i<1000;i++){
+                    if(isPalindromes(i)){
+                        console.log(i);
+                    }
+                }
+            }
+            assignment();
+           // isPalindrome(12321);
+            // console.log(Math.round(1.4));
+           // console.log(Math.floor(12534/100));
+          // console.log(isPalindrome(12221));
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

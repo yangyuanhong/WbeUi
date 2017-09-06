@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>平方</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            /* In this kata, you are asked to square every digit of a number.
+            For example, if we run 9119 through the function, 811181 will come out.
+            Note: The function accepts an integer and returns an integer
+            */
+            function squareDigits(num){
+            //may the code be with you
+                function power(element,index,array){
+                    return element*element+"";
+                }
+                var str=num+"";
+                // console.log(typeof(str)+""+str);
+                var arr=str.split("").map(power);
+                console.log(arr);
+                strs=arr.join("");
+                return strs-0;
+            }
+            console.log(squareDigits(9414));
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

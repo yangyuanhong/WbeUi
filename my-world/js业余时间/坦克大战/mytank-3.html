@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>tank转动</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/mytank3.css" rel="stylesheet">
+         <script>
+             var ss = document.styleSheets;
+             var cssRule;
+             var ss1=document.styleSheets[0].cssRules || document.styleSheets[0].rules;
+                var style1=ss1[1];
+                var style2=ss1[2];
+                var rule;
+                for (var i = 0; i < ss.length; ++i) {
+                    // loop through all the rules!
+                    for (var x = 0; x < ss[i].cssRules.length; ++x) {
+                        rule = ss[i].cssRules[x];
+                        if (rule.name == "drin4" && rule.type== CSSRule.KEYFRAMES_RULE){
+                            cssRule = rule;
+                        }
+
+                    }
+                }
+             //坦克大战1.2.0版，用户按下wasd键 坦克上左下右移动 能按j自由发射子弹
+           function mytank(x,y,dict){
+                this.x=x ;
+                this.y=y;
+                this.speed=5;
+               this.dict=dict;
+               //自己的坦克移动
+               this.mov=function(keynum){
+                 style1.style.bottom=this.y+"px";
+                 style1.style.left=this.x+"px";
+                 style1.style.backgroundPositionY=32+"px";
+                 ////wasd 分别代表上左下右 dict 0 1 2 3 分别代表枪口上下左右
+                switch (keynum) {
+                    case 87:
+                        this.y+=this.speed;
+                        this.dict=0;
+                        style1.style.backgroundPositionY=32+"px";
+                        break;
+                    case 65:
+                        this.x-=this.speed;
+                        this.dict=2;
+                        style1.style.backgroundPositionY=96+"px";
+                        break;
+                    case 83:
+                       this.y-=this.speed;
+                        this.dict=1;
+                        style1.style.backgroundPositionY=127+"px";
+                        break;
+                    case 68:
+                       this.x+=this.speed;
+                        this.dict=3;
+                        style1.style.backgroundPositionY=64+"px";
+                        break;
+                }
+                style1.style.bottom=this.y+"px";
+                style1.style.left=this.x+"px";
+            }
+                    // this.shoot=function(key){
+                        
+                    // }
+            // 判断用户想干嘛
+                    this.dosome=function(obj){
+                    var keynum;
+                    if(window.event) // IE
+                    {
+                    keynum = obj.keyCode;
+                    }
+                    else if(obj.which) // Netscape/Firefox/Opera
+                    {
+                    keynum = obj.which;
+                    }
+                     if(keynum==87||keynum==83||keynum==68||keynum==65){
+                        this.mov(keynum);
+                    }else if(keynum==74){
+                        new Shoot(this.x,this.y,this.dict).mov(keynum);
+                        console.log(this.dict);
+                    }
+                }
+                   
+
+           }
+           function Shoot(x,y,dict){
+               this.x=x;
+               this.y=y;
+               this.dict=dict;
+               this.mov=function(key){
+                
+                
+                var $shoot=document.getElementsByClassName("myshoot")[0];
+               
+                
+               //dict 0 1 2 3 分别代表子弹上下左右移动
+                    if(this.dict==0&&key==74){
+                        x=x+10;
+                        y=y+32;
+                        $shoot.style.left=x+"px";
+                        $shoot.style.bottom=y+"px";
+                        var ins=setInterval(function(){
+                            var bottom = (parseInt($shoot.style.bottom)+1);
+                            if(bottom>400){
+                                clearInterval(ins);
+                                return false;
+                            }
+                            $shoot.style.bottom = bottom+"px";
+                        },10);
+                       
+                        
+                         //dict 0 1 2 3 分别代表子弹上下左右移动
+                    }else if(this.dict==1&&key==74){
+                        x=x+12;
+                        y=y;
+                        $shoot.style.left=x+"px";
+                        $shoot.style.bottom=y+"px";
+                        var ins=setInterval(function(){
+                            var bottom = (parseInt($shoot.style.bottom)-1);
+                            if(bottom<0){
+                                clearInterval(ins);
+                                return false;
+                            }
+                            $shoot.style.bottom = bottom+"px";
+                        },10);
+                        //dict 0 1 2 3 分别代表子弹上下左右移动
+                    }else if(this.dict==2&&key==74){
+                        x=x;
+                        y=y+16;
+                        $shoot.style.left=x+"px";
+                        $shoot.style.bottom=y+"px";
+                        var ins=setInterval(function(){
+                            var left = (parseInt($shoot.style.left)-1);
+                            if(left<0){
+                                clearInterval(ins);
+                                return false;
+                            }
+                            $shoot.style.left= left+"px";
+                        },10);
+                        //dict 0 1 2 3 分别代表子弹上下左右移动
+                    }else if(this.dict==3&&key==74){
+                        x=x+32;
+                        y=y+16;
+                        console.log(x,y);
+                        $shoot.style.left=x+"px";
+                        $shoot.style.bottom=y+"px";
+                        var ind=setInterval(function(){
+                            var left = (parseInt($shoot.style.left)+1);
+                            if(left>400){
+                                clearInterval(ind);
+                                return false;
+                            }
+                            $shoot.style.left = left+"px";
+                        },10);
+                    }
+               }
+
+           }
+           var hero=new mytank(200,0,0)
+        </script> 
+    </head>
+    <body onkeydown="return hero.dosome(event)">
+        <div class="Frames">
+             <div class="mytanks"></div>
+             <div class="myshoot" style="bottom:0px;left:0px;"></div>
+        </div>
+    </body>
+</html>

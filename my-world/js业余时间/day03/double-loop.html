@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>double-loop</title>
+	<script type="text/javascript">
+		var spce="&nbsp;&nbsp";
+		var enter= "<br/>";
+
+		for (var i = 1; i <= 9; i++) {
+			for(var j=1; j<=i;j++){
+				var ss=spce;
+				if (i*j<10) {
+					ss=spce + spce;
+				}
+				document.write(j+"* "+i+"= "+(i*j)+ss);
+			}
+			document.write(enter);
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

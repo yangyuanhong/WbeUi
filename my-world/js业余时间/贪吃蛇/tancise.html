@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>贪吃蛇</title>
+    <style>
+        .Frames{
+            width: 400px;
+            height: 500px;
+            background-color: #000000;
+            border: 1px solid #000000;
+            margin: 0 auto;
+            position: relative;
+        }
+       
+    </style>
+    
+</head>
+<body onkeydown="return tcs.Move(event)">
+    <div class="Frames" >
+        <div style="width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: red; 
+        position: absolute;
+        left: 195px;
+        top: 250px;"></div>
+        <div style="width: 30px;
+        height: 10px;
+        background-color: beige;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        position: absolute;
+        left: 0px;
+        top: 0px;"> </div>
+    </div>
+</body>
+<script>
+        var $Frames=document.body.firstElementChild;
+        var $star=$Frames.firstElementChild;
+        var $tcs=$star.nextElementSibling;
+        
+    //贪吃蛇1.1版，红星随机生成
+        function Star(x,y){
+            this.x=x;
+            this.y=y;
+
+                $star.style.left=x+"px";
+                $star.style.top=y+"px";
+           
+        }
+
+        // new Star(1,2);
+        //随机生成器
+        function Random(){
+            var ion=setInterval(function(){
+                var a=Math.random()*400;
+                var b=Math.random()*500;
+                new Star(a,b);
+            },1000);
+        }
+
+        //贪吃蛇，能上下左右移动
+        function TcS(x,y,direct,speed){
+            this.x=x;
+            this.y=y;
+            this.direct=direct;
+            this.speed=speed;
+
+            // $tcs.style.top=x+"px";
+            // $tcs.style.left=y+"px";
+        
+            this.Move=function(obj){
+            
+                var keycod=obj.which;
+            switch(keycod){
+                case 87:
+                    this.y-=this.speed;
+                    this.direct=0;
+                    break;
+                case 65:
+                    this.x-=this.speed;
+                    this.direct=0;
+                    break;
+                case 83:
+                    this.y+=this.speed;
+                    this.direct=0;
+                    break;
+                case 68:
+                    this.x+=this.speed;
+                    this.direct=0;
+                    break;
+            }
+            $tcs.style.left=this.x+"px";
+            $tcs.style.top=this.y+"px";
+        }
+    }
+        var tcs=new TcS(2,3,0,5);
+       
+        
+        // Random();
+</script>
+</html>

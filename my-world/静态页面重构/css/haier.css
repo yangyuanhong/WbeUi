@@ -1,0 +1,262 @@
+body,ul{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "华文正楷";
+}
+a{
+    text-decoration: none;
+}
+li{
+    float: left;
+    list-style: none;    
+}
+header,footer,nav{
+    display: block;
+    /*块级展示  */
+}
+/*头  */
+header{
+    background-color: #f1f1f3;
+     /* height: 28px;   */
+    padding-left: 196.6px;
+    padding-right: 120px;
+    overflow: hidden;
+    border-bottom: 1px solid #cfcfcf;
+}
+header div.logo{
+    width: 342.9px;
+    height: 28px;
+}
+header div.logo ul{
+     width: 340px;
+     height: 28px;
+}
+header div.logo ul li{
+    margin-right: 10px;
+}
+header div.logo ul li:last-child{
+    margin-right: 0;
+}
+header div.logo ul li>select{
+    background-color: #d0d0d1;
+    height: 28px;
+    border: 0;
+}
+header div.logo ul li>a{
+    color: #555555;
+    line-height: 28px;
+}
+header div.roll{
+    width: 437.4px;
+    height: 28px;
+    color: #555555;
+}
+header>nav{
+    width: 356.5px;
+}
+header nav ul{
+    overflow: hidden;
+    width: 350px;
+}
+header nav ul li{
+    width: 68px;
+    text-align: center;
+    border-left: 1px solid #c4f1f3;
+    border-right: 1px solid #935594;
+}
+header nav ul li:first-child{
+    border-left: 0;
+}
+header nav ul li:last-child{
+    border-right: 0;
+}
+header nav ul li>a{
+    line-height: 28px;
+    color: #555555;    
+}
+header div.logo,div.roll,nav{
+    float: left;
+}
+div.seeks{
+    overflow: hidden;
+    background-color: #fdfdfd;
+    padding-left: 218px;
+    padding-right: 200px;
+}
+div.seeks>div{
+    float: left;
+    height: 85px;
+    margin-right: 67px;
+}
+div.seeks div.lefss{
+    width: 150px;
+}
+div.seeks .seekes{
+    width: 562px;
+    height: 29px;
+    padding: 20px 0 36px 0;
+}
+div.seeks .seekes>div{
+    float: left;
+     height: 29px;
+}
+div.seeks .seekes>div:first-child{
+    width: 410.8px;
+   
+}
+div.seeks .seekes>div:last-child{
+    width: 150px;
+}
+div.seeks .seekes input{
+    height: 24.2px;
+    width: 406px;
+}
+div.seeks .rightss{
+    width: 221px;
+    height: 65px;
+    padding-top: 20px;   
+    margin-right: 0px;
+}
+div.menusd{
+    overflow: hidden;
+    background-color: #e3e3e6;
+    padding: 0 150px 0 206.5px;
+    border-bottom: 1px solid #808080;
+}
+div.menusd>div{
+    height: 36px;
+    float: left;
+}
+div.menusd .fenlei{
+    width: 215px;
+    background-color: sandybrown;
+}
+div.menusd .fenlei>select{
+    width: 215px;
+    height: 36px;
+}
+div.menusd .fenlei>select>option{
+    height: 43px;
+    border-bottom: 1px solid #bebebe;
+}
+div.menusd .menusds{
+    width: 689px;
+}
+div.menusd .menusds ul{
+    width: 80%;
+}
+div.menusd .menusds ul li{
+    margin: 0 10px 0 10px;
+    line-height: 36px;
+}
+div.menusd .menusds ul li>a{
+    color: #20204e;
+    font-weight: 600;
+}
+div.menusd .gouwu{
+    width: 202.2px;
+    height: 32px;
+    padding-bottom: 4px; 
+}
+div.menusd .gouwu>div{
+    float: left;
+    margin-right: 10px;
+}
+ div.menusd .gouwu>button{
+    height: 36px;
+    width: 80px;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #df194e;
+} 
+.centnt{
+    padding: 38px 237px 0 512px;
+    background-color: #ededed;
+}
+.centnt .bog{
+    overflow: hidden;
+    width: 787px; 
+}
+.centnt .bog>div{
+    width: 28%;
+    height: 189px;
+    float: left;
+}
+.centnt .bog .last{
+    width: 16%;
+}
+.centnt .bog div ul{
+    margin-top: -10px;
+}
+.centnt .bog div ul li{
+    float: none;
+}
+.centnt .bog div ul li>a{
+    font-size: 0.8em;
+    color: #555555;
+}
+.smala{
+    background-color: #ffffff;
+}
+.smala .smlss{
+    margin: 0 auto;
+    width: 1003px;
+    overflow: hidden;
+}
+.smala .smlss>div{
+    width: 264.2px;
+    height: 130px;
+    padding-right: 137px;
+    float: left;
+}
+.smala .smlss .last{
+    width: 20%;
+    padding-right: 0;
+}
+footer{
+    background-color: #aeaeae;
+    height: 176px;
+}
+footer>div{
+    width: 600px;
+    padding-top: 20px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+footer>div>ul{
+    width: 600px;
+    overflow: hidden;
+}
+footer>div>ul li{
+    line-height: 18px;
+     width: 78px;
+    text-align: center;
+    border-right: 1px solid #c5dfff;
+    border-left: 1px solid #ffedd1;
+}
+footer>div>ul li:first-child{
+    border-left: 0;
+}
+footer>div>ul li:last-child{
+    border-right: 0;
+}
+footer>div>ul li>a{
+    color: #ffffff;
+}
+footer>div>p{
+   margin-top: 0;
+   text-align: center;
+}
+footer>ul{
+    width: 800px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+footer>ul li{
+    margin-right: 10px;
+}
+div .rghtsss{
+    float: right;
+}
+   

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>判断一个数是不是素数</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+        function isPrime(num) {
+        //TODO
+            if(num<2){return false;}
+            var flg=true;
+            for(var i=2;i<num/2;i++){
+                if(num%i==0){
+                    flg=false;
+                }
+            }
+            return flg;
+            }
+            console.log(isPrime(2));
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

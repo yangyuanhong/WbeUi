@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>利用*输出一个等腰三角形</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            function sanJao(){
+                document.write("<div class='one' style='margin:0 auto;text-align:center;width: 300px;height:300px;background:#ccc;border:1px solid #red;'>");
+                // var spce="  ";
+                for(var i=0;i<5;i++){
+                    var si=2*i+1;
+                    for(var j=0;j<si;j++){
+                        document.write("*");
+                    }
+                    document.writeln("<br>");
+                }
+                document.write("</div>");
+            }
+            sanJao();
+        </script>
+    </head>
+    <body>
+      <div class="one"></div>
+    </body>
+</html>

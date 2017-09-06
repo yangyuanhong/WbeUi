@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>闭包中局部变量是引用而非拷贝</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            function say(){
+                //local variable that ends up within closure
+                var num=666;
+                var sayAlert=function(){
+                    alert(num);
+                }
+                num++;
+                return sayAlert;
+            }
+            var sayAlert=say();
+            sayAlert();
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

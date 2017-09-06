@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>arguments</title>
+	<script type="text/javascript">
+		function add(){
+				var total=0;
+			for(var key in arguments){
+				var vul=arguments[key];
+				total+=vul;
+			}
+			return total;
+		}
+		console.log(add(1,2,3,4));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

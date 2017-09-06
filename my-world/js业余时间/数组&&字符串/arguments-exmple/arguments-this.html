@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>this-arguments</title>
+    <script>
+        var foo={
+            bar:function(){
+                return this.baz;
+            },
+            baz:1
+        };
+        var a=(function (){
+            return typeof arguments[0]();//arguments[0]是function(){return this.baz;},而arguments[0]()
+            //就相当于arguments.bar(),这里this指向arguments，固返回undefined,typeof undefined=>"undefined";
+
+        })(foo.bar);//"undefined"
+        //console.log(a);
+        var foo={
+            bar:function (){
+                return this.baz;
+            },
+            baz:1
+        }
+       var b= typeof (f=foo.bar)();//"undefined"
+       // console.log(b);
+       //可以把调用函数拆分一下
+       //var f=foo.bar
+       //typeof f();
+
+       var f=(function f(){
+           return "1";
+       },function g(){
+           return 2;
+       })();
+       //这种形式，最终圆括号返回的是最后的一个值
+       //比如var a=(1,2,3,4);console.log(a)//4
+       //所以，同样的此处会返回第二个函数出来执行，得到的最终返回值是2并赋值给f；所以答案是B
+    //    console.log(typeof f);//
+       
+       
+       var x=1;
+       if(function f(){}){
+           console.log(typeof f);
+           x+=typeof f;
+          // console.log(x);
+       }
+       x;
+       console.log(x);
+       /*
+        1）首先在if判定中，函数f的布尔值是true；所以判定条件成立，可以执行if中的语句
+        2）函数f在正常声明的情况下，typeof f应该是"function"
+        3）但是题目中f函数只是if的判定条件，没有经过声明；所以typeof f返回"undefined"，所以答案是C
+        //单独声明的情况下，f是函数类型
+        function f(){}
+        typeof f //"function"
+        //但题目中f作为一个if中的判定条件存在，未得到声明
+        if(function f(){}){
+        }
+        typeof f //"undefined"
+       */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

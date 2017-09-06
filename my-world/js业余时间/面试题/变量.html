@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>example</title>
+    <script>
+       /* var flag=true;
+        var flag2=true;
+        if(flag==true){
+            var i=0;
+            j=1;
+            if(flag2==true){
+                for(var m=0;m<10;m++){
+
+                }
+            }
+        }
+        alert(i);//0
+        alert(j);//1
+        alert(m);//10
+
+        var x=1;
+        function ScopeTest(){
+            alert(x);
+        }
+        ScopeTest();//1
+
+        var y=1;
+        function ScopeTest(){
+            alert(x);
+            var x="hello world";
+            alert(x);
+        }
+        ScopeTest();//undefined,hello world
+*/
+        var name="";
+        function echo(){
+            alert(name);
+        }
+        function env(){
+            var name="eve";
+            echo();
+        }
+        env();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

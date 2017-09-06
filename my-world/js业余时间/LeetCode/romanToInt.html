@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>罗马数字转换整数</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            var romanToInt=function(s){
+               var s=s.split("");
+                var count=0;
+                var count1=0;
+                var count2=0;
+                var thousands=0;
+                var hundreds=0;
+                var tensPlace=0;
+                var units=0;
+                for(var i=0;i<s.length;i++){
+                    if(s[i]=='M'){
+                        count++;
+                        if(s[i-1]=='C'||s[0]=='C'){
+                            count--;
+                            hundreds=900;
+                            count1--;
+                        }
+                    }else if(s[i]=='D'){
+                        hundreds=500;
+                        if(s[i-1]=='C'){
+                            hundreds-=100;
+                        }
+                    }else if(s[i]=='C'){
+                        count1++;
+                        if(s[i-1]=='X'){
+                            count1--;
+                            tensPlace=90;
+                        }
+                    }else if(s[i]=='L'){
+                        tensPlace=50;
+                        count2--;
+                        if(s[i-1]='X'){
+                            tensPlace=40;
+                        }
+                    }else if(s[i]=='X'){
+                        count2++;
+                        if (s[i-1]=='I'){
+                            count2--;
+                            units=9;
+                        }
+                    }else if(s[i]=='V'){
+                        units=5;
+                        if(s[i-1]=='I'){
+                            units=4;
+                        }
+                    }else if(s[i]=='I'){
+                        units++;
+                    }
+                }
+                for(var j=0;j<count;j++){
+                    thousands+=1000;
+                    console.log(thousands);
+                }
+                for(var j=0;j<count1;j++){
+                    hundreds+=100;
+                    console.log(hundreds);
+                }
+                for(var j=0;j<count2;j++){
+                    tensPlace+=10;
+                    console.log(tensPlace);
+                }
+                var sum=thousands+hundreds+tensPlace+units;
+                return sum;
+            };
+           console.log(romanToInt("MDCLXVI"));
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

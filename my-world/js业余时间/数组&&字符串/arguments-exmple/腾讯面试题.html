@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>面试题</title>
+    <script>
+        function test(x,y){
+            var x=10;
+            alert(arguments[0],arguments[1]);
+        }
+       // test(1);//10
+
+        //1.直接修改函数声明时的形参
+
+        function f1(a){
+            alert(a);
+            a=1;
+            alert(1===a);
+            alert(1===arguments[0]);
+        }
+        //f1(10);
+        //2.通过函数内部的arguments对象修改
+        function f2(a){
+            alert(a);
+            arguments[0]=1;//修改arguments
+            alert(1===a);
+            alert(1===arguments[0]);
+        }
+        //f2(10);
+
+        function f3(a){
+            alert(a);
+            var a=1;//声明局部变量a且赋值为1
+            alert(1===a);
+            alert(arguments[0]);
+        }
+        //f3(10);
+        function f4(a){
+            var a;//仅声明，不赋值
+            alert(a);
+            alert(arguments[0]);
+        }
+        f4(10);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

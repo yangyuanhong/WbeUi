@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>函数内部arguments数组</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            function sidEffecting(ary){
+                ary[0]=ary[2];
+            }
+            function bar(a,b,c){
+                c=10;
+                sidEffecting(arguments);
+                return a+b+c;
+            }
+            bar(1,1,1);//返回21
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>作用域</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+           /* var name='World';
+            (function (){
+                if(typeof name==='undefined'){//name==='undefined'返回false 然后typeof的返回值为string，任意非空字符串转为Boolean都为true
+                    var name='Jack';
+                    console.log('Goodbye '+name);
+                }else{
+                    console.log('Hello '+name);
+                }
+            })();//所以输出Goodbye Jack;*/
+            (function (){
+                var x=y=1;
+            })();
+            console.log(y);
+            console.log(x);
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

@@ -1,0 +1,117 @@
+
+.ss{
+    width: 750px;
+    height: 1280px;
+}
+.ss>img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.ss .big{
+    width: 750px;
+    height: 750px;
+    position: absolute;
+    top: 370px;
+}
+.ss .yuan1,.yuan2{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #f57129;
+    position: absolute;
+
+}
+.ss .yuan1{
+    left: 240px;
+    top: 25px;
+}
+.ss .yuan2{
+    left: 465px;
+    top: 625px;
+}
+.ss .big .xu{
+    width: 640px;
+    height: 640px;
+    border-radius: 50%;
+    position: absolute;
+    border: 1px dashed #f67228;
+}
+.ss .big #one{
+    left: 35px;
+    top: 10px;
+ }
+.ss .big #two{
+   left: 50px;
+   top:  5px;
+}
+.ss .big .conent{
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 30px solid rgba(214, 214,214, 0.5);
+    text-align: center;
+    background-color: rgba(107, 107, 107, 0.75);
+    font-size: 24px; 
+}
+.ss .big .conent>img{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.ss .big .conent input{
+    width: 378px;
+    height: 68px;
+
+    margin-bottom: 40px; 
+    background-color: transparent;
+    border: 3px solid#f7f7f7;
+    border-radius: 5px;  
+    font-size: 1.5em;
+}
+::-webkit-input-placeholder{
+    color: #f7f7f7;   
+}
+.ss .big .conent .dend{
+    width: 190px;
+    height: 80px;
+    background-color: #f57129;
+    border: 0;
+    margin-top: 40px;
+
+}
+.ss .big .conent .butn{
+    width: 190px;
+    height: 75px;
+    border: 0;    
+    background-color: #f57129;
+}
+.ss .big .conent .cin{
+    width: 378px;
+    height: 32px;
+    margin: 100px auto;
+}
+.ss .big .conent .cin .leds{
+    float: left;
+    width: 30%;
+    height: 32px;
+}
+.ss .big .conent .cin .rghs{
+    float: right;
+    width: 30%;
+    height: 32px;
+}
+.ss .big .conent .cin button{
+    width: 100%;
+    height: 32px;
+    background-color: transparent;
+    color: #f7f7f7;
+    font-size: 1em;
+    border: 0;
+}
+.ss .big .conent .yanz{
+    position: absolute;
+    top: 290px;
+    left: 420px;
+    color: #f67228;
+}

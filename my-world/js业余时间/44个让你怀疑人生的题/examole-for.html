@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>for</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            var END=Math.pow(2,53);
+            var START=END-100;
+            var count=0;
+            for(var i=START;i<=END;i++){
+                count++;
+            }
+            console.log(count);//报错，会无限循环
+           //由于2^53是js最大的数，即使加减也不会变化
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

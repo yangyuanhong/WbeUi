@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>split</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            /*
+            Example:
+                Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
+                Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
+            */
+            String.prototype.toJadenCase = function () {
+                //...
+                function outsdr(element){
+                    var sar=element.split("");
+                    sar[0]=(sar[0]+"").toUpperCase();
+                    element=sar.join("");
+                    return element;
+                }
+                var arr=str.split(" ").map(outsdr);
+                return arr.join(" ");
+                };
+                var str="How can mirrors be real if our eyes aren't real";
+                console.log(str.toJadenCase());
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

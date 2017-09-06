@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>求和</title>
+    <script>
+        /*
+            Given the string representations of two integers, return the string representation of the sum of those integers.
+            For example:
+            sumStrings('1','2') // => '3'
+            A string representation of an integer will contain no characters besides the ten 
+            numerals "0" to "9".
+        */
+        function toFixed(x) {
+            if (Math.abs(x) < 1.0) {
+                var e = parseInt(x.toString().split('e-')[1]);
+                if (e) {
+                    x *= Math.pow(10,e-1);
+                    x = '0.' + (new Array(e)).join('0') + x.toString().substring(2);
+                }
+            } else {
+                var e = parseInt(x.toString().split('+')[1]);
+                if (e > 20) {
+                    e -= 20;
+                    x /= Math.pow(10,e);
+                    x += (new Array(e+1)).join('0');
+                }
+            }
+            return x;
+        }
+        function sumStrings(a,b) { 
+            var total = +a + (+b) ;
+            var str=total+"";
+            return toFixed(str.substr(0,21)-0)+""+toFixed(str.substring(20,-1)-0);
+            }
+        console.log(sumStrings('50095301248058391139327916261','81055900096023504197206408605'));
+        //1311512013440818 82842044440424
+        //应该1311512013440818 95336534324866
+        console.log(sumStrings('712569312664357328695151392','8100824045303269669937'));
+        //    712577413488402 631964821329
+        //实际712577413488402 728280248400
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

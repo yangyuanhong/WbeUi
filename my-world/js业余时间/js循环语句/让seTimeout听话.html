@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>如何让for循环中的setTimeout()函数像预想中一样工作</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            function doScaledTimeout(i) {
+                setTimeout(function() {
+                    alert(i);
+                }, i * 5000);
+            }
+            for(var i=1;i<=2;i++){
+                doScaledTimeout(i);
+            }
+            
+
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

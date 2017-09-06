@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>闭包小例子</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            //它自己作用域的变量
+            //父函数作用域的变量
+            //全局作用域的变量
+
+            // var globalVar="abc";
+
+            // function outerFunction(outerArg){
+            //     var outerFuncVar="x";
+            //     function innerFunction(innerArg){
+            //         var innerFuncVar="y";
+            //         console.log("outerArg="+outerArg+"\n"+"innerArg="+innerArg+"\n"+"innerFuncVar="
+            //         +innerFuncVar+"\n"+"globalVar="+globalVar);
+            //     }
+            // }
+            // outerFunction();
+             var globalVar = "abc"; 
+
+            // Parent self invoking function 父类自我调用函数
+            (function outerFunction (outerArg) { // begin of scope outerFunction 开始范围outerFunction
+                // Variable declared in outerFunction function scope 在外套函数范围内声明的变量
+                var outerFuncVar = 'x';    
+                // Closure self-invoking function 关闭self-invoking函数
+                (function innerFunction (innerArg) { // begin of scope innerFunction 开始范围innerFunction
+                    // variable declared in innerFunction function scope 内函数函数范围内声明的变量
+                    var innerFuncVar = "y"; 
+                    console.log(          
+                        "outerArg = " + outerArg + "\n" +
+                        "outerFuncVar = " + outerFuncVar + "\n" +
+                        "innerArg = " + innerArg + "\n" +
+                        "innerFuncVar = " + innerFuncVar + "\n" +
+                        "globalVar = " + globalVar);
+            
+                })(5); // Pass 5 as parameter 将5作为参数传递
+            } )(7); // Pass 7 as parameter 将7作为参数传递
+            //innerFunction is closure that is defined inside outerFunc inner函数是在外套内部定义的闭包
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

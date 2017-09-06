@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>从一个字符串中找出n-z</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+        /*
+        只有a-m才不会出错
+        Example:
+            s="aaabbbbhaijjjm"
+            error_printer(s) => "0/14"
+
+            s="aaaxbbbbyyhwawiwjjjwwm"
+            error_printer(s) => "8/22"
+        */
+            function printerError(s) {
+                // your code
+                var arr=s.match(/[n-z]/g);
+                // console.log(arr);
+                return arr.length+"/"+s.length;
+            }
+            console.log(printerError("afdvsdregqrwwrwgvdf"));
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

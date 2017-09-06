@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>对数组进行排序并删除重复元素返回新的数组长度</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            // var removDuplicates=function(nums){
+            //     function firstPai(a,b){
+            //         // if(a==b){return b;}
+            //         return a-b;
+            //     }
+            //     var arr=nums.sort(firstPai);
+            //     return arr;
+            // };
+            // var arrs=[5,9,4,5,7,8,9,6,3];
+            // console.log(removDuplicates(arrs));
+            // var removeDuplicates=function(nums){
+            //     if(nums.length==0){return 0;}
+            //     var j=0;
+            //     for(var i=0;i<nums.length;i++){
+            //         if(nums[i]!=nums[j])nums[++j]=nums[i];
+            //         return ++j;
+            //     }
+            // }
+            function removeDuplicates(nums){
+                var i=nums.length>0?1:0;
+                for(var n in nums)
+                    if(n >nums[i-1])
+                        nums[i++]=n;
+                return i;
+            }
+            var arrs=[5,9,4,5,7,8,9,6,3];
+            console.log(removeDuplicates(arrs));//??????
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>function-return</title>
+	<script type="text/javascript">
+		function getModeth(){
+			return function(a,b){
+				return a+b;
+			};
+		}
+		var rslut=getModeth();
+		console.log(rslut);
+		var tatol=rslut(1,2);
+		console.log(tatol);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

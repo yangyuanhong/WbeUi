@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>var和函数声明提前</title>
+    <script>
+       /* function fn(a){
+            console.log(a);
+            var a=2;
+            function a(){
+                console.log(a);
+            }
+        }
+        fn(1);*/
+
+        console.log(typeof Fn);//function 函数声明会覆盖变量声明
+        var Fn;
+        function Fn(){};
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

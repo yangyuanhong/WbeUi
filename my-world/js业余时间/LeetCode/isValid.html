@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>isValid</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            var isValid = function(s) {
+                var strs="(){}[]";
+                var j=0;
+                    for( j=0;j<s.length;j++){
+                        for(var i=0;i<strs.length;i++){
+                            if(s.charAt(j)==strs.charAt(i)){
+                               if(ispeidui(j,i,s,strs)){
+                                   j=j+2;
+                                   continue;
+                               }else{
+                                   return false;
+                               }
+                            }
+                        }
+                    }   
+                return true;
+            };
+            function ispeidui(j,i,s,strs){
+                if(s.charAt(j+1)==strs.charAt(i+1)){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+            console.log(isValid("[](){]"));
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

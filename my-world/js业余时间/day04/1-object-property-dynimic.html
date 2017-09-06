@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>object-property-dynimic</title>
+	<script type="text/javascript">
+		var Coc = {
+			name: "vicky",
+			age: 19,
+			gender: "女",
+			add: function(a,b){
+				alert(a+b);
+			},
+			SayName: function(c,d){
+				console.log(this.name);
+			}
+		}
+		console.log(Coc.dess);
+		Coc.dess=10000;
+		console.log(Coc.dess);
+		delete Coc.dess;
+		console.log(Coc.dess);
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>深入</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            function Test(a,b){
+                var i,s="Test函数有";
+                var numargs=arguments.length;//获取实际被传递参数的数值。
+                var expargs=Test.length;//获取期望参数的数值，函数定义时的预期参数个数（有a和b 2个参数）。
+                s+=(expargs+"个形式参数。");
+
+                s+="\n\n"
+                for(i=0;i<numargs;i++){//获取参数内容
+                    s+=" 第"+(i+1)+"个参数是: "+arguments[i]+"\n";
+                }
+                return(s);
+            }
+          //  console.log(Test("param1","second param","第三个参数"));
+            //ps:arguments 是一个Object对象，它不是数组，不能对它使用shift、push、join等方法
+            //上述举例时用的argument[i]中的i只是作为arguments对象的属性，并不能理解为数组下标。
+
+            function reloadList(){
+                if(typeof arguments[0]=="function"){
+                    console.log(arguments[0].call(this));
+                   console.log( arguments[0]());
+                   console.log( arguments[0]);
+                }
+                if(typeof arguments[0]=="string"){
+                    console.log(arguments[0]+"string");
+                }
+                if(typeof arguments[0]=="number"){
+                    console.log(arguments[0]+"number");
+                }
+                if(typeof arguments[0]=="undefined"){
+                    console.log(arguments[0]+"undefinde");
+                }
+                if(typeof arguments[0]=="boolean"){
+                    console.log(arguments[0]+"boolean");
+                }
+                if(typeof arguments=="null"){
+                    console.log(arguments[0]+"null");
+                }
+            }
+            reloadList(function(){});
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

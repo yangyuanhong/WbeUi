@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>function-s</title>
+	<script type="text/javascript">
+		var show99 = function(){
+			var spce="&nbsp;&nbsp";
+			var enter= "<br/>";
+
+			for (var i = 1; i <= 9; i++) {
+				for(var j=1; j<=i;j++){
+					var ss=spce;
+					if (i*j<10) {
+						ss=spce + spce;
+					}
+					document.write(j+"* "+i+"= "+(i*j)+ss);
+				}
+				document.write(enter);
+			}
+		}
+		show99();
+		var add = function(a,b){
+			var run = a+b;
+			console.log("输出："+run);
+			return run;
+		}
+		var u=add(1,3);
+		console.log("原来是："+u);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

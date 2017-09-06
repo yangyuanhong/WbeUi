@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>颠倒子串顺序</title>
+    <script>
+        /*
+            Example:
+            reverseWords("This is an example!"); // returns  "sihT si na !elpmaxe"
+
+            reverseWords "An example!"    -- "nA !elpmaxe"
+            reverseWords "double  spaces" -- "elbuod  secaps"
+
+        */
+        function reverseWords(str) {
+         // Go for it
+         var arr=str.split(" ");
+         var arrs=arr.map(function(v){return v.split("").reverse().join("");});
+         return arrs.join(" ");
+        }
+        console.log(reverseWords("a b c d"));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

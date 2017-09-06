@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>function-call</title>
+	<script type="text/javascript">
+		function add(a,b){
+			console.log(this);
+			console.log(a+b);
+		}
+		// add(1,2);this->window
+		var obj={
+			name:"tre",
+			age:16
+
+		}
+		//add.call(obj,1,2);
+		add.apply(obj,[1,2]);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

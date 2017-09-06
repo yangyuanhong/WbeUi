@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>闭包问题Closure</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            function greeting(name){
+                var text='Hello '+name;//local variable
+                //每次调用时，都会产生闭包，并返回内部函数对象给调用者
+                return function(){
+                    alert(text);
+                    }
+            }
+            var sayHello=greeting("Closure");
+            sayHello();
+                
+            
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

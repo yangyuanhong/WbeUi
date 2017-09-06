@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>typeof</title>
+    <script>
+        var x=[typeof x,typeof y][1];
+        typeof typeof x;
+        //1）数组中获取坐标1的是typeof y，因为y未声明，所以返回"undefined"并赋值给x
+        //2）所以typeof x就是typeof "undefined"返回"string"，typeof "string"依然返回"string"；所以答案是B
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

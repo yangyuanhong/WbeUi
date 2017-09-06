@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>this</title>
+    <script>
+        var length =10;
+        function fn(){
+            console.log(this.length);
+        }
+        var obj ={
+            length:5,
+            method:function(fn){
+                arguments[0]()//可以理解为argrments.0(),当然这么写是不允许的
+            }
+        }
+        obj.method(fn);//输出1
+        // arguments={
+        //     0:fn,//也就是function(){console.log(this.length)}
+        //     1:第二个参数,//没有
+        //     3:第三个参数,//没有
+        //     length:1//只有一个参数
+            
+        // }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>杨辉三角</title>
+    <script>
+        function pascalsTriangle(n) {
+        //return a flat array representing the values of Pascal's Triangle to the n-th level
+            var arr=[],i,j;
+            var arry=new Array()
+            for(i=0;i<n;i++){
+                arry[i]=new Array();
+            }
+            for(i=0;i<n;i++)
+            {
+                for(j=0;j<=i;j++)
+                {
+                if(i==j||j==0)
+                    {arry[i][j]=1;}
+                else
+                    {arry[i][j]=arry[i-1][j]+arry[i-1][j-1];}
+                    console.log(arry[i][j]+"");
+                arr.push(arry[i][j]);
+                }
+                
+            }
+            return arr;
+        }
+        //大神代码
+        function f(n){
+            if(n<2)return 1;
+            return n*f(n-1);
+        }
+        function pascalsTriangles(n){
+            var r=[];
+            for(var i=0;i<n;i++){
+                for(var e=0;e<=i;e++){
+                    r.push(Math.round(f(i)/((f(e))*f(i-e))));
+                }
+            }
+            return r;
+        }
+        console.log(pascalsTriangles(4));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

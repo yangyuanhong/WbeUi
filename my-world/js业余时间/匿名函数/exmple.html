@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>匿名函数</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+           var a= (function (x){
+                delete x;
+                return x;
+            })(1);
+           console.log(a);
+
+           /*
+            1.delete是用来删除对象的属性的，它不能够删除函数中传递的参数
+            2.所以这里的delete x这句并没什么卵用，函数正常执行传参及返回参数;因此答案是A
+
+           */
+           // 给个delete使用方法的举例
+           var xiaoming={
+               name:'小明'
+           };
+           xiaoming.age;//undefined
+           xiaoming.age=18;//新增一个age属性
+           xiaoming.age;//18
+           delete xiaoming.age;//删除age属性
+           xiaoming.age//undefined
+           delete xiaoming['name'];//删除name属性
+           xiaoming.name;//undefined
+           delete xiaoming.school;//删除一个不存在的school属性也不会报错
+
+
+            var y=1,x=y= typeof x;
+            console.log(x);
+
+            /*
+                1.赋值运算符由右向左运算
+                2.首先typeof x 因为x未声明，因此结果是"undefined"(注意：typeof的结果都是以字符串形式返回的)
+                3.接着"undefined"被接连赋值给y与x，所以答案是D
+            */
+
+            var a=(function f(f){
+                return typeof f();
+            })(function (){
+                return 1;
+            });
+            console.log(a);
+
+            /*
+            1）这道题可以拆分一下，首先是函数本体
+            //此处是一个函数，传入了一个叫f的参数，这个参数还是另外一个函数
+            //随后在本体函数内部，将这个参数所代表的函数执行了一下，并返回其typeof结果
+            (function f(f) {
+                return typeof f();  //这里的f是指参数函数
+            })();
+            2）其次是参数
+            function () {
+                return 1;
+            }
+            3）所以现在就很清晰了，按照运算符优先级，首先参数函数执行f()结果为1；typeof 1结果为"number"；所以结果是A
+            */
+
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

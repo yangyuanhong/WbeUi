@@ -1,0 +1,127 @@
+
+.ss{
+    width: 750px;
+    height: 1280px;
+}
+.ss>img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.ss .big{
+    width: 750px;
+    height: 750px;
+    position: absolute;
+    top: 210px;
+}
+.ss .yuan1,.yuan2{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #f57129;
+    position: absolute;
+
+}
+.ss .yuan1{
+    left: 205px;
+    top: 29px;
+}
+.ss .yuan2{
+    left: 520px;
+    top: 690px;
+}
+.ss .big .xu{
+    width: 730px;
+    height: 730px;
+    border-radius: 50%;
+    position: absolute;
+    border: 1px dashed #f67228;
+}
+.ss .big #two{
+   left: 20px;
+   top: -10px;
+}
+.ss .big .conent{
+    width: 670px;
+    height: 670px;
+    border-radius: 50%;
+    border: 35px solid rgba(214, 214,214, 0.5);
+    text-align: center;
+    background: rgba(107, 107, 107, 0.3);
+    font-size: 24px; 
+    margin: 0 auto;
+}
+.ss .big .conent>img{
+    margin: 20px auto 0;
+}
+.ss .big .conent input,select,.fuc{
+    width: 378px;
+    height: 68px;
+    margin-bottom: 25px; 
+    background-color: transparent;
+    border: 3px solid#f7f7f7;
+    border-radius: 5px;  
+    font-size: 1.5em;
+}
+select{
+    color: #f7f7f7;
+    font-size: 1.5em;;
+}
+input::-webkit-input-placeholder{
+    color: #f7f7f7;   
+}
+input::-moz-placeholder{
+    color: #f7f7f7;   
+}
+.ss .big .conent .fuc{
+    font-size: 1em;
+    margin: 110px auto 50px;
+    border-color: transparent;
+}
+.ss .big .conent .fuxuan{
+    width: 24px;
+    height: 24px;
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 0;
+    background-color: transparent;
+    border: 1px solid #f47227;
+}
+.ss .big .conent .butn{
+    width: 190px;
+    height: 75px;
+    border: 0;    
+    background-color: #f57129;
+}
+.ss .big .conent .cin{
+    width: 378px;
+    height: 32px;
+    margin: 25px auto 0;
+}
+.ss .big .conent .cin .leds{
+    float: left;
+    width: 30%;
+    height: 32px;
+}
+.ss .big .conent .cin .rghs{
+    float: right;
+    width: 30%;
+    height: 32px;
+}
+.ss .big .conent .cin button,.butn{
+    width: 100%;
+    height: 32px;
+    background-color: transparent;
+    color: #f7f7f7;
+    font-size: 1.5em;
+    border: 0;
+}
+.ss .big .conent .cin button{
+    font-size: 1em;
+}
+.ss .big .conent .yanz{
+    position: absolute;
+    top: 280px;
+    left: 420px;
+    color: #f67228;
+}

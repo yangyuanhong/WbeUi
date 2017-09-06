@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>对象原型</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            var a={},b=Object.prototype;
+            // [a.prototype===b,Object.getPrototypeOf(a)===b]
+            console.log(a.prototype===b);//false a.prototype是未定义的
+            console.log(Object.getPrototypeOf(a)===b);//true,Object.getPrototypeof(a)可以获取到Object.prototype
+
+            function f(){}
+                var a=f.prototype,b=Object.getPrototypeOf(f);
+                console.log(a===b);
+
+            
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>

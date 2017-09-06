@@ -1,0 +1,178 @@
+body,ul{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header,aside,footer{
+    display: block;
+}
+/*头  */
+header {
+    background-color: #4593d0;
+    overflow: hidden;
+    padding: 0 13% 0 13%;
+}
+header .iocnn{
+    width: 170px;
+    height: 103px;
+    margin-right: 29%;
+    float: left;
+}
+header .iocnn>img{
+    width: 100%;
+    height: 100%;
+}
+header .bog{
+    width: 434px;
+    height: 103px;
+    float: right;
+}
+header .sh{
+    width: 434px;
+    height: 58px;
+    text-align: right;
+    padding-top: 10px;
+}
+
+header .butms{
+    width: 434px;
+    height: 35px;
+}
+header .butms ul{
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+header .butms ul li{
+    list-style: none;
+    float: left;
+    width: 106px;
+    line-height: 35px;
+    border-left: 1px solid #649cd1;
+    border-right: 1px solid #337dc3;
+}
+header .butms ul li:first-child{
+    width: 0;
+    border-left: 1px solid #337dc3;
+}
+header .butms ul li:last-child{
+    width: 0;
+    border-left: 1px solid #649cd1;
+}
+header .butms ul li>a{
+    text-decoration: none;
+    color: #faf7f8;
+}
+/*广告  */
+aside{
+    height: 424px;
+    position: relative; 
+}
+aside>div{    
+    float: left;
+    z-index: 10;
+    width: 50%;
+    height: 424px;
+    z-index: 1;
+}
+aside>img{
+    float: left;
+    left: 261.5px;
+    position: absolute;
+    z-index: 100;
+}
+aside .sa{
+    background-color: #f5f0f2; 
+}
+aside .bs{
+    float: right;
+    background-color: #fbf8f8;
+}
+/*三点小图标  */
+.logos{
+    background-color: #ffffff;
+    height: 61px;
+}
+.logos>div{
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.logos img{
+    float: right;
+}
+/* 内容区 */
+.contents{
+    background-color: #ffffff;
+    height: 297px;    
+}
+.contents>div.bog{
+    width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.contents>div.bog>div{
+    width: 320px;
+    height: 297px;
+    margin-right: 20px;
+    float: left;
+    text-align: center;
+}
+.contents>div.bog>div p{
+    text-indent: 2em;
+    font-size: 0.8em;
+    margin-top: -10px;
+    color: #999999;
+}
+.contents>div.bog>div.last{
+    margin-right: 0;
+}
+/*底部  */
+footer {
+    background-color: #4593d0;
+    /* height: 175px; */
+    overflow: hidden;
+    padding: 0 12.816% 0 12.816%;
+}
+footer>div{
+    float: left;
+    height: 175px;   
+}
+footer .ull{
+    width: 576px;
+}
+footer .ull div{
+    width: 56px;
+    float: left;
+    margin-right: 117px;
+}
+footer .ull div:last-child{
+    margin-right: 0px;
+}
+footer .ull div>ul>li{
+    list-style: none;
+    line-height: 18px;
+}
+footer .ull div>ul>li>a{
+    color: #b5d4ec;
+    font-size: 12px;
+    text-decoration: none;
+}
+footer .ulls{
+    width: 553.8px;
+    position: relative;
+}
+footer .ulls img{
+    float: right;
+}
+footer .ulls div{
+    width: 100%;
+    height: 54px;
+    top: 121px; 
+    color: #c3d9ee;
+    position: absolute;
+    text-align: right;   
+}
+footer .ulls div p{
+    font-size: 0.8em;
+}

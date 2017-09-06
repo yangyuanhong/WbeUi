@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>函数变量</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <script>
+            function foo(a){
+                var a;//变量的声明被挂起，但是在这种情况下，由于变量已经存在于范围内，所以它们被完全删除了
+                return a;
+            }
+            function bar(a){
+                var a='bye';//在bar()中，变量声明被删除，但是赋值仍然存在，所以它有效果
+                return a;
+            }
+            console.log(foo('hello'),bar('hello'));
+            //"hello" "bye"
+
+        </script>
+    </head>
+    <body>
+    
+    </body>
+</html>
