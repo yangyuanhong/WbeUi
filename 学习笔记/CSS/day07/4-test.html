@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>使用button来控制动画</title>
+	<style>
+		.outer{
+			border:1px solid red;
+			width: 60px;
+			height: 25px;
+		}
+		.inner{
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			position: absolute;
+			left: 10px;
+			top:30px;
+			/*display: none;*/
+			/*设置动画*/
+			animation-name: myInner;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			animation-play-state: paused;
+		}
+		/*.outer:hover .inner{
+			/*闪烁怎么解决
+			display: block;
+			animation-play-state: running;
+		}*/
+		button:hover+.inner{
+			/*解决闪烁*/
+			/*display: block;*/
+			animation-play-state: running;
+		}
+		@keyframes myInner{
+			from{
+				width: 100px;
+				height: 100px;
+			}
+			to{
+				width: 300px;
+				height: 300px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="outer">
+		<button>划过我</button>
+		<div class="inner"></div>
+	</div>
+</body>
+</html>

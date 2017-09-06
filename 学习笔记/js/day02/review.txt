@@ -1,0 +1,175 @@
+
+1.js背景
+	js:javascript
+	javascript：LIVEScript
+
+	1995年网景公司(浏览器制造商)
+
+	网景{
+		js解析器
+		语法
+		...
+	}
+
+	IE{
+		js解析器
+		语法
+		...
+	}
+
+	核心JS(ECMAScript)
+
+2.js的组成
+	ECMAScript:核心js:兼容性最好
+	DOM:文档对象模型
+		document
+	BOM：浏览器对象模型
+		alert()
+
+
+3.js的特点
+	1》脚本语言
+		html xml
+		本身具有行为能力和逻辑能力
+		需要解析执行
+		alert(1+1);
+		<div>1+1</div>：标记语言：
+			只能被读取
+	2》解释性语言
+		需要被浏览器中内置js解析器
+		解析执行
+	3》弱类型语言
+		java:强类型语言
+			int a=1;
+				a="hello";//报错
+		js:
+			var a=12;//a:数值
+				a="hello";//字符串
+				a=true;
+	4》从上往下顺序解析执行
+		html
+		js:
+			alert();
+			alert(2);
+
+4.在html中嵌入js代码
+	1.将js代码嵌入在html标签中
+		<div onclick="alert('hello');"></div>
+		<a href="javascript:void(0)"></a>
+		//阻止a标签进行跳转
+
+	2.将js代码嵌入在head标签内部
+		<script type="text/javascript">
+			//js代码
+		</script>
+		默认位置
+		(script标签可以放在html页面中的任意位置)
+
+	3.引入一个外部js文件
+		<script type="text/javascript" src="想要引入的外部js文件"></script>
+
+		创建js文件：
+			创建以.js为后缀名的文件
+		main.js:
+			alert(1);
+
+		index.html:
+			<script src="main.js"></script>
+
+
+5.script标签属性：
+	type：text/javascript
+		:标识script标签代码类型
+
+	src:
+		引入外部文件的属性
+
+	defer:
+		布尔类型
+		延迟当前脚本的执行
+		延迟到所有js和dom全部解析执行完成之后再执行
+
+		只能用在外部引入文件中
+		每一个页面中只能写一个defer属性
+
+
+6. <noscript></noscript>
+	告诉用户当前浏览器不支持js代码
+
+7.基本语法
+	1.区分大小写
+		var a=1;
+		var A=2;
+		alert(a);
+		alert(A);
+		typeof():判断当前变量的数据类型
+		typeOf():报错
+
+	2.标识符
+		变量、函数名/方法名...
+
+		1.只能以字母、数字、下划线、$符号组成
+		2.不能以数字开头
+			var a1
+
+		3.不能够使用关键字当做变量名称
+			alert()
+			window
+			（保留字）
+
+		4.尽量使用驼峰式命名
+			第二个单词开始之后每一个单词的首字母大写
+			var firstNameAgeGender
+			var firstName="zhang"
+			var lastName="san"
+			var full=firstName+lastName
+	3.注释
+		使代码更加可维护
+		是代码更具有可读性
+		//单行注释
+		/*多行注释*/
+	4.语句
+		建议语句结束以分号结尾；
+		浏览器中js解析器默认找结尾
+		var a=1;
+		var b=2;
+		var a=1,b=2,c=3;
+
+---------------------------------------
+1.创建变量
+	1.变量的声明
+		var str;
+	2.变量的初始化
+		赋值操作
+		str="hello";
+	3.变量的更改
+		str="world";
+		str=true;
+	4.变量的使用
+		alert(str);
+		console.log(str);
+			//打印在控制台上
+
+			str=str+"hello";
+				//truehello
+
+				alert(str);
+
+
+	变量的声明和初始化：
+		var str="hello";
+			//var str;
+			//str="hello";
+
+		var str1="lisi";
+		var str2="zhangsan";
+		var str3="wangwu";
+
+	var str="hello",str1="lisi",str2="zhangsan",str3="wangwu";
+
+	1.var age=12;
+	2.age=12;
+
+
+
+

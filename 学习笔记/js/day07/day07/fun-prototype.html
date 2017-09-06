@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>原型模式</title>
+    <script>
+        function Student(num,name,address){
+            this.stuNum = num;
+            this.name = name;
+            this.address = address;
+        }
+        
+        Student.prototype.sayName = function(){
+            console.log(this.name);
+        }
+        var stu1 = new Student(1,'terry','jx');
+        var stu2 = new Student(2,'larry','lz');
+        console.log(stu1,stu2);
+        stu1.sayName();
+        stu2.sayName();
+        console.log(stu1.sayName == stu2.sayName);
+
+
+        for(var key in stu1){
+            console.log(key);
+        }
+        // Array RegExp Date ...
+        var o = {};//o 是Object的实例，Object的原型中定义了toString,valueOf...。实例对象可以调用构造函数原型中的方法和属性。
+        Object.prototype.test = function(){
+            console.log("test....");
+        }
+        o.test();
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var str = "hello he.1n.__.$% sss pp.zz.__.$%"
+        var str = "az$bz*cz^12 hello az$bz*cz^1_"
+        // xxXxxXxxXxx  x代表任意的asc字符，X任意非ASC字符串
+        var pattern = /\w\w\W\w\w\W\w\w\W\w\w/ig;
+        console.log(str);
+        console.log(pattern.source);
+
+        var result;
+        while(result= pattern.exec(str)){
+            console.log(result);
+        }  
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

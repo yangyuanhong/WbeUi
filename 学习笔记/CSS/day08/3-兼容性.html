@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>兼容性</title>
+    <style>
+        div:first-child{
+            border:1px solid red;
+            font-size:0;
+        }
+        img{
+            /* display: block; */
+        }
+        /*IE会出现蓝色边框  */
+        a img{
+            border:none;
+        }
+        /*IE6 浮动元素 双倍边距  display:inline  */
+        div.one{
+            width: 100px;
+            height: 100px;
+            background: pink;
+             float: left; 
+             margin-left: 10px; 
+             margin-right: 10px; 
+            /* display: inline; */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="../../HTML5/images/1-鱿鱼网登陆页面_07.png" alt="图片显示不出来了">
+    </div>
+    <a href="">
+        <img src="../../HTML5/images/1-鱿鱼网登陆页面_07.png" alt="图片显示不出来了">
+    </a>
+    <br>
+    <div class="one"></div>
+    <div class="one"></div>
+</body>
+</html>

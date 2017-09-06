@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>type的其他值</title>
+</head>
+<body>
+    <form action="#" novalidate="true">
+        <!--其他的type属性值  -->
+        搜索框:<input type="search" placeholder="请输入搜索内容" name="search1">
+        搜索框:<input type="search" value="请输入搜索内容" name="search2">
+        <br>
+        <!--
+            step表示步长  每次增加或者减少的值  
+            min 最小值
+            max 最大值
+         -->
+        数值框:<input type="number" min="0" max="100" step="5">
+        <br>
+        滑块: <input type="range" min="0" max="100" step="20" value="20" name="range">
+        <br>
+        颜色:<input type="color">
+        <br>
+        电话号码: <input type="tel" pattern="[0-9]{11}">
+        <br>
+        url: <input type="url">
+        <br>
+        email: <input type="email">
+        <br>
+        <input type="submit">
+    </form>
+</body>
+</html>

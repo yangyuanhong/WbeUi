@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        div#one{
+            background: lightblue;
+        }
+        div#two{
+            background: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div id="one">
+        <!--这是一个段落-->
+        <p>one</p>
+        <ul></ul>
+        <table></table>
+    </div>
+    <div id="two">
+        <!--这是一个段落-->
+        <p>two</p>
+    </div>
+    <script>
+        //console.log(document instanceof Node);
+        var $div = document.getElementById("one")
+        var $div_sons = $div.childNodes;
+        console.log($div_sons);
+        for(var i=0;i<$div_sons.length;i++){
+            var son = $div_sons[i];
+            console.log(son.nodeName,son.nodeType,son.nodeValue);
+        }
+        console.log($div.parentNode);
+        console.log($div.previousSibling);
+        console.log($div.nextSibling);
+        console.log($div.firstChild);
+        console.log($div.ownerDocument === document);
+    </script>
+</body>
+</html>

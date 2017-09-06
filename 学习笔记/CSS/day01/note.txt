@@ -1,0 +1,306 @@
+html
+    超文本标记语言
+    .html或.htm结尾
+    用浏览器打开    frirefox  chrome  opera   safari  IE
+
+html元素
+    开始标签和结束标签以及包裹的内容
+    块级元素---行级布局
+        独占一行,可以设置宽高
+    行内元素---列级布局
+        与其他元素共享一行,不可以设置宽高
+        行内元素和块级元素是可以相互转换的
+    空元素
+        <img />
+    替代元素
+        <input type="">
+        
+html标签
+    开始标签和结束标签
+html属性
+    开始标签之后,语法是:属性名="属性值" 属性名="属性值"
+
+    <img src="" alt=""/>
+html文档结构组成
+    html:4t
+    html:4s
+    html:5
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <meta />
+                <title>标题</title>
+                <style>
+                    /*css代码*/
+                <style>
+                <script>
+                    //javascript的代码
+                </script>
+            </head>
+            <body>
+                显示给用户看到
+            </body>
+        </html>
+html语法
+    注释<!--注释内容-->
+    实体   &nbsp;  空白
+html标签
+    p  段落   块级元素
+    h1-h6  减小   标题   块级元素
+    strong b  em i sub  sup  s  u 
+        强调加粗,加粗,强调倾斜,倾斜,下标,上标,删除线,下划线
+    a   超链接    
+        href属性     链接地址  
+            路径
+                绝对路径:url   http://www.baidu.com/test/1.jpg
+                相对路径:相对与当前文件所在位置
+                    ../  上级目录
+                    ./   当前目录
+                文件系统:
+                    window:   
+                        file:///D:images/1.jpg
+
+            锚点
+                元素id="test"
+                href="#test"
+            邮箱
+                href="mailto:liuyr@briup.com"
+    img   图片   显示的时候是行内元素,但是可以设置宽高,不是一个纯粹的行内元素或块级元素
+        src=""    图片地址
+                    路径
+        alt=""    图片显示不出来的提示信息
+        width=""
+        height=""
+            以px为单位
+            以百分比
+    table  
+        caption
+        thead
+        tbody
+        tfoot
+            tr  
+                th 表头中的单元格
+                td 普通单元格
+        属性:
+            border="1px"
+            cellspacing="0"  单元格之间的空隙为0     也就是单元格之间的外边距
+            cellpadding="0"  单元格边框与内部内容的间隙    也就是单元格的内间距
+            width=""  设置整个表格的宽度
+            align="center"  居中
+            bgcolor=""  背景色
+
+            技巧:
+                给tr设置高度  一行高度
+                给td设置宽度  一列宽度
+
+            盒子模型
+                内容  内间距  边框  外边距
+                content  padding   border  margin
+    ul 列表
+        ol
+            start属性:    开始数字    5
+            reversed属性: 是否逆序  反转
+        ul
+            li
+        dl 
+            dt  标题
+            dd  有一个左边距 
+
+html5新增的一些标签
+    header
+    nav
+    article
+    section  标题用
+    footer   版权
+    aside    广告
+    address  联系我们
+
+    figure
+        img         图片
+        figcaption 标题
+    details
+        summary  标题
+        ...详细信息
+    mark   高亮显示
+    cite   名字引用
+
+form表单
+    form标签
+        属性: action  method name id target enctype validate
+        重写:在提交按钮或提交图片上写以下属性
+            formaction  formmethod
+            formtarget   formenctype
+            formnovalidate
+        如果表单控件在form标签之外的话,使用form属性=form表单的id
+    表单控件的属性
+        readonly 只读
+        disabled 禁用
+        required 必填
+        autofocus 自动聚焦
+        pattern  正则匹配
+        placeholder 占位符
+        name     传递给后台的属性名
+        value    传递给后台的属性值
+        id       label的for属性来使用
+        checked  默认单选和多选选中
+        selected  select中的option的默认选中
+    input的type属性值
+        text  单行文本框
+        password 密码框
+        radio   单选框
+        checkbox 多选框
+        hidden  隐藏
+        submit 提交按钮
+        reset  重置按钮
+        image  提交图片按钮  src alt 
+        file    文件系统
+        button  按钮   没有提交功能
+
+        date   年月日
+        datetime-local   年月日时分
+        time    时分
+        month   年月
+        week    年周
+
+        number  数值   min  max  step
+        range   滑块   min  max  step
+        color   颜色
+        tel     电话号码   需自己验证
+        url     url地址   ://
+        email   邮箱   XXX@XXXX.XXX
+        search   搜索
+    button控件
+        <button></button> 可提交
+        type    
+            submit   
+            reset  
+            button  不可提交
+    select控件   name=""
+        optgroup    lable="标题"
+            option  value=""
+
+        
+        <input type="text" list="test" name="datalistValue"/>
+
+        datalist  id="test"
+            option  value=""
+    label控件
+        <label for="female">女</label>
+        <input type="radio" id="female"/>
+    textarea控件  文本域
+        cols=""
+        rows=""
+        name=""
+        placeholder=""   
+    fieldset标签
+        legend  标题
+        ...表单控件
+CSS
+    层叠样式表
+    Cascading Style Sheets
+    是一种修饰语言
+    html   css        js
+    脸     化妆技术    动画
+    
+语法
+    css声明
+        属性名:属性值;
+        属性名:属性值;
+    css声明块
+        {
+            属性名:属性值;
+            属性名:属性值;
+        }
+    css选择器
+        div{
+            属性名:属性值;
+            属性名:属性值;
+        }
+
+        <div></div>
+        <div></div>
+
+
+    margin  速记属性
+        margin:0px 0px 0px 0px;
+            上 右 下 左
+        margin:0 0;
+            上下  左右
+        margin:0 0 0;
+            上  左右  下
+        margin:0;
+            上下左右都是
+    margin-top
+    margin-bottom
+    margin-left
+    margin-right
+
+
+    css样式表的位置
+        行内样式表
+            style="width:100px;"
+        内部样式表
+            <style>
+                div{
+                    width:100px;
+                }
+            </style>
+        外部样式表
+            外部css文件中
+            引入css文件:
+                1.将css文件引入到html文件中,使用link标签的href属性.
+                2.将源css文件(common.css)引入到目标css文件(style.css)中,在目标css文件中写:@import url("common.css")
+    三种样式表优先级
+        就近原则
+          link
+          style
+            div style=""
+
+            行内样式表>内部样式表>外部样式表
+    
+            style
+            link
+                div style=""
+            行内样式表>外部样式表>内部样式表
+
+浏览器加载页面的过程:
+    加载html-解析html------------DOM--展示
+                    |           |
+                  加载css----解析css
+    text-align   元素内部的内容居中
+        left center  right
+    display     展示形式
+        none   隐藏
+        inline  行内显示
+        block   块级显示
+        inline-block  行内显示但是有块级元素的特点,可以设宽高
+    float    浮动
+        将一个元素飘起来,脱离文档流
+        left right
+        靠左还是靠右显示 
+
+        作业:将ul中的li一行显示   
+            将6页面的img实现点击图片之后跳转到图片大图,新选项卡方式打开
+
+    
+    选择器:
+        标签选择器
+            div  body
+        普遍选择器
+            *   选择所有
+        id选择器
+            #id
+        类选择器
+            .class
+        组合选择器
+            div,span{}
+        嵌套选择器
+            div.one
+        后代选择器    空格
+            div img{}
+
+
+
+
+
+

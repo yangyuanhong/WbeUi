@@ -1,0 +1,14 @@
+1. 数组的创建
+    构造函数
+        var arr = new Array();
+        arr空数组=>[];
+
+        var arr = new Array(20);
+        创建一个指定长度的数组，长度20，数组中每一个元素都会被初始化undefined
+
+        var arr = new Array("terry",true,3);
+        创建一个数组，并使用实参进行初始化数组
+
+    字面量
+        var arr = [1,true,false,'hello'];
+2. 

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>变形</title>
+	<style>
+		div{
+			width:100px;
+			height: 100px;
+			background-color: pink;
+			margin:10px;
+		}
+		div.one:hover{
+			/*transform: translate(20px,50px);*/
+			/*transform: scale(2,2);*/
+			/*transform-origin: left top;
+				设置坐标轴的原点，默认是元素正中心，
+				水平方向：left center right
+				垂直方向：top center bottom
+				也可以为px和百分比
+			*/
+			/*旋转*/
+			transform: rotateY(30deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="one">hello</div>
+	<div>参照</div>
+</body>
+</html>

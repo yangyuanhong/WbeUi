@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>显示与隐藏</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+        div:first-child{
+            background-color: red;
+            /* display: none;  不占用空间  */
+            /* visibility: hidden; 可见性:不可见 占用空间 */
+            /* visibility: visible; 可见 */
+        }
+        div:nth-child(2){
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+</body>
+</html>

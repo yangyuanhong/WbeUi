@@ -1,0 +1,72 @@
+事件
+1. 三要素
+    事件源
+        获取： dom对象
+    事件处理函数 
+        function(){}
+        匿名函数，当触发绑定的事件的时候执行该函数
+    事件对象
+        非IE
+        function(event){}
+        IE低版本
+        function(){
+            window.event
+        }
+2. 事件绑定(原生)
+    1. 兼容性比较好，简单
+        $dom.onXXX = handler
+    2. IE低版本
+        $dom.attachEvent("onXXX",handler);
+        $dom.detachEvent("onXXX",handler);
+    3. 非IE版本
+        $dom.addEventListener("xxx",handler,boolean);
+        $dom.removeEventListener("xxx",handler);
+3. 事件绑定(框架 jQuery)
+    $("#one").on("click",function(event){
+        event.preventDefault();
+    });
+4. 事件流
+    事件捕获    由外而内 outer->center->inner
+    目标处理    inner
+    事件冒泡    由内而外 inner->center->outer
+5. 事件对象
+    1) 阻止默认行为
+        非IE 
+            event.preventDefault()
+        IE低版本
+            event.returnValue = false;
+        $form.onSubmit= function(event){
+            //.....
+            event.preventDefault();
+            //return false;
+        }
+    2) 阻止冒泡
+        非IE 
+            event.stopPropagation()
+        IE低版本
+            event.cancelBubble = true;
+    3) 目标对象
+        target  操作的dom对象
+        currentTarget   当前目标对象
+        this            当前目标对象
+     
+    
+6. 事件代理
+    tbody
+        tr
+            td
+    tbody可以代理tr上的事件绑定，也就是可以将事件绑定到tbody上，通过event.target可以获取到当前对象（并不一定是tbody）
+7. 闭包
+    一个函数位于另外一个函数的内部，内部函数引用外部函数的变量，那这个变量和内部函数就组成了闭包。
+
+    var a = 3;
+    function test(){
+        alert(a);
+    }
+    test();
+
+    知乎      
+    stackoverflow
+    github
+    google
+    @尤雨溪   

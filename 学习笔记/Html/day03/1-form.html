@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>新增的表单元素</title>
+</head>
+<body>
+    <!--"5"+"5"=55   5+5=10  -->
+    <form action="login.html" oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+        <!--进度条 max最大工作量   value当前工作进度,一般是从后台获取  -->
+        <progress value="70" max="100"></progress>
+        <!--meter  磁盘容量
+            low 是下限值
+            high是上限值
+            optimum 最优值
+            如果optimum<low的话,越低越好.
+                value<low,是绿色
+                low<value<high,是黄色
+                value>high,是红色
+            如果low<optimum<high的话,在中间最好
+                low<value<high,是绿色,其他为黄色
+            如果optimum>high的话,越高越好
+                value<low,是红色
+                low<value<high,是黄色
+                value>high,是绿色
+        -->
+        <meter min="0" max="100" value="10" low="10" high="80" optimum="5"></meter>
+
+        <meter min="0" max="100" value="88" low="10" high="80" optimum="50"></meter>
+
+        <meter min="0" max="100" value="99" low="10" high="80" optimum="90"></meter>
+
+        <br>
+        <input type="number" value="5" id="a">+
+        <input type="number" value="5" id="b">=
+        <output name="result">10</output>
+
+        <!--datalist 子元素是option -->
+
+        <input type="text" list="datalist" name="inputAndDatalist">
+        <datalist id="datalist">
+            <option value="">请选择</option>
+            <option value="shanghai">上海</option>
+            <option value="jiagnsu">江苏</option>
+            <option value="shanxi">山西</option>
+        </datalist>
+        <!--与select的option的对比:
+            1.如果在option标签内部写了内容的话,点击之后,datalist显示的是value值,select那边显示的是option的元素内容.
+            2.数据提交都提交的是option的value值
+            3.datalist在火狐和谷歌上显示的区别.火狐上只显示内容,谷歌上显示value跟内容
+        -->
+
+
+
+
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

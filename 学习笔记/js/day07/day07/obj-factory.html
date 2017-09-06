@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>工厂函数模式</title>
+    <script>
+        // stuNumber,name,address
+        var sayName = function(){
+            console.log(this.name);
+        }
+        function createStudent(num,name,address){
+            var student = {
+                stuNumber:num,
+                name:name,
+                address:address,
+                sayName:sayName
+            }
+            return student;
+        }
+        var stu1 = createStudent(1001,"terry","江西");
+        var stu2 = createStudent(1002,"larry","兰州");
+        console.log(stu1);
+        console.log(stu2);
+        stu1.sayName();
+        stu2.sayName();
+        console.log("函数：",stu1.sayName==stu2.sayName);
+
+        function createDog(name,color){
+            return {
+                name:name,
+                color:color
+            }
+        }
+        var dog1 = createDog("一休","金黄色");
+        console.log(dog1);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

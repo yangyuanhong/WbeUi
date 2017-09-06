@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid #ccc;
+            float: left;
+            margin: 0 auto;
+            border-radius: 50%;
+            text-align: center;
+        }
+        .inner {
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            line-height: 100px;
+        }
+        .center{
+            margin: 50px;
+        }
+        
+    </style>
+</head>
+<!--zencoding emmet插件-->
+<body> 
+    <div class="outer">
+        <div class="center">
+            <div class="inner">click me</div>
+        </div>
+    </div>
+
+    <button>取消事件</button>
+    <script>
+    var $outer = document.getElementsByClassName("outer")[0];
+    var $center = document.getElementsByClassName("center")[0];
+    var $inner = document.getElementsByClassName("inner")[0];
+    var $btn = document.getElementsByTagName("button")[0];
+
+    $outer.attachEvent("onclick",function(){
+        alert("outer");
+    });
+    /*
+    $btn.onclick = function(){
+         $outer.removeEventListener("click",handler1);
+         $outer.removeEventListener("click",handler2);
+    }
+    var handler1 = function(){
+        alert("outer1");   
+    };
+    var handler2 = function(){
+        alert("outer2");   
+    };
+    $outer.addEventListener("click",handler1);
+    $outer.addEventListener("click",handler2);
+
+    $center.addEventListener("click",function(){
+        alert("center");   
+    });
+    $inner.addEventListener("click",function(){
+        alert("inner");   
+    });
+
+    */
+
+    /*
+    $outer.onclick = function(){
+        alert("outer");
+    }
+    $center.onclick = function(){
+        alert("center");
+    }
+    $inner.onclick = function(){
+        alert("inner");
+    }
+    */
+
+    </script>
+    
+</body>
+</html>

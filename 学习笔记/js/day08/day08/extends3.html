@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>借用构造函数继承</title>
+    <script>
+        function Animal(id,name){
+            this.id = id;
+            this.name = name;
+        }
+        Animal.prototype.sayName=function(){
+            console.log(this.name);
+        }
+        function Dog(id,name,color){
+            //this -> 新对象 借用构造函数
+            Animal.call(this,id,name);
+            this.color = color;
+        }
+        //原型链继承
+        Dog.prototype = new Animal();
+        Dog.prototype.constructor = Dog;
+        Dog.prototype.sayColor = function(){
+            console.log(this.color);
+        }
+        function Bird(id,name,type){
+            Animal.call(this,id,name);
+            this.type = type;
+        }
+        //原型链继承
+        Bird.prototype = new Animal();
+        Bird.prototype.constructor = Bird;
+        Bird.prototype.sayType= function(){
+            console.log(this.type);
+        }
+        var d1 = new Dog(1,'一休','金黄色');
+        var b1 = new Bird(2,'八哥','花色');
+        var result 
+        = Dog.prototype.isPrototypeOf(d1);
+        console.log("d1 animale:",result);
+
+        // ECMAScript5 API
+</script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,155 @@
+1. 面向对象
+    1) 创建的对象的封装
+        1. 工厂函数模式
+            function factory(id,name){
+                return {
+                    id:id,
+                    name:name
+                }
+            }
+            var obj = factory(1,'terry');
+
+        2. 构造函数模式
+            function Person(id,name){
+                this.id = id;
+                this.name = name;
+                this.sayName = function(){
+                    console.log("terry");
+                }
+            }
+            var p = new Person(1,'terry');
+        3. 原型模式
+            function Person(id,name){
+                this.id = id;
+                this.name = name;
+            }
+            Person.prototype.sayName = function(){
+                console.log(this.name);
+            }
+            var p = new Person(1,'terry');
+
+            p instanceof Person
+2. 继承
+    1) 属性的继承
+        借用构造函数继承
+        function Animal(id,name){
+            this.id = id;
+            this.name = name;
+        }
+        Animal.prototype.sayName=function(){
+            console.log(this.name);
+        }
+        function Dog(id,name,color){
+            //借用构造函数继承
+            Animal.call(this,id,name)
+            this.color = color;
+        }
+    2) 方法的继承
+        Dog.prototype = new Animal();
+        Dog.prototype.constructor = Dog;
+        var d = new Dog(1,'tom','金黄色');
+        d 可以调用Dog原型中的方法，Animal原型中的方法，Object原型中的方法
+3. API( 应用程序变成接口 )
+    js(官方api,) - java(官方api,自定义API)
+    CommonJS(模块化开发)
+
+    1. Array
+        构造函数，原型Array.prototype
+        Array的实例可以调用Array.prototype中的方法
+
+        1) 实例（对象）的创建 
+            1. 构造函数
+                var arr = new Array();
+                无参
+                整数      length 
+                多个值     初始化
+            2. 字面量
+                var arr = [1,2,3,4];
+        2) 数组的属性
+            length  长度（数组中拥有元素的个数）
+            length 可读可写（可以改变）
+                arr.length = 3;
+                arr.length = 4;
+        3) 数组的访问
+            arr[索引]
+            索引可以超过数组的边界，undefined
+        4) 数组的遍历（索引）
+            for(){}
+            while(){}
+            do{}while();
+
+            for(var key in arr){
+                key索引
+            }
+        6) Array可以调用的方法
+            Array.isArray(arr); 判断指定变量是否是数组
+        5) 数组对象可以调用的方法(数组原型中的方法)
+            var arr = new Array();
+            1. 序列化
+                toString();
+                join();
+            2. 栈 
+                push(item1,item2,....)
+                    返回数组的长度
+                pop()
+                    返回数组中最后一个元素，并且将该元素从数组中删除
+            3. 队列
+                shift()
+                    返回数组中第一个元素，并且将该元素从数组中删除
+                unshift(item1,item2,...)
+                    将参数依次插入到数组前，返回数组的长度
+            4. 排序
+                编码表
+                    0101
+                    
+                    64      a
+                    65      b
+                    10086   中
+
+
+                reverse() 改变了原数组
+                    var arr = [1,2,3,4,5,6]
+                    反转数组
+                    1. 不对原数组进行改变，将反转后的数组作为返回值返回
+                        arr.reverse();
+                            var result = [6,5,4,3,2,1]
+                            return result;
+                    2. 对原数组进行改变，并且返回该数组
+                        arr.reverse();
+                            arr = [6,5,4,3,2,1];
+                            return arr;
+        
+
+---作业---
+ 1.   模仿Array原型中的方法，将其实现一遍
+    arr.reverse();//将arr反转
+    Array.prototype.myReverse = function(){
+
+    }
+    arr.myReverse();
+
+ 2. angularJS
+    var arr = [{
+        id:1002,
+        name:"terry",
+        age:18
+    },{
+         id:1001,
+        name:"larry",
+        age:19
+    },{
+         id:1003,
+        name:"jacku",
+        age:16
+    }];
+    /**
+        param: 排序前的数组，排序规则
+        return 排好序的数组
+    */
+    function sortStudent(arr,property,sort){
+        //代码...
+
+    }
+    //id的升序排列
+    var arr = sortStudent(arr,"id",true);
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>目标</title>
+<style>
+        div{
+            border: 1px solid #ccc;
+            float: left;
+            margin: 0 auto;
+            border-radius: 50%;
+            text-align: center;
+        }
+        #inner {
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            line-height: 100px;
+        }
+        #center{
+            margin: 50px;
+        }
+        
+</style>
+<script>
+    window.onload = function(){
+        var $outer = document.getElementById("outer");
+        var $center = document.getElementById("center");
+        var $inner = document.getElementById("inner");
+
+        $outer.onclick = function(event){
+            console.log("outer",event.target);
+            console.log("outer",event.currentTarget);
+            console.log("outer",this);
+        }
+        $center.onclick = function(event){
+            console.log("center",event.target);
+            console.log("center",event.currentTarget);
+            console.log("center",this);
+            //阻止事件冒泡
+            event.stopPropagation();
+        }
+
+    }
+</script>
+</head>
+<!--zencoding emmet插件-->
+<body> 
+    <div id="outer">
+        <div id="center">
+            <div id="inner">click me</div>
+        </div>
+    </div>
+    <script>
+       
+    </script>
+    
+</body>
+</html>

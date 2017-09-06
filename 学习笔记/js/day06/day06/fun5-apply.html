@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function test(a,b){
+            console.log(a,b);
+        }
+        test(1,2);
+        test.call(this,1,2);
+        test.apply(this,[1,2]);
+
+        var arr = ["terry","larry","jacky"];
+        var handler = function(item,index){   
+            console.log(item,index);
+        };
+        arr.forEach(handler);
+
+        function test2(){
+            var msg = "hello";
+            return function(){
+                console.log(msg);
+            }
+        }
+        var result = test2();
+        result.call(this);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

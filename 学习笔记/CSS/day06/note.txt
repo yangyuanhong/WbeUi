@@ -1,0 +1,169 @@
+outline属性
+    外边线  不占据屏幕空间
+    outline-style
+        solid  实线
+        double 双实线
+        dashed 虚线
+        dotted 点状线
+        groove 凹槽 3D
+        ridge  凸槽
+        inset  凹边
+        outset 凸边
+    outline-width
+    outline-color
+display   显示与隐藏   显示样式
+    none  不显示   不占屏幕空间
+    inline 行内显示  块级元素展示为行内元素  (不可设置宽高)
+    block  块级显示  行内元素展示为块级元素
+    inline-block  行内显示,可设置宽高
+visibility  可见性
+    hidden  隐藏   占据屏幕空间,看不见但是位置还在
+    visible 默认  可见
+overflow  溢出
+    hidden 子元素浮动的话,清除浮动,给父元素高度
+            子元素没有浮动,但是内容超过父元素,隐藏超出部分
+    scroll  滚动条   无论是否溢出,都产生滚动条
+    auto    自动   超出有滚动条,不超出就没有
+
+盒子模型
+    IE盒子模型
+        width  ----  border-box
+                包括内容区,padding区,border区
+    W3C盒子模型
+        width ---- content-box
+                内容区
+    盒子:
+        margin   外边距
+        border   边框
+        padding  内间距
+        width
+        height
+    设置盒子模型
+        box-sizing属性
+            border-box
+            content-box
+背景
+    background-color 
+        #CCCCCC
+        rgb(255,255,255)
+        rgba(255,0,0,0.5)
+            颜色+透明度(0-1之间的小数)
+    background-image
+        url()
+    background-position
+        水平方向 left center right
+        垂直方向 top center bottom
+        px  百分比 
+        移动图片,如果为负值,图片精灵技术
+    background-size
+        px
+        百分比   100% 100%
+        cover  充满
+    backgorund-repeat
+        repeat-x   x方向重复
+        repeat-y   y方向重复
+        no-repeat  没有重复
+        repeat     都重复
+    background-origin  起点
+        padding-box   padding区左上角
+        border-box    border区左上角
+        content-box   内容区左上角
+    background-clip   终点 ,裁切
+        padding-box   padding区右下角
+        border-box    border区右下角
+        content-box   内容区右下角
+    background-attachment
+        fixed   与视口绑定
+            从border-box展示
+        scroll  与元素绑定
+            从padding-box展示
+        local    与内容绑定  内容滚动,背景图片也滚动
+    background
+        url() no-repeat
+边框
+    border-style
+        与outline-style一样
+    border-width    
+    border-color
+    border:1px solid red;
+    border-radius  圆角边框
+        px  百分比
+        正圆  50%以上
+    border-image-source  图片地址
+        url()
+    border-image-slice  图片裁切点
+        4个值    上 右 下 左
+        3个值    上 左右  下
+        2个值    上下 左右 
+        1个值    上下左右
+        与margin和padding一样
+    border-image-repeat 中间部分重复方式
+        repeat  有半个图片的,不是自适应的
+        round   自适应  没有半个图片
+        stretch 拉伸
+表格
+    table-layout
+        fixed  固定,内容容易溢出
+        auto   内容多少自动分配,一般用这个 默认
+    border-collapse  表格边框合并
+        collapse   合并
+        separate   不合并 默认
+    border
+    background
+    caption-side  标题的位置
+        top   默认
+        bottom
+box-shadow  盒子阴影
+    h-offset v-offset blur size color
+    水平 垂直 模糊距离 阴影大小  颜色
+
+布局
+    1.默认文档流
+        文档书写顺序就是页面展示顺序
+        块级元素独占一行,行内元素与其他共享一行
+    2.改变默认文档流
+        float
+        dispaly
+        position  定位
+            static 默认定位
+            fixed   固定定位  固定在浏览器上  脱离文档流
+            relative  相对定位  相对于原本的位置  不脱离文档流
+            absolute  绝对定位
+                脱离文档流
+                相对于页面或者离它最近的祖先定位元素定位
+            定位元素是使用poaition属性,并且属性值为flex或者relative.
+            定位元素有一些特用属性,left,right,top,bottom 
+display:flex  弹性盒子布局
+    容器
+        父元素
+        display:flex;
+        flex-direction:方向
+            row  默认.显示在一行,从左开始
+            row-reverse 显示在一行,从右开始  最前面的子元素在最右面
+            column 显示在一列,从上开始
+            column-reverse 显示在一列,从底下开始
+        flex-wrap  自动换行
+            nowrap 默认 不自动换行
+            wrap   自动换行
+            wrap-reverse 自动换行,最底下的在最上面
+        align-items  垂直对其方式
+            stretch  拉伸
+            flex-start 上对齐
+            flex-end   下对齐
+            center    居中
+        justify-content 水平方向对齐
+            flex-start 左对齐
+            flex-end  右对齐
+            center   居中
+            space-between 子元素之间有空白
+            space-around  子元素周围有空白  左跟右
+    项目
+        子元素
+        flex:比例 px;
+            占得总比例,最小宽度
+
+
+
+
+
+

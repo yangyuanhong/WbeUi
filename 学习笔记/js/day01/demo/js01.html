@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		/* css代码 */
+		.one{
+			width: 100px;
+			height: 100px;
+			background-color: #ccc
+		}
+	</style>
+
+<!--1.将js代码嵌入在head标签内部-->
+<script type="text/javascript">
+		window.alert("hello world! 1");
+</script>
+	<!--3.引入外部的js文件
+	不能再已经引入外部文件的script标签内部书写js代码，否则会被浏览器忽略执行
+	
+
+	-->
+<script type="text/javascript" src="js/day01.js">
+</script>
+</head>
+<body>
+	
+	<h1>这是body体内的内容</h1>
+	<!--2.将js代码嵌入在html标签内部-->
+	<div class="one" onclick="alert('点击弹出');">		
+	</div>
+	<a href="http://www.baidu.com">点击我进行跳转</a>
+	<a href="javascript:void(0)">点击我</a>
+	
+</body>
+
+</html>

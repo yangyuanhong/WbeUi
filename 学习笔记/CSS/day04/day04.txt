@@ -1,0 +1,126 @@
+1.字体样式：
+	color 		为字体指定颜色
+		颜色值或关键字
+	font-family 		为文字指定特殊的字体，浏览器只会使用浏览器可以访问到的字体
+		serif 		:有衬线的字体				
+		sans-serif	:无衬线的字体				
+		monospace	:等宽字体，用于代码				
+		cursive 	:草书				
+		fantasy 	:装饰字体 
+	font-style		用于打开和关闭斜体文本
+		normal	: 正常字体，关闭斜体				
+		italic 	: 斜体				
+		oblique	: 模拟斜体
+
+	font-weight		为字体设置粗细程度
+		normal, bold 	: 正常，加粗字体	  400,700			
+		lighter, bolder	: 设置当前元素字体比父元素更细或者更粗
+		100–900 	: 数值类型的粗细程度（值越大字体越粗）
+	text-transform 	设置或者取消字体改变
+		none 	:防止任何改变			
+		uppercase: 将文本转换为大写				
+		lowercase: 将文本转换为小写		
+		capitalize: 将所有单词第一个字母转换为大写
+		full-width: 转换为类似于一个等宽字体字体
+
+	text-decoration 	设置或者取消文本修饰
+		none	 	: 取消所有文本修饰			
+		underline 	: 为文本添加下划线			
+		overline 	: 为文本添加上划线			
+		line-through	: 为文本添加删除线
+
+		text-decoration-style:
+			solid：
+				  实线
+			double：
+				  双线
+			dotted：
+				  点状线条
+			dashed：
+				  虚线
+			wavy：
+				  波浪线
+		text-decoration-type:
+			以上的取值;
+		text-decoration-color:  颜色
+
+	text-shadows 	设置或者取消文本阴影
+		text-shadow: h-shadow v-shadow blur color;
+			none	 	:   取消所有阴影			
+			h-shadow 	:  必需。水平阴影的位置。允许负值。			
+			v-shadow	:  必需。垂直阴影的位置。允许负值。			
+			blur		:  可选。模糊的距离。
+			color		:   可选。阴影的颜色。参阅 CSS 颜色值。
+
+	font-size 	 	为文字指定大小
+
+	font属性：
+	    [<font-style>] [<font-weight>] <font-size/line-height>        <font-family>
+
+2.列表
+	list-style-type	: 	  设置列表项标志类型
+		none		: 没有		
+		disc		: 实心圆
+		circle		: 空心圆	
+		square		: 实心方形
+		decimal	 	: 数字，Beginning with 1
+		lower-roman 	:小写罗马数字 i, ii, iii, iv, v…	
+		upper-roman	: 大写罗马数字 I, II, III, IV, V…
+		decimal-leading-zero	: 小于10的前面加0  01, 02, 03, … 98, 99
+	list-style-position	: 设置列表项标志出现的位置
+		outside		: 列表项标志出现在主块框的外部
+		inside		: 列表项标志出现在主块框的内部
+	list-style-image 	: 自定义设置列表项标志
+		url()		: 指定图标位置
+	list-style		: 列表样式的速记写法
+		<type>[<image>][<position>]
+	line-height 		: 设置列表的行高
+
+	ul有margin上下16px，padding 左40px
+	dl有margin上下16px，没有padding，但是dd有margin-left为40px
+	p有margin上下16px
+
+3.超链接
+	cursor的取值：
+		url 需使用的自定义光标的 URL。
+		注释：请在此列表的末端始终定义一种普通的光标，以防没有由 URL 定义的可用光标。
+		default 	默认光标（通常是一个箭头）
+		auto 		默认。浏览器设置的光标。
+		crosshair 	光标呈现为十字线。
+		pointer 	光标呈现为指示链接的指针（一只手）
+		move 		此光标指示某对象可被移动。
+				【东east   西west  南north  北south】
+		e-resize 	此光标指示矩形框的边缘可被向右（东）移动。
+		ne-resize 	此光标指示矩形框的边缘可被向上及向右移动（北/东）。
+		nw-resize 	此光标指示矩形框的边缘可被向上及向左移动（北/西）。
+		n-resize 	此光标指示矩形框的边缘可被向上（北）移动。
+		se-resize 	此光标指示矩形框的边缘可被向下及向右移动（南/东）。
+		sw-resize 	此光标指示矩形框的边缘可被向下及向左移动（南/西）。
+		s-resize 	此光标指示矩形框的边缘可被向下移动（南）。
+		w-resize 	此光标指示矩形框的边缘可被向左移动（西）。
+		text 		此光标指示文本。
+		wait 		此光标指示程序正忙（通常是一只表或沙漏）。
+		help 		此光标指示可用的帮助（通常是一个问号或一个气球）。
+outline:
+	与border的区别：
+		1.outline是不占空间的，既不会增加额外的width或者height
+		2.outline有可能是非矩形的
+	outline-color 	规定边框的颜色。
+	outline-style 	规定边框的样式。
+		none 	默认。定义无轮廓。
+		dotted 	定义点状的轮廓。
+		dashed 	定义虚线轮廓。
+		solid 	定义实线轮廓。
+		double 	定义双线轮廓。双线的宽度等同于 outline-width 的值。
+		groove 	定义 3D 凹槽轮廓。此效果取决于 outline-color 值。
+		ridge 	定义 3D 凸槽轮廓。此效果取决于 outline-color 值。
+		inset 	定义 3D 凹边轮廓。此效果取决于 outline-color 值。
+		outset 	定义 3D 凸边轮廓。此效果取决于 outline-color 值。
+		inherit 	规定应该从父元素继承轮廓样式的设置。
+	outline-width 	规定边框的宽度。
+text-align
+	left 	把文本排列到左边。默认值：由浏览器决定。
+	right 	把文本排列到右边。
+	center 	把文本排列到中间。
+	justify 	实现两端对齐文本效果。
+	inherit 	规定应该从父元素继承 text-align 属性的值。

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件绑定</title>
+</head>
+<body>
+	<div id="outer">
+		click me
+	</div>
+	<a href="http://www.baidu.com" target="_blank">百度一下</a>
+	<form action="http://www.baidu.com">
+		username:<input type="text" name="username">
+		<input type="submit" value="提交">
+	</form>
+	<script>
+		var $outer = document.getElementById("outer");
+		
+		//EventUtil.on($outer,"click",handler1);
+		//$outer.attachEvent("onclick",handler1);
+		$outer.onclick = function(event){
+			console.log(event);
+		}
+		var $a = document.links[0];
+		$a.onclick = function(){
+			console.log(this);
+			alert(this.innerHTML);
+		}
+
+		var $form = document.forms[0];
+		$form.onsubmit = function(event){
+			var event = event?event:window.event;
+			alert(event);
+			var $username = document.getElementsByName("username")[0].value;
+			if(! /^\w{6,}$/i.test($username)){
+				alert("输入有误");
+				//event.preventDefault();
+				//return false;
+				if(event.preventDefault){
+					event.preventDefault();
+				} else {
+					event.returnValue = false;
+				}
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>内部样式表</title>
+    <style>
+        /*组合选择器  */
+        /* body,ul{
+            margin: 0px;
+            padding: 0px;
+        } */
+        /*普遍选择器  */
+        *{
+            margin:0;
+            padding: 0;
+        }
+
+
+        /*标签选择器  */
+        /* ul{
+            padding: 0px;
+            margin: 0px;
+        } */
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        /*类选择器  */
+        .one{
+            background-color: #cccccc;
+            margin:0px 0px 20px 0px;
+            /* margin:20px; */
+            /* margin:10px 100px 20px; */
+        }
+        .two{
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">one</div>
+    <div class="two">two</div>
+
+    <ul>
+        <li>列表一</li>
+        <li>列表一</li>
+        <li>列表一</li>
+    </ul>
+</body>
+</html>

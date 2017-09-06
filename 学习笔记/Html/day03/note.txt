@@ -1,0 +1,155 @@
+form表单
+    与后台服务器进行数据交互.
+    表单控件:接受用户输入信息
+    form标签
+        action:将数据提交给后台的地址
+        method:数据提交的方式
+            get 默认 数据在地址栏,不安全.
+                http://www.baidu.com?q=hello是什么意思
+                login.action?name=zhangsan&password=123
+            post方式   method="post"  数据在请求体中.比较安全
+                name="zhangsan"
+                password="123"
+        target:响应页面显示的位置
+            _self  默认
+            _blank 新选项卡的方式打开
+            _top
+            _parent
+        name:给表单起名字
+            js可以直接通过name属性来获取表单DOM节点
+        enctype:表单的编码方式
+            3种
+            application/x-www-form-urlencoded       默认的,将空白转换为+,特殊字符采用ASCII编码
+            multipart/form-data
+                文件上传与下载的时候用
+            text/plajpg
+表单控件
+    input控件
+        type:
+            text        单行文本框
+            password    密码框
+            radio       单选按钮
+                        name值保持一致
+            checkbox    复选按钮
+            hidden      隐藏框
+            submit      提交按钮
+            image       提交图片
+            reset       重置按钮
+            button     按钮   没有提交功能
+            file        文件
+                file:///F:/1.jpg
+        name:
+            给控件起名字,服务器通过它取值
+        value:
+            显式设置值,传递给服务器的值
+        checked:
+            radio
+            checkbox   默认选中
+        size:
+            文本框的宽度,放多少个字符
+        maxlength:
+            最大可输入的字符数
+    button控件
+        button标签  默认在表单内部是可以提交的
+        type:
+            button submit reset
+    label控件
+        for属性   取值为某个控件的id值
+    select控件   name属性  multiple是否多选
+        option   value属性
+        optgroup  label属性:分组起名字
+            option
+    textarea控件
+        cols属性  多少列 (column列)
+        rows属性  多少行
+        name属性  
+        <textarea>内容</textarea>
+单值属性:
+    checked    radio/checkbox 默认选中
+    selected   option   默认选中
+    multiple    select是否多选
+    readonly    只读
+    disabled    禁用
+-------------------------
+
+html5中新增的表单元素和属性
+    新增的表单元素
+        pregress  进度条
+            进度条 max最大工作量   value当前工作进度,一般是从后台获取
+        meter   磁盘容量
+            meter  磁盘容量
+            low 是下限值
+            high是上限值
+            optimum 最优值
+            如果optimum<low的话,越低越好.
+                value<low,是绿色
+                low<value<high,是黄色
+                value>high,是红色
+            如果low<optimum<high的话,在中间最好
+                low<value<high,是绿色,其他为黄色
+            如果optimum>high的话,越高越好
+                value<low,是红色
+                low<value<high,是黄色
+                value>high,是绿色
+        output  输出信息   js配合使用
+
+        datalist  数据列表
+            option
+            对比与select的区别
+                与select的option的对比:
+                1.如果在option标签内部写了内容的话,点击之后,datalist显示的是value值,select那边显示的是option的元素内容.
+                2.数据提交都提交的是option的value值
+                3.datalist在火狐和谷歌上显示的区别.火狐上只显示内容,谷歌上显示value跟内容
+    新增的type属性值
+        火狐不支持
+        data   年月日
+        datatime-local  年月日时分
+        time   时分
+        month  年月
+        week   年周     
+        
+        number  数值
+            min max step
+        range   滑块
+            min max step
+        tel     电话
+            pattern="[0-9]{11}"
+        url     url地址
+            http://www.baidu.com
+        color   颜色
+            #cccccc
+        search  搜索
+
+        email   邮件
+            liuyr@briup.com
+    表单属性:
+        form属性
+            写在表单控件中,将外部的表单控件包裹在表单内  值是form标签的id值
+        novalidate 取消表单验证
+        formaction  
+        formmethod
+        formtarget
+        formenctype
+        formnovalidate
+            写在提交按钮或提交图片上的.对原先表单的一些重写
+        required   必填项
+        pattern    正则表达式
+        autofocus  自动聚焦
+        placeholder 占位符
+            与value的区别:
+                1.显示上,placeholder是灰色,value是正常色
+                2.提交的时候,placeholder值不会提交,value是会提交的
+                3.输入数据之后,placeholder的值会消失.value值需要先删掉再填写
+其他html5的元素
+    mark    高亮显示
+    cite    引用 倾斜
+    ol     start="4" reversed  反转或者倒序
+
+
+
+
+
+
+
+
+

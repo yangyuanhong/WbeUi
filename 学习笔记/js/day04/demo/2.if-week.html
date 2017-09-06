@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>week</title>
+	<script type="text/javascript">
+		
+		//var result=alert("hello");//警告框
+		//var result2=prompt("请输入数值");
+		//会话框
+		//console.log(typeof result2);
+		/*
+		alert()没有返回值，返回值为undefined
+		prompt():
+			参数为提示用户输入的内容
+			当用户点击确定时，返回用户所输入的内容，并且内容为String类型；如果没有输入，返回空字符串当用户点击取消时，返回null;
+
+		*/
+		
+		/*
+			函数：
+			1.函数的参数
+			2.函数的返回值
+		*/
+
+
+		/*星期转换*/
+		var day=prompt("请输入一个数值");
+		//day:String
+		day=+day;
+		if(day && typeof day=="number"){
+			if(day>=1 && day<=7){
+				if(day==1){
+					console.log("星期1");
+				}else if(day==2){
+					console.log("星期2");
+				}else if(day==3){
+					console.log("星期3");
+				}else if(day==4){
+					console.log("星期4");
+				}else if(day==5){
+					console.log("星期5");
+				}else if(day==6){
+					console.log("星期6");
+				}else{
+					console.log("星期天");
+				}
+			}else{
+				console.log("您输入的数值有误");
+			}
+		}else{
+			console.log("您输入的数据类型有误");
+		}
+
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

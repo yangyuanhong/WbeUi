@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>伪元素选择器</title>
+    <style>
+        /* ::before */
+        ul li{
+            list-style: none;
+            width: 400px;
+            text-align: right;
+        }
+        /*之前  */
+        li::before{
+            content: "*";
+            color: red;
+        }
+        /*之后  */
+        li::after{
+            content: "*";
+            color: blue;
+        }
+        /*块级元素第一行  */
+        p::first-line{
+            color: blue;
+        }
+        /*第一个字符  */
+        p::first-letter{
+            font-size: 30px;
+            color:red;
+        }
+        /*选中状态  */
+        textarea::selection{
+            background-color: pink;
+        }
+
+    </style>
+</head> 
+<body>
+    <ul>
+        <li>列表一</li>
+        <li>列表一列表一</li>
+        <li>列表一列表一列表一</li>
+        <li>列表一列表一列表一列表一</li>
+    </ul>
+    <p>
+       hello
+       <br>
+       你好 
+    </p>
+    <textarea name="" id="" cols="30" rows="10">选中我选中我选中我选中我选中我选中我选中我选中我选中我选中我选中我选中我选中我选中我选中我选中我选中我选中我选中我选中我</textarea>
+</body>
+</html>

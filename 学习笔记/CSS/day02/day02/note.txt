@@ -1,0 +1,86 @@
+css
+    层叠样式表
+    修饰文档(html)
+css声明
+    属性名:属性值;
+
+css声明块
+    {
+        属性名:属性值;
+        属性名:属性值;        
+    }
+css选择器
+    div{
+        属性名:属性值;
+        属性名:属性值; 
+    }
+    ID 选择器    #id
+    class选择器  .class
+    标签选择器      div  标签名
+    普遍选择器     *
+    组合选择器     div,p    .one,#outer{}
+    嵌套选择器(复合)   div.one{}  
+css引入到html中
+    标签的style属性内
+        <div style="color:red;"></div>
+    style标签内部
+        <head>
+            <style>
+                div{
+                    color:red;
+                }
+            </style>
+        </head>
+    html文档外   外部样式表
+        新建一个.css结尾的文件 style.css
+            在文件内部写
+                div{
+                    color:red;
+                }
+        引入到html中
+            <head>
+                <link href="./style/style.css"/>
+            </head>
+        在style.css中引入其他的common.css文件
+            需要在style.css文件的第一行,
+            @import url("common.css");
+css属性
+    color:red;   设置元素内容的颜色
+    height:20px; 设置元素的高度
+    width:100px; 设置元素的宽度
+    margin:
+        上 右 下 左;
+        上 左右 下;
+        上下 左右;
+        上下左右;
+        0 auto;    居中
+
+        div{
+            margin:0 auto;  /*让div居中*/
+            text-align:center;  /*让div内部的内容水平居中*/
+            line-height:100px;
+        }
+        默认div占一行,高度由子元素撑起来.一般在div上设置宽度,在子元素上设置高度.
+    padding:四种取值  内间距
+    text-align:center;
+    background:   背景
+    background-color:设置背景颜色
+
+    float:left/right;
+        浮动,脱离文档流飘起来.
+        如果第一个元素浮动,那么在原来位置飘起来,之后的元素占用其在文档流中原来的位置.
+        如果第一个和第二个都左浮动,那么第二个跟在第一个之后飘起来,之后的顶上去.
+        如果是两个都右浮动,那么第一个在右侧.正常情况下,需要第一个在左侧,那么需要更换两个在文档中的位置(前后顺序).
+
+        清除浮动:
+            clear:both;
+
+        浮动中的左右边距问题:
+            正常情况下,没有浮动,两个相邻元素的上下margin共用.
+            如果两个元素都浮动,两个相邻元素的左右margin不共用,累加.
+        浮动与父级关系:
+            如果子元素都浮动的话,父级没有高度.如果父级想要有高度,父级使用overflow:hidden来解决.就有高度了.并且不影响之后的布局.
+            如果只是想不影响之后的布局,在之后布局的元素内部,使用clear:both,来清除浮动.
+
+
+

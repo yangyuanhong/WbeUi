@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>排序相关</title>
+    <script>
+        /*
+        var arr = ['terry',1,'larry'];
+        console.log("before:",arr);
+        //反转
+        var result = arr.reverse();
+        console.log("after:",arr);
+        console.log("返回值：",result);
+        */
+
+        var arr = [1,22,81,9,64,5];
+        console.log("before:",arr);
+        var handler = function(){};
+        var result = arr.sort(function(a,b){
+            if(a > b){
+                return -1;
+            } else if(a <b){
+                return 1;
+            } else {
+                return 0;
+            }
+        });
+        console.log("after:",arr);
+        console.log("result:",result);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

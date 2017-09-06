@@ -1,0 +1,13 @@
+@import url("common.css");
+div{
+    width: 100px;
+    height: 100px;
+}
+#one{
+    background-color: blue;
+}
+#two{
+    background-color: pink;
+}
+
+

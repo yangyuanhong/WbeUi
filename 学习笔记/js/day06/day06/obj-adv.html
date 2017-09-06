@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>深入理解对象</title>
+    <script>
+        var obj = {
+            name :"terry",
+            age:12
+        }
+        Object.defineProperties(obj,{
+            gender:{
+                value:"male",
+                enumerable:true
+            },
+            height:{
+                value:"178cm",
+                enumerable:true
+            }
+        });
+        Object.defineProperty(obj,"weight",{
+            value:"80kg",
+            enumerable:false,
+            writable:false
+        });
+        obj.weight = "90kg";
+
+        for(var key in obj){
+            console.log(key,obj[key]);
+        }
+        console.log(obj);
+
+        console.log(Object.getOwnPropertyDescriptor(obj,"weight"));
+        var arr = [1,2,3];
+        console.log(Object.getOwnPropertyDescriptor(arr,"length"));
+</script>
+</head>
+<body>
+    
+</body>
+</html>

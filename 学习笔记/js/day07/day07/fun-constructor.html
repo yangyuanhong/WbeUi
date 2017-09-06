@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>构造函数模式</title>
+    <script>
+        function Student(num,name,address){
+            //var obj = {}; this = obj
+            this.stuNum = num;
+            this.name = name;
+            this.address = address;
+            this.sayName = function(){
+                console.log(this.name);
+            }
+            //return this
+        }
+        var stu1 =new Student(1001,"terry","江西");
+        console.log(stu1 instanceof Student);
+        var stu2 =new Student(1002,"larry","江西");
+        console.log(typeof stu2);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

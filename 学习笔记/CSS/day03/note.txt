@@ -1,0 +1,87 @@
+浮动
+    float属性
+        left    左浮动
+        right   右浮动
+        none    不浮动
+    浮动的特点:
+        1.脱离文档流,浮动一个元素,飘在原来位置的上面,并不是飘在页面的左上角.
+        2.如果左浮动两个a,b元素,a在左,b在右,如果后面还有其他元素,其他元素顶上去
+            如果右浮动两个a,b元素,a在右,b在左.
+    浮动对父元素的影响:
+        如果父元素包裹两个子元素,子元素都浮动,那么父元素没有高度.
+        如果想让父元素有高度,使用overflow:hidden.(父元素上使用).
+            div  parent  overflow:hidden
+                div left
+                div left 
+                div normal   clear:both
+            div other
+    一般给父元素设置宽度,给子元素设置高度,父元素的高度由子元素撑起来.子元素的宽度就可以使用百分比.
+
+选择器
+    选择器的作用:选择符合条件的元素,元素选择出来之后,在css声明块中给样式.
+        div{
+            color:red;
+        }
+        选中所有div元素,给内部文字颜色为红色
+
+    id选择器
+    class选择器
+    标签选择器
+    普遍选择器   *
+    组合选择器   div,p
+    嵌套选择器   div.one   div#one
+        div .one 是选择div后代元素中class为one
+        div.one  是选择div并且class为one的
+        div,.one 是选择div元素和class为one
+    
+    子元素-后代-兄弟选择器
+        >   子代
+        空格  后代
+        +    后一个兄弟
+        ~    之后的兄弟
+
+    属性选择器
+        [key]  选择有某个属性的元素
+            div[title]
+                div.one
+        [key=val]  属性名=属性值
+        [key^=val] 属性值以什么开始
+        [key&=val] 属性值以什么结束
+        [key*=val] 属性值中包含什么字符
+        [key~=val] 属性值中有什么值
+
+    伪类选择器
+        子代选择器
+            p:only-child   独生子p
+            p:first-child  p作为第一个孩子的被选中
+            p:last-child   p作为最后一个孩子的被选中
+            p:nth-child(n) p作为第几个孩子的被选中
+            p:nth-last-child(n)p作为倒数第几个孩子的被选中
+            后代:first-of-type
+                每个类型中的第一个
+            后代:last-of-type
+                每个类型中的最后一个
+            后代:nth-of-type(n)
+                每个类型中的第几个
+            后代:nth-last-of-type(n)
+                每个类型中的倒数第几个
+            括号的取值:
+                n  自然数
+                2n+1  
+                odd  奇数
+                even 偶数 
+        状态选择器  达到某一特定情况下激发  
+            :hover
+    伪元素选择器
+        ::before
+    
+选择器的优先级
+
+选择器的继承
+
+
+
+    
+
+
+    

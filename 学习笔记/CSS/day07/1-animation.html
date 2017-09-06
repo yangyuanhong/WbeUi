@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animation</title>
+	<style>
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			/*动画名字*/
+			animation-name: myAnimation;
+			/*动画持续时间*/
+			animation-duration: 4s;
+			/*动画执行方向*/
+			/*animation-direction: normal;  默认 开始一帧-最后一帧 开始一帧-最后一帧*/
+			/*animation-direction: reverse; 反向 最后一帧-开始一帧 最后一帧-开始一帧*/
+			/*animation-direction: alternate; 开始一帧-最后一帧-开始一帧*/
+			/*animation-direction: alternate-reverse; 最后一帧-开始一帧-最后一帧*/
+			/*动画执行次数*/
+			animation-iteration-count: infinite;
+			/*延迟执行*/
+			/*animation-delay: 3s;*/
+			/*动画执行速度*/
+			/*animation-timing-function: ease;*/
+			/*animation-timing-function: ease-in;*/
+			/*animation-timing-function: ease-out;*/
+			/*animation-timing-function: ease-in-out;*/
+			animation-timing-function: linear;
+			animation-direction: alternate;
+
+
+
+			/*-ms-animation-name:myAnimation;*/
+			/*-ms-animation-duration: 5s;*/
+
+		}
+		@keyframes myAnimation{
+			from{
+				/*第一帧*/
+				width: 100px;
+				background-color: rgba(255,0,0,0.5);
+				height: 100px;
+				border-radius: 0%;
+				margin-left: 10px;
+				margin-top:10px;
+			}
+			to{
+				/*最后一帧*/
+				width: 200px;
+				background-color: rgba(0,0,255,0.5);
+				height: 200px;
+				border-radius: 50%;
+				margin-left:200px;
+				margin-top:200px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

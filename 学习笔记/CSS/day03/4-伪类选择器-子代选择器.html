@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>伪类-子代</title>
+    <style>
+        /*要求:outer有高度  inner全左浮动  都有边框  */
+        div.outer{
+            border:1px solid red;
+            overflow: hidden;
+        }
+        /*权值 11  */
+        div.inner{
+            width: 200px;
+            height: 200px;
+            border:1px solid blue;
+            margin:10px;
+            float: left;
+        }
+        /*伪类-子代  */
+        /*独生子   选择p标签,并且是独生子 */
+        p:only-child{
+            /* background-color: pink;    */
+        }
+        /*第一个孩子   选择span标签,并且是别人家的第一个孩子 */
+        span:first-child{
+            /* background-color: pink; */
+        }
+        /*最后一个孩子   选择span标签,并且是别人家的最后一个孩子 */
+        span:last-child{
+            /* background-color: pink; */
+        } 
+        /* div#innerDiv+div span:last-child{
+            background-color: pink;
+        } */
+
+        /*第几个孩子   选择span标签,并且是别人家的第二个孩子 */
+        span:nth-child(2){
+            /* background-color: pink;  */
+        } 
+        /*倒数第几个孩子   选择span标签,并且是别人家的倒数第四个孩子 */
+        span:nth-last-child(4){
+            /* background-color: pink;  */
+        } 
+
+         /*后代元素中每个类型中的第一个*/
+        #innerDiv>*:first-of-type{
+            /* background-color: pink;  */
+        } 
+        /*后代元素中每个类型中的最后一个*/
+        #innerDiv>*:last-of-type{
+            /* background-color: pink;  */
+        }
+        /*后代元素中每个类型中的第二个*/
+        #innerDiv>*:nth-of-type(2){
+            /* background-color: pink;  */
+        }
+        /*后代元素中每个类型中的倒数第二个*/
+        #innerDiv>*:nth-last-of-type(2){
+            background-color: pink; 
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+        <div class="inner" id="innerDiv">
+            <span>hello</span>
+            <span>hello</span>
+            <span>hello</span>
+            <span>hello</span>
+            <span>hello</span>
+            <span>hello</span>
+            <span>hello</span>
+            <span>hello</span>
+            <p>你好 <span>hello</span></p>
+            <p>你好 <span>hello</span></p>
+        </div>
+        <div class="inner">
+            <p>你好</p>
+            <span>hello</span>
+        </div>
+        <div class="inner">
+            <span>hello</span>
+        </div>
+    </div>
+</body>
+</html>

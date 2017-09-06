@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>input控件</title>
+</head>
+<body>
+    <h3>用户注册页面</h3>
+    <form action="register.action">
+        <fieldset>
+            <legend align="right">必填信息</legend>
+            隐藏框：<input type="hidden" name="userId" value="1001"><br>
+            用户名：<input type="text" name="usernmame" size="100"><br>
+            密码：<input type="password" name="password" maxlength="8"><br>
+            确认密码：<input type="password" name="password2"><br>
+        </fieldset>
+        <fieldset>
+            <legend>选填信息</legend>
+            性别：
+                <!--label标签实现点击文字，选择单选框 lable的for属性指向某一个id属性值  -->
+                <input type="radio" name="gender" value="female" id="female"><label for="female">女</label>
+
+                <input type="radio" name="gender" value="male" checked="true">男
+            <br>
+            爱好：
+                <input type="checkbox" name="hobby" value="basketball">篮球
+                <input type="checkbox" name="hobby" value="dancing" checked>跳舞
+                <input type="checkbox" name="hobby" value="swimming">游泳
+            <br>
+            上传头像：<input type="file" name="userLogo">
+        </fieldset>
+        <fieldset>
+            <legend>提交</legend>
+            <input type="submit" value="提交">
+            <input type="reset" value="重置">
+            <input type="image" src="../images/1-鱿鱼网登陆页面_03.png" alt="图片迷路了..." width="50px" height="25px">
+            <input type="button" value="button">
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>练习</title>
+    <script>
+        //["1112","0021","332","444","298"]
+        //排序，权重
+        /**
+            计算权重 [5,3,8,12,19]
+            建立权重和字符串之间的关系
+                obj = {
+                    s3:"0021"
+                    s5:"1112"
+                    s8:"332"
+                    ...
+                }
+            按照权重排序  [3,5,8,12,19]
+            转换为字符串 [obj[3],obj[8]]
+        */
+        function sortByW(arr){
+            //1. 计算权重
+            var wArray = arr.map(function(item){
+                // item = "1112"    => 5
+                var iArray = item.split("");
+                var w = 0;
+                iArray.forEach(function(item){
+                    w += +item;
+                });
+                return w;
+            });
+            //wArray [ 5, 3, 8, 12, 19 ]
+            //2. 建立权重和字符串之间的关系
+            var mapper = {};
+            wArray.forEach(function(item,index){
+                mapper['s'+item] = arr[index];
+            });
+            //mapper { s5: "1112", s3: "0021", s8: "332", s12: "444", s19: "298" }
+            //3. 排序
+            wArray.sort(function(a,b){
+                if(a < b){
+                    return -1;
+                } else if(a>b){
+                    return 1;
+                } else {
+                    return 0;
+                }
+            });
+            //4. 将排序的权重数组进行替换
+            var result = [];
+            wArray.forEach(function(item){
+                result.push(mapper['s'+item]);
+            });
+            console.log(result);
+        }
+        var arr = ["1112","0021","332","444","298"];
+        sortByW(arr);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>position</title>
+    <style>
+        body{
+            margin: 0;
+            padding:0;
+        }
+        div{
+            width: 100px;
+            height: 200px;
+            background-color: pink;
+        }
+        .one{
+            /*静态定位  默认  */
+            position: static;
+        }
+        .two{
+            /*固定定位  广告  原始状态是在原来的位置,脱离文档流,后面元素顶上去   相对于浏览器窗口,页面滚动它不动*/
+            position: fixed;
+            /* top:100px; */
+            bottom: 10px;
+            right: 10px;
+        }
+        .three{
+            /*相对定位 不脱离文档流,相对于原来位置定位 默认位置在原来的位置 */
+            position:relative;
+            top:10px;
+            left: 10px;
+        }
+        .four{
+            /*绝对定位 脱离文档流,原始位置在原来位置的上方  如果没有祖先元素或者祖先元素不是定位元素,相对于页面定位.如果有祖先元素为定位元素,那么相对于离它最近的定位祖先元素定位*/
+            position: absolute;
+            left:10px;
+            top:10px; 
+        }
+        .parent{
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">静态定位 默认</div>
+    <div class="two">固定定位</div>
+    <div class="three">相对定位</div>
+    <div class="parent">
+        <div class="four">绝对定位</div>
+    </div>
+    <div>正常div</div>
+</body>
+</html>

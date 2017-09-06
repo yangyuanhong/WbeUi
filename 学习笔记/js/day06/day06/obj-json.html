@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var obj = {
+            name :"terry",
+            age:12,
+            sayName:function(){
+                console.log(this.name);
+            }
+        }
+        console.log(obj);
+        //序列化
+        var json = JSON.stringify(obj);
+        console.log(json);
+
+        var json2 = '{"name":"larry","age":13}';
+        var obj2 = JSON.parse(json2)
+        console.log(obj2);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Object</title>
+	<script type="text/javascript">
+		//1.
+		var student=new Object();
+			student.name="zhansgan";
+			student.age=12;
+		//console.log(student.name);
+		//console.log(typeof(student));
+
+		//2.
+		var teacher={
+			name:"lisi",
+			age:12,
+			valueOf:function(){
+				return 1
+			}
+		};
+		//console.log(teacher.constructor);
+		//console.log(typeof(teacher));
+
+		//function
+		/*function eat(){
+
+		}
+		console.log(eat);
+		console.log(typeof(eat));//function
+	console.log(eat instanceof  Object);*/
+
+	console.log(teacher.valueOf());
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

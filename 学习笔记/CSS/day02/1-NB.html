@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新百伦页面</title>
+	<style>
+		/*去掉页面默认样式*/
+		body,ul{
+			margin:0px;
+			padding:0px;
+		}
+		header,address,footer,nav{
+			display: block;  /*块级展示*/
+		}
+		/*header布局*/
+		header{
+			/*height: 56px;*/
+			background-color: #232323;
+			overflow:hidden;
+		}
+		header div.logo{
+			width: 150px;
+			height: 56px;
+			background-color: #df1e3b;
+			float: left;
+		}
+		header nav{
+			width: 380px;
+			background-color: green;
+			float: left;
+		}
+		header nav>ul{
+			overflow:hidden;
+		}
+		header nav>ul>li{
+			list-style: none;   /*去掉默认原点*/
+			float: left;
+			margin:0 28px;
+			line-height: 56px;
+		}
+		header nav>ul>li a{
+			text-decoration: none;   /*超链接的修饰*/
+			color:#e7e7e7;  /*a标签内字体的颜色*/
+		}
+		header div.search{
+			width: 360px;
+			height: 56px;
+			background-color: skyblue;
+			float: right;
+		}
+		header div.findAddress{
+			width: 95px;
+			height: 56px;
+			background-color: blue;
+			float: right;
+		}
+		/*广告布局*/
+		div.ad{
+			height: 475px;
+			background-color: #ededed;
+		}
+
+		/*关注*/
+		div.focus{
+			height:50px;
+		}
+		div.focus>div{   /* > 直接子代*/
+			width:1070px; 
+			background-color: skyblue;
+			margin:0 auto;
+			text-align:center;
+			line-height: 50px;
+		}
+
+		/*产品*/
+		div.products{
+			/*height: 1440px;*/
+			background-color: #ededed;
+		}
+		div.products>div{
+			width:1070px;
+			overflow:hidden;
+			/*background-color: pink;*/
+			margin:0 auto;
+		}
+		div.products>div div.product{
+			width: 520px;
+			height: 285px;
+			/*border:1px solid red;*/
+			background-color: red;
+			float: left;
+			margin-bottom:28px;
+			margin-right: 28px;
+		}
+		div.products>div div.right{
+			margin-right:0px;
+		}
+		div.products>div div.last{
+			width: 1070px;
+			height: 455px;
+			background-color:#232323;
+			/*clear:both; */
+			float: left;
+			margin-bottom:28px;
+		}
+
+
+
+		/*联系我们*/
+		address{
+			height: 220px;
+			border-bottom:1px solid #545454;
+		}
+		/*版权信息*/
+		footer{
+			height: 48px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="logo"></div>
+		<nav>
+			<ul>
+				<li><a href="#">男</a></li>
+				<li><a href="#">女</a></li>
+				<li><a href="#">儿童</a></li>
+				<li><a href="#">跑鞋顾问</a></li>
+			</ul>
+		</nav>
+		<div class="findAddress"></div>
+		<div class="search"></div>
+	</header>
+	<div class="ad"></div>
+	<div class="focus">
+		<div>关注我们的信息</div>
+	</div>
+	<div class="products">
+		<div>
+			<div class="product"></div>
+			<div class="product right"></div>
+			<div class="product"></div>
+			<div class="product right"></div>
+			<div class="product"></div>
+			<div class="product right"></div>
+			<div class="last"></div>
+		</div>
+	</div>
+	<address></address>
+	<footer></footer>
+</body>
+</html>

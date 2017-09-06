@@ -1,0 +1,185 @@
+
+数据类型转换：
+	将基本数据类型中的其它数据类型转换为：
+		Number
+		Boolean
+		String
+	转换函数：
+			Number()
+			Boolean()
+			String()
+
+	1.将其他数据类型转换为Boolean：
+			string：
+					所有费空字符串转换为true
+					空字符串转换为false
+			null:false
+			undefined:false
+			Number:
+					任何非0转换为true
+					0和NaN转换为false
+	2.将其他数据类型转换为Number:
+		1>Number()
+				布尔类型：
+						true:1
+						false:0
+				null:0
+				undefined:NaN
+				Number:直接输出
+				字符串：
+				只包含数值，解析为对应的数值
+				不能解析八进制，会忽略前导0
+				可以解析十六进制
+				首位如果为符号，解析为对应数值的正值/负值(不包含其他字符)
+				其他位包含字符：NaN
+		2>parseInt()
+				解析整数
+				布尔类型：NaN
+				null:	NaN
+				undefined:NaN
+				Number:
+					整数：对应整数
+					小数：舍去小数点(无论几个)
+
+		字符串：
+				只包含整数：对应整数
+				包含小数：先转换为number类型，舍去小数点
+				不能解析8进制，忽略前导0
+				可以解析16进制
+				首位为符号，不包含其他特殊字符，解析为对应数值正/负
+				其他位包含特殊字符，从签到后一次解析，遇到第一个特殊字符后返回
+	3>parseFloat()
+			与parseInt()一致
+			除了：
+			1.能够解析一个小数点，多个小数点只保留一个，其他截取
+			2.不能解析八进制和十六进制
+3.其他数据类型转换为String
+		1>String()
+				将任意类型转换为String，加上""
+		2>toString()
+		//自动装箱  自动拆箱
+			null和undefined没有toString()方法
+			var  a=12；
+			Number(a).toString();//实例
+			console.log(a);//自动拆箱
+			//var a? Number(a)
+			a.toString(16);//十进制
+
+			var b=true;
+			Boolean(b).toString();
+			//"true"
+
+			var c="hello";
+			String(c).toString();
+
+			其他基本数据类型可以将自身封装到转换函数内，调用toString().
+			将自身转换为String类型
+		Number:
+				toString():输出十进制string
+				toString(2):输出二进制string
+				toString(8):输出八进制string
+				toString(16):输出十六进制string
+二、操作符
+	1.一元操作符
+		++ -- + -
+		返回number类型
+		1.递增 ++  
+			++a:
+			a++:a=a+1;
+			前置：操作该变量之前进行递增
+			后置：操作该变量之后进行递增
+		2.递减 --
+			前置：操作该变量之前递减操作
+			后置：操作该变量之后递减操作
+			
+		3.加 +
+			+a:Number(a)
+			相当于调用Number();
+			
+		4.减 -
+			将一元减应用于数值时，数值会变成负数。
+			-Number(a)
+			其他情况与+相同
+	2. 布尔操作符
+	逻辑非 !
+	先将任意类型的数值转换为Boolean，然后取反
+		!!:连用两次相当于调用了Boolean()
+		3. 逻辑与 && 
+		如果第一个操作数是 
+		null,NaN,undefined,false,0,""可被转换为false的值的时候返回该值，否则返回第二个数
+	
+
+		4. 逻辑或 ||		
+			如果第一个操作数是null,NaN,undefined,false,0,"" 则返回第二个操作数，否则返回第一个数
+	5. 加性操作符
+		1. 加法 +
+		m + n
+		1) 当m,n不为String,Object类型的时候，先将m,n转换为Number类型，然后再进行计算
+		2) 当m,n有一个为String,无论另一个操作数为何（但不为对象）都要转换为String，然后再进行拼接
+			
+		3) 当m,n 有一个为对象，默认调用父级Object的toString();如果子级只重写了toString
+		(),调用子级toString();如果既重写了toString(),又重写了valueOf(),调用valueOf()
+	
+	2. 减法 -
+		无论操作数为任何类型，先将其使用Number()转换器转换为Number类型，然后再计算。
+		
+ 
+6. 乘性操作符
+	执行自动的类型转化Number()
+	1. 乘法 *
+		如果两个数都是数值，执行常规的乘法计算
+		如果一个操作数是NaN,结果为NaN
+		超过数值范围返回Infinity
+	2. 除法 /
+		如果一个操作数是NaN,结果为NaN （0/0 ; NaN）
+		一个非0值除0 Infinity   
+		
+	3. 取余 %
+		如果两个数都是数值，执行常规的取余计算
+		如果一个操作数是NaN,结果为NaN（任意数%0 ; NaN）
+
+7. 关系操作符
+	< > <= >= ,返回一个Boolean值
+	1.如果两个操作数是字符串，比较字符串中对应位置的每个字符的字符编码值
+		
+	2.如果一个操作数是数值，将另外一个操作数也转换为数值进行比较
+		任何数和NaN比较结果都为false
+	3.有一个为对象，默认调用父级Object的toString();如果子级只重写了toString
+		(),调用子级toString();如果既重写了toString(),又重写了valueOf(),调用valueOf()
+8.相等操作符,返回Boolean
+	1.相等和不相等 ==, != (先转换在比较)
+		1.如果两个操作数都为字符串，比较字符序列
+		2.如果两个操作数都为数值类型，比较值的是否相等
+		3.如果两个操作数都是对象，比较的对象的引用
+		4.null == undefined	//true
+			undefined派生自null
+		5.NaN与任何值（包括NaN）相等比较结果为false，不等结果为true.
+		6.如果一个操作数为number类型，另外一个操作数为undefined,null,boolean,string之一，先将这些数据类型转换为数值，再进行比较
+
+	2.全等和不全等
+		仅比较不转换，先比较两个数所属的数据类型，如果类型不同则不同，如果类型相同，再继续比较两个数的值
+		console.log("55" == 55); true
+		console.log("55" === 55);false
+		null == undifined;		//true null派生自undifined
+		null === undifined;		//false
+
+9. 三目运算符 ? : 
+	if(a>b){
+		//>
+	}else{
+		//<
+	}
+
+
+	var result=a>b?">":"<";
+    
+10. 赋值运算符 = 
+   将右侧的值赋给左侧的变量
+   可以和其他算术运算符连用 *= /= %= += -= 
+   var a=3;
+   		a="hello";
+   	a+=2;//a=a+2
+   
+11. 逗号操作符
+   可以在一条语句中执行多个操作
+   var num1=1,num2 = 2, num3 = 3;

@@ -1,0 +1,156 @@
+
+
+1.变量的声明
+	1.变量的声明
+		var str;
+	2.变量的初始化
+		str="hello";
+	3.变量的更改
+		str=true;
+		str+1;
+	4.变量的使用
+		alert();
+		console.log();
+		str-->"true"
+
+
+	变量的声明和初始化：
+		var str="hello";
+
+	var str="hello",str2="world",str3="22";
+
+变量的声明：
+	1.使用var操作符
+		var str;
+	2.不使用var操作符
+		str="hello";
+
+
+局部变量和全局变量：
+	全局变量：
+		在js的整个作用域内都可以访问到的变量
+		1.使用var操作符，声明在js的全局里面（不能包含在函数内部）
+		2.不使用var操作符，可以声明在js作用域的任意位置
+
+	局部变量：
+		只能够在特定范围内使用的变量
+		使用var操作符，声明在函数内部
+
+
+3.数据类型
+	一共有6种数据类型
+	5中基本数据类型
+		undefined：未定义
+			1.变量只声明，未赋值
+			2.显性的将undefined赋值给变量
+			3.既不声明也不赋值
+				console.log(a);//undefined
+
+		null:
+			空引用数据类型
+			即将要指向堆区中的一块空间
+			typeof(null):object
+			var a=null;
+				a="hello";
+
+			if(name!=null){
+				//
+			}
+		Boolean：
+			布尔类型
+			true
+			false
+		Number:
+			数值类型
+			整数：
+				十进制
+				八进制
+					055=45
+				十六进制
+					0xa=10
+			浮点数
+				1.233：1.233
+				1.0：1
+				1.300：1.3
+			科学计数法：
+				var a=1.2e7;
+
+	isFinite(a):返回布尔类型
+	NaN:
+		number
+		(not a number)
+		isNaN(a);
+		//当参数为NaN->true
+		//当参数不为NaN-->false
+
+	String:
+		字符串类型
+		"" ''
+		var a="true";//string
+		var b="undefined";
+			//string
+
+		"hello"
+		console.log("hello\nworld");
+		\n:换行
+		\":"
+		\':'
+
+	length:
+		属性
+		var str="hello";
+		str.length//5  number
+
+
+	1中引用数据类型
+		复杂数据类型
+		堆区
+		最大父级对象Object
+		1.使用new关键字
+			var student=new Object();//空对象
+			student.name="lisi";
+			student.age=12;
+			console.log(student.age);//12
+			console.log(student);
+			//Object{nmae:"lisi";..}
+		2.var teacher={
+			name:"lisi",
+			age:12
+		};//空对象
+
+			console.log(teacher.age);
+
+	funciton eat(){
+
+	}
+
+	eat()
+	typeof(eat)//function-->string
+
+	eat instanceof Object//true
+
+	函数是引用数据类型
+
+	constructor:
+		属性
+		teacher.constructor//Object()
+		当前对象的构建者是谁
+	toString():
+		//[Object Obejct]:string
+	valueOf()
+		当前对象
+
+		techer.toSting();
+
+
+其他数据类型转换为
+	Boolean
+	Number
+	String
+	转换函数：
+	Boolean()
+	Number()
+	String()
+
+
+

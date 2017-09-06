@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+    <style>
+        div{
+            width: 100px;
+        }
+        div#one{
+            background: lightblue;
+        }
+        div#two{
+            background: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div id="one"><p>one</p><p>two</p><p>three</p></div>
+
+    <div id="two">
+        <!--这是一个段落-->
+        <p>two</p>
+    </div>
+    <script>
+        var $one = document.getElementById("one")
+        var $one1 = $one.firstChild.cloneNode(true);
+
+        setTimeout(function() {
+            //$one.appendChild($one1);
+            //$one.insertBefore($one1,$one.lastChild);
+            $one.replaceChild($one1,$one.lastChild);
+        }, 1000);
+
+        var $ps = document.getElementsByTagName("p");
+        console.log($ps);
+        
+        
+    </script>
+</body>
+</html>

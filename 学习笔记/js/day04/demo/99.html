@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>99</title>
+	<script type="text/javascript">
+		for(var j=1;j<=9;j++){
+			for(var i=1;i<=j;i++){
+				var nbsp;
+				if(i*j<10){
+					//加空格
+					nbsp="&nbsp;&nbsp;&nbsp;"
+				}else{
+					nbsp="&nbsp;";
+				}
+
+				document.writeln(i+"*"+j+"="+(i*j)+nbsp);
+		
+			}
+			document.writeln("<br/>");
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

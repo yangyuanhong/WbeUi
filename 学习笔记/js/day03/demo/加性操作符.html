@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		var a={
+			name:"lisi",
+			age:12,
+			valueOf:function(){
+				return 10;
+			},
+			toString:function(){
+
+				return 1;
+			}
+		};//+ Number()
+		var b=2;
+		var result=a+b;
+		//console.log(result);
+		/*
+		对象和数值进行操作时，默认调用对象父级的toString();
+		如果子类只重写了toString(),调用子类的toString();
+		如果·子类只重写valueOf(),调用子类的valueOf()
+		如果·子类既重写了toSting()又重写了valueOf(),优先调用valueOf()
+
+		*/
+
+var a={};
+var b={};
+
+console.log(a==b);
+console.log(a===b);
+//NaN和任意数值进行比较，都将转换为false
+//全等===：先去比较数据类型，数据类型相同再继续比较数值，如果数值相同，比较引用地址
+
+
+
+
+	var a=5;
+	var b=2;
+	//var result=a>b?"大于":"小于";
+	var result;
+	if(a>b){
+		result=">>>";
+	}else{
+		result="<<<"
+	}
+
+	//console.log(result);
+	var a=3;
+	var g=4;
+	g*=3;//a=a*3
+	console.log(g);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

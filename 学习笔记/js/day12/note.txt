@@ -1,0 +1,53 @@
+1. Dom
+
+javascript
+    ECMAScript(标准JS)    ECMA规范
+    DOM(文档对象模式)      浏览器厂商
+    BOM(浏览器对象模型)    浏览器厂商
+2. 
+                Node
+Document    Element     Comment     Text
+document    $h1         <!---->     <p>1</p>
+
+3. Node
+    nodeType    
+    nodeName    P H1 TABLE   
+    nodeValue   
+
+    childNodes
+    parentNode
+    previousSibling
+    nextSibling
+
+    cloneNode()
+
+    appendChild()
+    insertBefore();
+    replaceChild();
+    removeChild();
+
+4. document 
+    window.document(当前页面)
+
+    document.title
+    document.forms
+    document.images
+    document.links
+    ....
+    document.getElementById("");
+    document.getElementsByTagName("");
+    document.getElementsByClassName("");
+    document.getElementsByName("");
+
+    document.createElement();
+5. Element
+    var e =  document.getElementById("");
+
+    e.id
+    e.title
+    e.className
+
+    e.getAttribute("alt");
+    e.setAttribute("alt","图片找不到了");
+
+    e.setAttribute("class","");

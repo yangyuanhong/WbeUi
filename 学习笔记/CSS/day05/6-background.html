@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>背景</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            /* background-color: red; */
+             background-image: url(../../Html5/images/1-鱿鱼网登陆页面_07.png); 
+             /* background-image: url(../../Html5/images/1-鱿鱼网登陆页面_10.png); */
+              background-repeat: no-repeat;  
+             /* background-repeat: repeat-x;  */
+            /* background-repeat: repeat-y;  */
+            /* background-repeat: repeat;  */
+            /* background-position: center center; */
+            /* background-position: right bottom;   */
+            /* 
+            水平方向left center right 
+            垂直方向top center bottom */
+            /* background-position: -30px -30px; */
+            /*图片精灵  */
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- <img src="../../Html5/images/1-鱿鱼网登陆页面_10.png" alt=""> -->
+    </div>
+
+    <div class="icon"></div>
+    <div class="icon"></div>
+    <div class="icon"></div>
+    <!--这3个div的背景都是不同小图标,  为了减少访问服务器的次数,将所有的小图标放到一张图片  3行4列  
+        . . . .
+        . . . .
+        . . . .
+        
+        div.icon{
+            background-image:url();
+        }
+        div.icon:fist-child{
+            background-position:-100px -100px;
+        }
+    -->
+
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>这是用户注册页面</title>
+</head>
+<body>
+    <h3>这是注册页面</h3>
+    <form action="register.action">
+        <table border="1px" cellspacing="0" cellpadding="0" width="400px" align="center">
+            <tr>
+                <td colspan="2"><marquee>这是注册页面</marquee></td>
+            </tr>
+            <tr>
+                <td>*用户名:</td>
+                <td><input type="text" name="username" required></td>
+            </tr>
+            <tr>
+                <td>*密码:</td>
+                <td><input type="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td width="130px">再次确认密码:</td>
+                <td><input type="password" name="password2" required>*</td>
+            </tr>
+            <tr>
+                <td>性别:</td>
+                <td>
+                    <input type="radio" name="gender" id="male" value="male" checked>
+                    <label for="male">男</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">女</label>
+                </td>
+            </tr>
+            <tr>
+                <td>爱好:</td>
+                <td>
+                    <input type="checkbox" name="hobby" id="basketball" value="basketball">
+                    <label for="basketball">篮球</label>
+                    <input type="checkbox" name="hobby" id="swimming" value="swimming">
+                    <label for="swimming">游泳</label>
+                    <input type="checkbox" name="hobby" id="dancing" value="dancing">
+                    <label for="dancing">跳舞</label>
+                </td>
+            </tr>
+            <tr>
+                <td>喜欢的颜色:</td>
+                <td>
+                    <input type="color" name="color">
+                </td>
+            </tr>
+            <tr>
+                <td>电话号码:</td>
+                <td>
+                    <input type="tel" pattern="[0-9]{11}" name="tel">
+                </td>
+            </tr>
+            <tr>
+                <td>出生年月:</td>
+                <td>
+                    <input type="date">
+                </td>
+            </tr>
+            <tr>
+                <td>*邮箱:</td>
+                <td>
+                    <input type="email" required>
+                </td>
+            </tr>
+            <tr>
+                <td>个人简介:</td>
+                <td>
+                    <textarea name="info" cols="30" rows="10" placeholder="请输入个人简介"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="image" src="../images/1-鱿鱼网登陆页面_03.png" alt="" width="100%" height="40px">
+                </td>
+            </tr>
+
+
+
+
+
+        </table>
+    </form>
+</body>
+</html>

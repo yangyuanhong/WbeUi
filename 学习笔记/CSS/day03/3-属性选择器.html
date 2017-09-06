@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>属性选择器</title>
+    <style>
+        div{
+            width:100px;
+            height: 100px;
+            border: 1px solid red;
+            margin:10px;
+        }
+        /*属性选择器   选择有title属性的  */
+        div[title]{
+            /* background-color:pink; */
+        }
+        /*选择有title属性,并且属性值固定的  */
+        div[title="one"]{
+             /* background-color:pink; */
+        }
+        /* 选择有title属性 并且以什么开始的 */
+        div[title^=t]{
+              /* background-color:pink;  */
+        }
+        /* 选择有title属性 并且以什么结尾的 */
+        div[title$=e]{
+              /* background-color:pink;  */
+        }
+        /*包含什么的*/
+        div[title*=o]{
+            /* background-color:pink;    */
+        }
+        /*值中有什么的  完整的单词 一般用于class  */
+        div[class~=two]{
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <div title="one"></div>
+    <div title="two" 
+    class="one two"></div>
+    <div title="three"></div>
+    <div title=""></div>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //构造函数
+        var obj = new Object();
+        obj.name = "terry";
+        obj.age = 12;
+        obj.gender = "male";
+        delete obj.gender;
+        console.log(obj);
+
+        var name = "larry"
+        var obj = {
+            name : name,
+            "first-name":"robit",
+            age :12,
+            gender:"male",
+            valueOf:function(){
+                return "this is valueOf overrid";
+            },
+            toString: function(){
+                return "this is toString overrid";
+            }
+        }
+        console.log(obj.name);
+        console.log(obj.toString());
+        console.log(obj.valueOf());
+        console.log(obj);
+
+        console.log("father" in obj);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

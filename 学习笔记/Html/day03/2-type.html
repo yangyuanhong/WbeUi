@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html5新增的type值</title>
+</head>
+<body>
+    <form action="#" oninput="result.value=month.value">
+        年月日:<input type="date" name="date"> <br>
+        年月日时分: <input type="datetime-local" name="datetimeLocal">  <br>
+        时分: <input type="time" name="time"> <br>
+        年月: <input type="month" name="month">
+            <output name="result">0</output> <br>
+        年周: <input type="week" name="week"> <br>
+        <!--其他的type属性值  -->
+        搜索框:<input type="search" placeholder="请输入搜索内容" name="search1">
+        搜索框:<input type="search" value="请输入搜索内容" name="search2">
+
+        <input type="submit">
+
+    </form>
+</body>
+</html>

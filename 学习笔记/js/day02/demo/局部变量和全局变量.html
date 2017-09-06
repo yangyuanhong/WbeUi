@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>局部变量和全局变量</title>
+	<script type="text/javascript">
+		 a=1;
+		/*console.log(a);*/
+		
+		fan();//window  js中的内置对象
+		//window.fan()
+		//slef.fan()
+		function fan(){
+			/*console.log(a);*/
+			b=2;
+			console.log(b);
+		}
+		console.log(b);
+
+	
+
+		/*
+		函数:方法
+		a:10    b:买饭()
+		var fan=a.买饭(10);
+
+		*/
+		
+
+		/*
+		全局变量：
+			1.使用var操作符，将变量声明在script标签的任意位置,除了函数内部
+			2.不使用var操作符，将变量声明在任意位置
+
+		局部变量：
+			1.使用var操作符，将变量声明在函数内部
+
+
+		*/
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

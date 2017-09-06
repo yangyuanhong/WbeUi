@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>html5新添加的表单属性</title>
+</head>
+<body>
+    <form action="#" id="myForm">
+        *用户名: <input type="text" required autofocus placeholder="请输入用户名" name="username">
+        *密码: <input type="password" required pattern="[a-z]{2}" name="password">
+        <br>
+        <input type="submit">
+        <input type="image" src="../images/1-鱿鱼网登陆页面_03.png" width="100px"  height="30px" alt="图片显示不出来了" formaction="login.action" formmethod="post" formenctype="" formtarget="_blank"
+        formnovalidate="true">
+    </form>
+    颜色: <input type="color" name="color" form="myForm">
+</body>
+</html>

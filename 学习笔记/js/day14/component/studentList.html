@@ -1,0 +1,46 @@
+    <table class="students_tbl">
+        <tbody>
+            <tr>
+                <th><input type="checkbox"></th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>手机号</th>
+            </tr>
+           
+        </tbody>
+    </table>
+    <div class="options">
+        <button>添加</button>
+        <button>修改</button>
+        <button>删除</button>
+    </div>
+    <script>
+$(function(){
+
+    $("button:contains('添加')").on("click",function(){
+        $(".content").load("component/studentAdd.html")
+    })
+    $("button:contains('删除')").on("click",function(){
+        var ids = $("input:checkbox:checked").map(function(index,item){
+            return +item.value;//$(item).val();
+        }).toArray();
+        //删除数组中的学生
+        students = students.filter(function(item){
+            return ids.indexOf(item.id) == -1;
+        });
+        //console.log(result);
+        $(".content").load("component/studentList.html")
+    })
+    students.forEach(function(item){
+        var newTr = $("<tr>"
+                +"<td><input type='checkbox' value='"+item.id+"'></td>"
+                +"<td>"+item.name+"</td>"
+                +"<td>"+item.gender+"</td>"
+                +"<td>"+item.phone+"</td>"
+            +"</tr>");
+        $(".students_tbl>tbody").append(newTr);
+    })
+
+    
+});
+</script>

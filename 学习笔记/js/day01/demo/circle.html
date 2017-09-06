@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		.article{
+			width: 230px;
+			height: 330px;
+			background-color: #343434;
+			margin:0 auto;
+		}
+
+		.circle{
+			height: 230px;
+			padding: 35px;
+			animation-name: outer;
+			animation-duration: 4.5s;
+			animation-delay: 0s;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+
+		}
+
+		.circle .outer{
+			border:5px solid #9b9b9b;
+			height: 100%;
+			border-radius: 50%;
+			padding: 10px;
+			animation-name: inner;
+			animation-duration: 4.5s;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+		}
+
+		.circle .outer .inner{
+			border:10px solid #fff;
+			height: 100%;
+			border-radius: 50%;
+		}
+
+		.text{
+			color: #fff;
+			text-align: center;
+		}
+
+		/* 动画设置 */
+		@keyframes outer{
+			20%{
+				padding: 25px;
+			}
+
+			40%{
+				padding: 35px
+			}
+
+			100%{
+				padding: 35px
+			}
+		}
+
+		@keyframes inner{
+			20%{
+				padding: 20px
+			}
+
+			40%{
+				padding: 10px;
+			}
+
+			65%{
+				padding: 22px
+			}
+
+			100%{
+				padding:10px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="article">
+		<div class="circle">
+			<!--外圆-->
+			<div class="outer">
+				<!--内圆-->
+				<div class="inner"></div>
+			</div>
+		</div>
+		<div class="text">
+			HI!
+		</div>
+	</div>
+</body>
+</html>

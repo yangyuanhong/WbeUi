@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>parseInt</title>
+	<script type="text/javascript">
+	//布尔值/null/undefined/""/NaN/任意字符串-》NaN
+		var a="12";//12
+		var a="12.9";//12
+		var a="+12";//12
+		var a="12+1222222";//12
+		var a="12abc";//12
+		var a="055";//55 忽略前导0
+		var a="0xA";//10
+		/*var result=parseInt(a);
+		console.log(a);
+		console.log(result);*/
+
+		var a="0xa";
+		var result=parseFloat(a);
+		console.log(a);
+		console.log(result);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

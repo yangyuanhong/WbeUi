@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        /*
+        //create
+        var pattern = new RegExp("hello","i");
+        //var pattern2 = /hello/i;
+        //console.log(pattern);
+        //console.log(pattern2);
+        //匹配
+        var result = pattern.test("abc hello world def g");
+        console.log(result);
+        */
+        // xx.xx.xx.xx he.12.__.$%
+        // xxxXX   x a-zA-Z  X0-9 abc12
+        var str = "javascript is good, it easy than java, Java is ood";
+        //var str = "he.12.__.$%"
+        //var str = "abc12 aa_12 ccc3456"
+        //var pattern = /[a-z]{3}\d{2,}/ig;
+        //var pattern = /..\...\...\.../ig;
+        var pattern = /java(script){0,}?/ig;
+
+        var result;
+        var index = 0;
+        while(result = pattern.exec(str)){
+            index++;
+            console.log("第"+index+"次",result[0],result.index);
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

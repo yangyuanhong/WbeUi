@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>其他的属性</title>
+	<style>
+		.one{
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			animation-name: myOne;
+			animation-duration: 3s;
+			/*设置填充样式*/
+			/*animation-fill-mode: forwards;  最后一帧的形态填充*/
+			/*animation-fill-mode: backwards;  延迟执行的时候，使用第一帧来填充
+			animation-delay: 4s;*/
+			animation-fill-mode: none;
+			animation-delay: 4s;
+		}
+		@keyframes myOne{
+			0%{
+				background-color: red;
+			}
+			100%{
+				background-color: blue;
+			}
+		}
+		.two{
+			width: 100px;
+			height: 100px;
+			background-color: skyblue;
+			margin:10px;
+			animation-name: myTwo;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			animation-play-state: paused;
+		}
+		.two:hover{
+			animation-play-state: running;
+		}
+		@keyframes myTwo{
+			from{
+				width: 100px;
+				height: 100px;
+			}
+			to{
+				width: 300px;
+				height: 300px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="one"></div>
+	<div class="two"></div>
+</body>
+</html>

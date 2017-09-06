@@ -1,0 +1,243 @@
+css优先级
+    1.!important   优先级最高
+    2.权值  特性值
+        style    1000
+        id选择器  100
+        class选择器,属性选择器,伪类  10
+        标签选择器,伪元素选择器  1
+        > 空格 + ~  0
+        权值大的优先
+    3.就近原则(在权值相同的情况下)
+css继承
+    可继承属性
+        color
+        font
+    不可继承属性
+        border
+    inherit   继承
+        border:inherit;
+    initial   不继承
+        color:initial;
+    unset    不设置
+        color: unset;
+        border:unset;
+字体的样式
+    color  颜色
+    font-style  设置斜体 
+        normal  正常
+        italic  斜体
+        oblique 倾斜  模拟斜体
+    font-weight  设置字体粗细
+        normal  正常  400
+        bold    加粗  700
+        100-900
+        lighter bolder  比父元素细,粗
+    font-size  设置字体大小
+        px
+        em
+        默认的是16px;    一般用的是14或12
+    font-family 设置字体家族
+        serif  有衬线
+        sans-serif 无衬线
+        monospace  等宽   code编码使用  英文字母所占位置一样宽
+        cursive  草书
+        fantasy  梦幻
+        font-family:"微软雅黑","黑体",serif;
+
+    font    速记属性
+        font-style font-weight
+        font-size/line-height font-family
+    text-transform  字体改变
+        none
+        lowercase  小写
+        uppercase  大写
+        capitalize   首字母大写
+        full-width  等宽 将英文字符和中文字符宽度一样
+    text-decoration  文本修饰
+        none   去除文本修饰 
+        text-decoration-line: 线的位置
+            underline  下划线
+            overline   上划线
+            line-through 删除线
+        text-decoration-style: 线的样式
+            solid  实线
+            double 双实线
+            dotted 点状线
+            dashed 虚线
+            wavy   波浪线
+        text-decoration-color 线的颜色 
+    text-shadow  设置文本阴影
+        h-offset v-offset blur color
+        x偏移 y偏移 模糊距离 颜色
+        多个阴影使用逗号隔开
+    text-align  设置对齐方式
+        left   左
+        center 中
+        right  右
+        justify 两端
+    line-height  设置行高,会将文字垂直居中
+
+列表
+    list-style  设置列表的样式
+        none   无
+        list-style-type 编号的类型
+            disc   实心圆
+            circle 空心圆
+            square 方形
+            decimal 数值
+            decimal-leading-zero 10以下加0
+            lower-roman  小写罗马
+            upper-roman  大写罗马
+            ...大写字母  小写字母
+        list-style-position 位置
+            inside 主框内  
+            outside 主框外  默认
+        list-style-image 图片编号
+            url();
+超链接
+    cursor  鼠标样式
+        url();  图片  需要一个默认样式
+            cursor:url(),default;
+        default 默认的,箭头
+        auto   浏览器的 
+        pointer 手形
+        move    移动 手形(握住)
+        crosshair 十字
+        text  文本  大写I
+        help  帮助 问号
+        wait  等待  转圈
+        8种方向 n-resize   w e s n
+outline
+    外边框  不占用空间
+    outline 速记属性
+        outline-style
+	outline-width
+	outline-color
+    outline与border的区别：
+	outline不占用屏幕空间
+display   展现形式
+	inline  行内展示   将块级元素转换为行内元素（不可设置宽高）
+	block   块级展示   将行内元素转换为块级元素（可设置宽高）
+	inline-block 行内展示，可设置宽高
+	none    元素隐藏  不占据屏幕空间
+visibility  可见性
+	hidden 不可见   占用屏幕空间
+	visible 可见
+overflow 超出处理
+	hidden  当子元素有浮动的时候 ，清除浮动，使父元素有高度
+			当子元素不浮动，但是内容超过父元素的时候，让超出部分隐藏
+	scroll  无论是否有溢出，都有滚动条
+	auto    有溢出有滚动条，不溢出没滚动条
+
+盒子模型
+
+    w3c标准盒子模型
+        div{
+            width:100px;
+            padding:10px;
+            border:10px;
+            margin:10px;
+        }
+        内容区宽度100px
+        盒子宽度  width+padding*2+border*2
+        所占空间 width+padding*2+border*2+margin*2
+    IE盒子模型
+        div{
+            width:100px;
+            padding:10px;
+            border:10px;
+            margin:10px;
+        }
+        内容区宽度width-2*padding-2*border
+        盒子宽度  width 100px
+        所占空间 width+margin*2
+    使用 box-sizing来设置盒子类型
+    	content-box   默认盒子，w3c盒子
+    		所设置的width为contentWidth
+    	border-box    IE盒子
+    		所设置的width为contentWidth+2*padding+2*border
+
+背景:
+    background-color  背景颜色
+    background-image 背景图片
+        url()
+    background-position 背景图片的位置
+        关键字
+            水平方向 left center right
+            垂直方向 top center bottom
+        px
+            可以为负值
+            参考原点为元素左上角
+            可以制作图片精灵
+    background-size:
+        背景图片的大小
+        正常情况下,背景图片的大小为 图片的大小
+        
+        百分比    100% 100%
+        px        30px 30px
+        cover   一定比例充满元素
+    background-repeat： 重复方式
+    	no-repeat  不重复
+    	repeat     x y 都重复
+    	repeat-x   x方向重复
+    	repeat-y   y方向重复
+    background-origin 背景图片原点
+        border-box   border开始
+        padding-box  paddign开始 默认
+        content-box  content开始
+    background-clip  图片裁剪的范围 结束的位置
+        border-box   border结束 默认
+        padding-box  paddign结束
+        content-box  content结束
+    background-attachment 将图片绑定到什么上
+        fixed   绑定到视口上
+        scroll  绑定到元素上 默认的
+        local   绑定到元素内容上
+    background 速记属性
+        background-image background-repeat
+
+        background:url() no-repeat;
+        .....
+边框
+    border   速记属性
+        border-width border-style border-color
+
+        border-width  设置宽度
+        border-style  线条样式
+            solid 
+            double
+            dashed
+            dotted
+            wavy  ??
+            groove  
+            ridge
+            inset 
+            outset
+        border-color    边框颜色
+
+    border-image    边框图片
+        border-image-source:
+            url()
+        border-image-slice:  裁剪
+            top right bottom left
+            30 30 30 30
+        注意border:10px solid;
+        border-image-repeat:重复方式
+            round
+            repeat
+            stretch
+    border-radius   圆角边框
+    	px
+    	百分比
+    	超过50%  就为圆
+表格
+    border-collapse
+        collapse  合并
+        separate  不合并
+    background  背景
+    caption-side  标题的位置
+        top
+        bottom
+    table-layout  布局方式
+        auto    自动
+        fixed   固定

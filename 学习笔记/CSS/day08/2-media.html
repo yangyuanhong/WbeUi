@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>media2</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: red;
+            margin:10px;
+            float: left;
+        }
+        @media screen and (max-width:768px){
+            div{
+                width: 90%;
+                transition-property: width;
+                transition-duration: 4s; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</body>
+</html>

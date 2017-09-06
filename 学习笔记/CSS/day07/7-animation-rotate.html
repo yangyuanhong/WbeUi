@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>变形</title>
+	<style>
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			margin:10px;
+		}
+		div.one{
+			animation-name:myOne;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			/*animation-direction: alternate;*/
+			/*transform: skewY(30deg);*/
+		}
+		div.three{
+			animation-name:myThree;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			/*animation-direction: alternate;*/
+		}
+		@keyframes myOne{
+			from{
+				/*transform: rotateX(0deg);*/
+				/*transform: rotateY(0deg);*/
+				/*transform: rotateZ(0deg);*/
+				/*transform: rotate(0deg);*/
+				/*transform: skewX(0deg);*/
+				/*transform: skewY(0deg);*/
+				transform: skew(0deg,0deg);
+			}
+			to{
+				/*transform: rotateX(180deg);*/
+				/*transform: rotateZ(-60deg);*/
+				/*transform: rotate(360deg);*/
+				/*transform: skewX(80deg);*/
+				/*transform: skewY(80deg);*/
+				transform: skew(30deg,30deg);
+
+			}
+			
+		}
+		@keyframes myThree{
+			from{
+				/*transform: skewX(180deg);*/
+				transform: skewX(80deg);
+			}
+			to{
+				/*transform: skewX(100deg);*/
+				transform: skewX(0deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="one">one</div>
+	<div>参照</div>
+	<div class="three"></div>
+
+</body>
+</html>

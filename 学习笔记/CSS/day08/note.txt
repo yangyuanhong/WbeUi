@@ -1,0 +1,316 @@
+动画和变形
+    animation:
+        name  duration timing-function delay count direction
+    animation-name   与动画序列绑定
+        @keyframes myAnimation{
+            from{
+                //属性控制
+            }
+            to{}
+        }
+        @keyframes myAnimation{
+            0%{}
+            50%{}
+            100%{}
+        }
+        div{
+            animation-name:myAnimation;
+        }
+    animation-duration  动画持续时间
+        s ms
+    animation-timing-function 动画执行的速度
+        ease  默认  先慢后快再慢
+        ease-in  先慢后快
+        ease-out 先快后慢
+        ease-in-out  先慢后快再慢
+        linear  线性
+    animation-delay   动画延迟时间
+        s 
+        ms
+        默认立即执行
+    animation-iteration-count 动画执行次数
+        n 
+        infinite  无限次
+    animation-direction    动画执行的方向
+        normal  正常执行  从第一帧-最后一帧
+        reverse 反向执行  从最后一帧-第一帧
+        alternate 第一次从第一帧-最后一帧，第二次从最后一帧-第一帧.....
+        alternate-reverse   第一次从最后一帧-第一帧，第二次从第一帧-最后一帧.....
+    animation-play-state  动画是否执行
+        running  执行
+        paused   暂停
+    animation-fill-mode   动画填充
+        none  不填充  默认
+            pink   一red   最后blue
+                pink
+        forwards  动画执行的最后一帧进行填充
+        backwards  动画执行的第一帧进行填充         在延迟的时候
+过渡
+    transition:
+        transition-duration   时间
+        transition-delay     延迟
+        transition-timing-function  速度
+        transition-property   过渡控制的属性
+        div{
+            width:100px;
+        }
+        div:hover{
+            width:300;
+            transition-property:width;
+            .......
+        }
+变形
+    transform:
+        属性值：
+            translate(x,y)  移动
+                translateX()
+                translateY()
+                translateZ()
+            scale(x,y)   放大倍数
+                大于1放大，小于1缩小
+            skew()   倾斜
+                deg  度数
+                skewX()
+                skewY()
+            rotate()  旋转  z
+                deg  度数
+                rotateX()   单杠
+                rotateY()   钢管
+                rotateZ()   转盘
+媒体查询
+    媒体类型
+        all  所有设备
+        print  打印
+        screen  屏幕
+        speech  声音合成器
+    媒体特性
+        color
+        device-width/device-height  设备宽高
+        width/height  窗口的宽高
+
+        min-width：992px;
+        max-width:1200px;
+
+        992-1200
+
+        尺寸划分 width
+            ----超小屏--768px---小屏---992px---中屏---1200px---大屏----
+    逻辑运算符
+        and   并且
+        not    除了
+        only  只有
+媒体查询模块
+    媒体查询类型
+    css样式
+    @media screen and (max-width:768px){
+        div{
+            background:red;
+        }
+    }
+    @media screen and (min-width:768px) and (max-width:992px){
+        div{
+            background:blue;
+        }
+    }
+    @media screen and (min-width:992px) and (max-width:1200px){
+        div{
+            background:pink;
+        }
+    }
+    @media screen and (min-width:1200px){
+        div{
+            background:skyblue;
+        }
+    }
+-----复习--
+ css
+    css基础语法
+        注释  /**/
+
+        css声明：   属性名:属性值;
+        css声明块：
+            {
+                属性名:属性值;
+                属性名:属性值;
+            }
+        css导入方式
+            style=""
+            <style></style>
+            link href=""
+            @import url()
+css选择器
+    ID选择器   #id
+    类选择器   .class
+    标签选择器 div
+    普遍选择器  *
+    嵌套选择器  div.one
+    组合选择器  div,.one
+    子代选择器
+        空格    后代
+        >       子代
+        +       下一个兄弟
+        ~       之后的兄弟
+    属性选择器
+        [key]  有某个属性的
+        [key=val]   key=val
+        [key^=val]  开始
+        [key$=val]  结束
+        [key*=val]  包含
+        [key~=val]  有某个值  class
+    伪类选择器
+        子代
+            :only-child  独生子
+            :first-child  第一个孩子
+            :last-child   最后一个孩子
+            :nth-child()   第几个孩子
+            :nth-last-child()  倒数第几个孩子
+            :first-of-type 每类型中的第一个
+            :last-of-type   每类型中的最后一个
+            :nth-of-type()  每类型中的第几个
+            :nth-last-of-type()  每类型中的倒数第几个
+        状态：
+            :link     未访问
+            :visited  已访问
+            :hover    悬停
+            :active   点击
+            :checked 选中
+            :default 默认
+            :focus   聚焦
+            :readonly 只读
+            :disabled   禁用
+            :enabled   可用
+            :required  必填
+            :optional  选填
+            :valid    通过验证
+            :invalid  不通过验证的
+            :in-tange   范围内
+            :out-of-range  范围外
+    伪元素选择器
+        ::before       之前   content:""
+        ::after        之后
+        ::first-letter 第一个字符
+        ::first-line   第一行
+        ::selection    选中的
+选择器的优先级
+    1.!important   最优先
+    2. 特性值
+        style=""    1000
+        id选择器    100
+        class选择器，伪类，属性  10
+        标签选择器，伪元素   1
+        空格 > + ~    0
+    3.如果特性值一样，就近原则
+
+属性的继承
+    可继承属性和不可继承属性
+    属性值：
+        initial   初始化  不继承
+        inherit   继承
+        unset     不设置  不管
+
+
+        color:initial;
+
+字体样式
+    font  
+        font-style
+            normal
+            italic  斜体
+            oblique
+        font-weight
+            normal  400
+            bold   700
+            bolder/lighter
+            100-900
+        font-size/line-height
+            16px
+        font-family
+            serif
+            sans-serif
+            fantasy
+            cursive
+            monospace
+    text-shadow
+        x y 距离 color
+    text-transform  
+        lowercase
+        uppercase
+        capitalize？？？？？
+    text-align  
+        center
+        left
+        right
+    text-decoration   文本修饰
+        line
+            underline
+            overline
+            line-through
+            none
+        style
+            solid
+            double 
+            dotted
+            dashed
+            wavy
+        color
+    list-style  
+        type
+            ....
+        position
+            inside
+            outside
+        image
+            url()
+    cursor
+        ......
+    outline
+        style
+            ...
+            groove
+            ridge
+            inset
+            outset
+盒子模型
+    IE
+    W3C
+    box-sizing:
+        content-box
+        border-box
+背景
+    background
+        ...
+边框
+    border
+        .....
+表格
+    caption-side
+    border-collapse
+    table-layout
+布局
+    默认文档流
+    浮动
+    定位
+        固定
+        绝对
+        相对
+        默认
+    弹性布局
+        display:flex;
+        ....
+动画和变形
+
+媒体查询
+
+兼容性
+
+    overflow
+    display
+    visibility
+    z-index
+
+
+
+
+
+
+

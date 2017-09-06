@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //对象的创建-构造函数
+        var obj = new Object();
+        obj.name = "terry";
+        obj.age = 12;
+        console.log(obj);
+        //对象字面量
+        var obj2 = {
+            name :"terry",
+            age : 12
+        };
+        console.log(obj2);
+
+        //console.log(obj2.name);
+        //对象属性的遍历（自有属性）
+        for(var key in obj){
+            //key代表的是每次遍历从obj中获取的属性名
+            var val = obj[key];//obj["age"]
+            console.log(key,val);
+        }
+        //
+        var a = "name";
+        //访问obj中的name属性
+        console.log(obj.name);
+        console.log(obj['name']);
+        console.log(obj[a]);
+        //属性的检测
+        //in 当被检测的属性为对象的自定义属性以及继承属性的时候为true
+        console.log("name" in obj);
+        var name = "name";
+        console.log(name in obj);
+        console.log("constructor:","constructor" in obj);
+        //
+        var result = obj.hasOwnProperty("constructor");
+        console.log(result);
+        console.log(obj.propertyIsEnumerable("name"));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

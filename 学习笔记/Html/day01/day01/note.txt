@@ -1,0 +1,124 @@
+html   
+    hypertext markup language    
+    超文本标记语言
+    用来制作网页
+    www.baidu.com/index.html
+
+
+    浏览器   --http---  服务器 
+    url    
+        http://www.baidu.com/index.html
+
+        127.0.0.1   唯一标识一台主机
+
+    B/S架构
+        浏览器/服务器
+    C/S架构 
+        客户端/服务器
+
+    html发展历史
+        html 1.0
+            第一次浏览器大战   
+        html 4.01
+        XHTML   
+        html5
+    html元素
+        <p>这是一个段落<i>hello</i></p>
+        块级元素   独占一行
+        行内元素   与其他元素共享一行
+        空元素     <img />
+        替代元素   input img
+    html属性
+        <table bgcolor="red" align="center"></table>
+        <标签名 属性名=“属性值” 属性名=“属性值”></结束标签>
+        <table >
+
+        </table>
+
+    以.html结尾或者以.htm  结尾
+
+    创建html文档：
+        html:4t   传统版
+        html:4s   严格版
+        html:5    html5版
+
+
+    分析html5文档：
+        各标签的作用
+    
+    html语法
+        空白
+        注释
+        实体
+
+    html标签
+        p      段落   块级元素
+        h1-h6  标题   块级元素
+        strong b em i u s sub sup  行内元素
+        a      超链接 
+             href 跳转的地址
+                取值:路径     . 当前目录  ..上级目录
+                    锚点     p的id值    #id
+                    mailto:liuyr@briup.com
+            target 打开链接页面的方式
+                _self  默认，当前页面打开
+                _blank 打开一个新的选项卡
+                _top   
+                _parent 
+        img  图片
+            src  图片路径属性
+            alt  图片显示不出来的提示信息
+            width 设置宽度  以px（像素）为单位
+            height 设置高度
+        html核心属性  大部分标签可以使用的属性
+            id     唯一标识
+            class  可以重复，为一类
+            style  写css样式
+            title  提示信息
+        table 表格   cellspacing cellpadding width border align  
+            caption 标题
+            colgroup  列组
+                col  一列   span属性
+            thead   表头
+                tr   一行
+                    th 单元格
+            tbody   表体
+                tr  一行    height属性
+                    td 单元格   colspan rowspan width
+            tfoot   表尾
+                tr  一行
+                    td 单元格
+        ol ul dl 列表
+            li 列表项
+            dl
+                dt
+                dd
+    html5中新增的标签
+        结构标签
+            header
+            article
+            section
+            nav
+            aside    
+            footer  
+            address 
+    html5中新增的其他标签
+        figure
+            figcaption
+        details   open属性
+            summary
+    纯粹的块级标签  div
+    纯粹的行内标签  span
+
+
+
+
+
+    
+
+
+
+
+
+
+

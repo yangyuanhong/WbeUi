@@ -1,0 +1,28 @@
+1. 包装器数据类型
+    var str = 'hello';// str是String的一个实例，String.prototype定义的方法 str都可以调用
+
+    str.
+    Boolean
+    Number
+    
+
+JSON
+    对象
+        {
+            "name":"terry",
+            "age":12
+        }
+    数组
+        ["terrt",12,{
+            "name":"terry"
+        }]
+
+        Object
+
+                Node
+
+Document(文档节点 nodeType 9)   Element(元素节点 nodeType 1)    Text(文本节点 nodeType 3) Comment(注释节点 nodeType 8)
+
+HTMLDocument            HTMLElement
+
+document                 $div

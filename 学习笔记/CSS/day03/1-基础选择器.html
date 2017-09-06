@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>基础选择器</title>
+    <style>
+        /*标签选择器 权值 1  */
+        div{
+            width: 100px;
+            height: 300px;
+        }
+        /*类选择器 权值 10 */
+        .one{
+            /* background-color: red; */
+            border:1px solid red;
+        }
+        .one *{
+            border:1px solid blue;
+        }
+        /*id选择器 权值 100 */
+        #two{
+            background-color: blue;
+        }
+        /*嵌套选择器  权值 11*/
+        div.one{
+            color:red;
+            font-size: 10px;
+        }
+        /*组合选择器  权值 10 100 */
+        .one,#two{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <p>你好<span>h</span></p>
+        <span>hello</span>
+    </div>
+    <div id="two">hello</div>
+     <!-- <p class="one"></p>  -->
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    window.onload = function(){
+        var $user = document.getElementsByName("username")[0];
+        var $search = document.getElementsByName("search")[0];
+        $search.onkeyup = function(event){
+            if(event.keyCode == 13){
+                alert("您输入的关键字为"+this.value);
+            }
+        }
+        $user.onblur = function(){
+            var $msg = document.createElement("strong");
+            $msg.innerText = "输入不合法"
+            if(!/^\w{6,}$/i.test(this.value)){
+                
+                this.parentNode.insertBefore($msg,this.nextElementSibling)
+            }else{
+                console.log($msg);
+                if(this.parentNode.hasChildNodes($msg)){
+                     this.parentNode.removeChild($msg);
+                }
+               
+            }
+        }
+    }
+    
+    </script>
+</head>
+<body>
+    <input type="search" placeholder="请输入关键字" name="search"><br>  
+    username:<input type="text" name="username"><br>
+    descript:<textarea name="" id="" cols="30" rows="10">hello world</textarea>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</body>
+</html>

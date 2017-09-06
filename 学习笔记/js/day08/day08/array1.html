@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var obj = {
+            name:"terry",
+            age:12
+        }
+        var name = "name";
+        console.log(obj[name])
+        //区别在于属性名，对象的属性名是字符串，数组的属性名是数字
+        var arr = ["terry",12];
+        console.log(arr[0]);
+
+        var result
+             = arr.__proto__.constructor == Array;
+        console.log(result);
+        for(var key in Array.prototype){
+            console.log(key);
+        }
+        /*
+            var arr = {
+                0:"terry",
+                1:12
+            }
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

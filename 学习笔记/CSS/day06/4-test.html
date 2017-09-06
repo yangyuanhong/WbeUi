@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>光标划过在按钮下方出现div</title>
+    <style>
+        div.outer{
+            width: 110px;
+            margin:0 auto;
+            border:1px solid red;
+            position: relative;
+            height:40px;
+        }
+        span{
+            display: block;
+            width: 100px;
+            line-height: 30px;
+            text-align: center;
+            border: 3px groove yellow;
+            cursor: pointer;
+            /* position: absolute; */
+            /* left: 40%; */
+        }
+        div.inner{
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            position: absolute;
+            left: 45%;
+            top:37px;
+            display: none;
+        }
+        div.outer:hover div.inner{
+            display: block;
+        } 
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <span>我是按钮</span>
+        <div class="inner">我是要显示的内容</div>
+    </div>
+</body>
+</html>

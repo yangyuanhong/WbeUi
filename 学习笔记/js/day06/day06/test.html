@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>值传递vs引用传递</title>
+    <script>
+        function changeName(a){
+            a += "change...";
+        }
+        function changeName2(a){
+            a.name += "change....";
+        }
+        var a = "terry";
+        changeName(a);
+        console.log("值传递",a);
+        //引用数据类型
+        var a = {
+            name :"larry"
+        }
+        changeName2(a);
+        console.log("引用传递",a.name);
+
+
+        //本质
+        var a = "larry";
+        var a1 = a;
+        a1 += " change...";
+        console.log("值传递：",a);
+
+        var b = {
+            name :"terry"
+        }
+        var b1 = b;
+        b1.name +=" change...";
+        console.log("引用传递：",b.name);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

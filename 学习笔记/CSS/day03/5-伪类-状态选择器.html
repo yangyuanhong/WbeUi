@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>状态</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        /*未访问的状态  默认是蓝色*/
+        .one:link{  
+            color: black;
+        }
+        /*已访问的状态  默认是深蓝色*/
+        .one:visited{
+            color:skyblue;
+        }
+        /*悬停状态  默认没有*/
+        .one:hover{
+            color:yellowgreen;
+        }
+        /*点击或者激活状态  默认红色*/
+        .one:active{
+            color:pink;
+        }
+
+        /*顺序:  link  visited hover active   
+        lvha  
+        love hate  */
+
+
+        /*表单的  */
+        /*聚焦状态  */
+        form *:focus{
+            /* background-color: pink; */
+        }
+        /*禁用状态  */
+        form *:disabled{
+            /* background-color: pink;  */
+        }
+        /*非禁用状态  */
+        form *:enabled{
+            /* background-color: pink;  */
+        }
+        /*单选或者多选的选中状态  */
+        form *:checked{
+             /* outline: 1px solid blue;  */
+        }
+        /*单选或者多选默认的选中状态  */
+        form *:default{
+            /* outline: 1px solid red; */
+        }
+        /*通过验证的状态 有效 */
+        form *:valid{
+            /* background-color: green; */
+        }
+        /*不通过验证的状态 无效  */
+        form *:invalid{
+            /* background-color: red; */
+        }
+        /*必填状态  */
+        form *:required{
+            /* background-color: red */
+        }
+        /*非必填  */
+        form *:optional{
+            /* background-color: green; */
+        }
+        /*范围内  */
+        form *:in-range{
+            background-color: green;
+        }
+        /*范围外  */
+        form *:out-of-range{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">默认</a>
+    <br>
+    <a href="#" class="one">自定义的</a>
+
+    <form action="#">
+        单行文本:<input type="text" disabled> <br>
+        密码: <input type="password">
+        <br>
+        单选: 
+        <input type="radio" name="gender" checked>女
+        <input type="radio" name="gender">男
+        <br>
+        验证: <input type="email" required>
+        范围: <input type="number" min="10" max="20">
+    </form>
+
+
+    
+</body>
+</html>

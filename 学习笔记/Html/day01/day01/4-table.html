@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表格</title>
+</head>
+<body>
+    <h3>这是一个表格</h3>
+    <table width="400px" align="center" border="1px" cellspacing="0" cellpadding="0">
+        <caption>这是表的标题：学生信息表</caption>
+        <thead>
+            <tr height="100px">
+                <th>学号</th>
+                <th>姓名</th>
+                <th>年龄</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td bgcolor="red">1001</td>
+                <td>张三</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>1001</td>
+                <td>张三</td>
+                <td rowspan="2">12</td>
+            </tr>
+            <tr>
+                <td>1001</td>
+                <td><img src="../images/1-鱿鱼网登陆页面_03.png" alt=""></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>总计</td>
+                <td colspan="2">共3人</td>
+            </tr>
+        </tfoot>
+    </table>
+    <hr>   <!--分割线-->
+    <table cellspacing="0" cellpadding="0" border="1px" width="400px">
+        <caption>标题</caption>
+        <colgroup>
+            <col span="2" style="background-color:red">
+            <col style="background:blue">
+        </colgroup>
+        <tr>
+            <th>姓名</th>
+            <th>姓名</th>
+            <th>姓名</th>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>张三</td>
+            <td>张三</td>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>张三</td>
+            <td>张三</td>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>张三</td>
+            <td>张三</td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>

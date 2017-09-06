@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>动画小例子</title>
+	<style>
+		.one{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+		.one:hover{
+			/*动画相关*/
+			animation-name: myOne;
+			animation-duration: 2s;
+			animation-delay: 1s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+		}
+		@keyframes myOne{
+			/*设置背景颜色变化*/
+			0%{
+				/*red*/
+				background-color: red;
+			}
+			50%{
+				/*blue*/
+				background-color: blue;
+			}
+			100%{
+				/*green*/
+				background-color: green;
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- 在2秒内执行完毕，延迟1秒，改变颜色从red到blue到绿，次数无限次，方向第一帧到最后一帧-第一帧 在鼠标点击的时候开始执行动画 -->
+	<div class="one"></div>
+	<div class="two"></div>
+</body>
+</html>

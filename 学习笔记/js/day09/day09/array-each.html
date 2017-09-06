@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var arr = [{
+            id:1002,
+            name:"terry",
+            age:18,
+            gender:"male"
+        },{
+            id:1001,
+            name:"larry",
+            age:19,
+            gender:"male"
+        },{
+            id:1003,
+            name:"vicky",
+            age:16,
+            gender:"female"
+        }];
+        // $("").each(function(index,item){
+        //    this
+        //})
+        //遍历
+        /*
+        arr.forEach(function(item,index,ss){
+            console.log(item,index,ss);
+        });
+        */
+        //映射 ， 获取数组中学生的姓名
+        /*
+        var result = arr.map(function(item,index,ss){
+            return item.name+'-'+item.age;
+        });
+        console.log(result);
+        */
+        //过滤
+        /*
+        var result = arr.filter(function(item,index,ss){
+            return item.gender == 'male';
+        });
+        console.log(result);
+        */
+        //some 一些
+        var result = arr.every(function(item,index,ss){
+            console.log("执行循环");
+            return item.gender === "female";
+        });
+        console.log(result);
+
+
+        /*
+        //每次遍历后处理当前遍历的项
+        var handler =function(item,index){
+            console.log(item,index);
+        }
+        for(var key in arr){
+            handler.call(this,arr[key],key);
+        }
+
+        arr.forEach(function(item,index){
+            console.log(item,index);
+        });
+        */
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
