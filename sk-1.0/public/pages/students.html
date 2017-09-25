@@ -1,0 +1,112 @@
+<div class="tops">
+    <h5>学生信息管理</h5>
+    <button>查找</button>
+    <input type="search" placeholder="请输入您要查询的条件*all查询所有">
+    
+</div>
+<hr>
+<div class="counts">
+        <table>
+                <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>姓名</th>
+                        <th>性别</th>
+                        <th>出生日期</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+        </table>
+</div>
+<div class="bum">
+    <button>删除</button>
+    <button p="pages/updatestu.html">修改</button>
+    <button p="pages/addstudents.html"><a href="javascript:void(0)">添加学生信息</a></button>
+</div>
+<script> 
+    $(function(){
+        //基础路径
+        var htp='http://47.94.206.92:3000/students';
+        function queryall(){
+            $.getJSON(htp+'/query',function(data){
+                    show(data);
+            });
+        }
+        //初始化页面
+        queryall();
+        //删除
+            $('.bum button:first').on('click',function(eve){
+               var ids=Array.from($("tbody input:checked").map(function(){
+                    return $(this).val();
+                })); 
+                if(ids.length<=0){
+                    alert('未选择你要删除的学生');
+                }else{
+                    $.getJSON(htp+'/delById?ids='+ids,function(datas){
+                     alert('删除了'+datas.affectedRows+'行！');
+                     queryall();
+                    })
+                    eve.preventDefault();
+                }
+            }); 
+            $('.bum button').eq(1).on('click',function(eve){
+               var id=$("input:checked").val();
+               console.log(id==undefined);
+               console.log(id===undefined);
+                if(id==undefined){
+                    alert('你要改谁呀?');
+                }else{
+                    $('h5').data('ids',id);
+                    $('.counts').load($(this).attr('p'));
+                }
+
+            });  
+        function show(data){
+            $('tbody').empty();
+            data.forEach(function(item){
+                var newTr='<tr>'+
+                                '<td><input type="checkbox" value="'+item.id+'"></td>'
+                                +'<td>'+item.name+'</td>'
+                                +'<td>'+item.gender+'</td>'
+                                +'<td>'+item.brith.slice(0,item.brith.search("T"))+'</td>'
+                          +'</tr>';
+                $('tbody').append(newTr);
+            });
+        }
+        //搜索框按下回车键搜索
+        $('input').keydown(function(e){
+            if(e.which==13){
+                $('.tops button').trigger('click');
+            }
+        });
+        //查询
+        $('.tops button').on('click',function(){
+            var vau=$('input[type=search]').val();
+            if(vau==="all"){
+                queryall();
+            }
+               else {
+                $.getJSON(htp+'/queryByArg?Arg='+vau,function(data){
+                    if($("tbody tr").eq(1)&&$("tbody input").val()!==vau){
+                            if(!data) {
+                                $('tbody').empty();
+                                $('tbody').append('<p>用户不存在</p>');
+                                return;
+                            }else{
+                                show(data);
+                            }
+                        }
+                });
+            }
+            
+        });
+        //添加学生
+        $('.bum button').on('click',function(){
+            $('.counts').load($(this).attr('p'));
+        });
+        
+       
+    });
+</script>

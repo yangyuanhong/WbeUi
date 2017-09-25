@@ -1,0 +1,67 @@
+<style>
+    form{
+        font-size: 20px;
+        line-height: 40px;
+        margin: 20px;
+    }
+    form input:last-child{
+        font-size: 20px;
+        border: 0;
+        background-color: #3385FF;
+    } 
+    form .sbu{
+        float: none;
+        font-size: 20px;
+        margin-right: 20px;
+    }
+</style>
+<form  id="form" method="get">
+
+<button class="sbu" p="pages/students.html"><a href="javascript:void(0)">返回</a></button>
+<input type="submit" value="提交"> 
+</form>
+<script>
+$(function(){
+    var ids=$('h5').data('ids');
+    $.getJSON('http://47.94.206.92:3000/students/queryByArg?Arg='+ids,function(reust){
+            var input1='姓名：'+'<input type="text" name="username" value="'+reust[0].name+'" >'+'<br>';
+            var radio;
+            if(reust[0].gender=='男'){
+                radio='性别：'+'<label for="ar">'+'男'
+                +'<input type="radio" id="ar" name="male" value="男" checked>'
+                +'</label>'+'<label for="ars">'+'女'
+                +'<input type="radio" id="ars" name="male" value="女" >'
+                +'</label>'+'<br>';
+            }else{
+                radio='性别：'+'<label for="ar">'+'男'
+                +'<input type="radio" id="ar" name="male" value="男" >'
+                +'</label>'+'<label for="ars">'+'女'
+                +'<input type="radio" id="ars" name="male" value="女" checked>'
+                +'</label>'+'<br>';
+            }
+            var bun='出生日期：'+'<input type="text" name="brith" value="'+reust[0].brith.slice(0,reust[0].brith.search("T"))+'">'+'<br>';
+            if($('form input[type=radio]').length<=0){ 
+            $('.sbu').before(input1);
+            $('.sbu').before(radio);
+            $('.sbu').before(bun);
+            }
+            
+    });
+$('form input[type=submit]').on('click',function(ele){
+    $.getJSON("http://47.94.206.92:3000/students/update?id="+ids,$("#form").serialize(),function(data){
+        if(data.affectedRows){
+           alert("修改成功");
+       }else{
+           alert("输入格式错误");
+       }
+    });
+    ele.preventDefault();
+});
+//返回查询页面
+$('.sbu').on('click',function(eles){
+    $('.content').load($(this).attr('p'));
+    eles.preventDefault();
+});
+});
+</script>
+

@@ -1,0 +1,113 @@
+body,ul{
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+}
+a{
+    color: #000000;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+header,article,section{
+    display: block;
+}
+header{
+    width: 60%;
+    background-color: #01164B;
+    margin: 0px auto;
+    color: #ffffff;
+    overflow: hidden;
+    font-size: 2em;
+}
+header p{
+    margin-left: 20px;
+    float: left;
+    font-size: 1.8em;
+    font-family: "华文行楷";
+}
+header ul li a{
+    color: #ffffff;
+    font-size: 0.75em;
+}
+header .ulifno{
+    float: right;
+    font-size: 1.2em;
+}
+header .ulifno>li{
+    float: left;
+    margin: 10px;
+}
+article{
+    width: 60%;
+    height: 500px;
+    display: flex;
+    margin: 0 auto;
+    font-size: 2.8em;
+}
+article .conleft{
+    flex: 1;
+    text-align: center;
+    background-color: #E58100;
+    border-right: 2px solid #ccc;
+}
+article .conleft ul{
+    margin-top: 20px;
+}
+article .conleft ul li{
+    line-height: 30px;
+}
+article .content{
+    flex: 4;
+    background: #ccc;
+    padding: 20px;
+    overflow: hidden;
+}
+.content h5{
+    float: left;
+    margin: 10px 0px; 
+}
+.content .tops{
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+}
+.content .tops input{
+    height: 30px;
+    margin: 10px;
+    float: right;
+    background-color: #ffffff;
+}
+.content .tops button{
+    float: right;
+}
+.content button{
+    height: 30px;
+    margin: 10px;
+    border: 0;
+    background-color: #3385FF;
+}
+.content button,input{
+    border-radius: 5px;
+}
+.content .counts{
+    height: 300px;
+    width: 100%;
+}
+.content table{
+    font-size: 0.6em;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    
+}
+.content table th,.content table td{
+    border: 1px solid #000000;
+    text-align: center;
+}
+.content table a{
+    margin-right: 10px;
+    background-color: #E58100;
+    border-radius: 5px;
+}
