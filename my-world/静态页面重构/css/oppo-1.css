@@ -1,0 +1,134 @@
+	* {
+		box-sizing: border-box;
+	}
+	body {
+		margin: 0;
+		padding: 0;
+	}   
+	    .nav-top {
+	    	width: 100%;
+	    	height: 29px;
+	    	padding-right: 11.3812%;
+	    	background-color: #009b72;
+	    }
+		.nav-top ul {
+			margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            text-align: right;
+            background-color: #009b72;  
+		}
+		.nav-top li{
+			height: 100%;
+            display: inline-block;
+            width: 5%;
+            text-align: center;
+            padding-top: 2px; 
+		}
+		.nav-top li:hover {
+			background-color: #46B589;
+		}
+        .nav-top li>a{
+        	text-decoration: none;
+        	color: #ffffff;
+        }
+        .nav .lefts {
+        	width: 50%;
+        	height: 78px;
+        	background: url("images/oppo-1_02.gif") round;
+        	float: left;
+        }
+        .nav .rghts {
+        	width: 50%;
+        	height: 78px;
+        	float: right;
+        }
+        .nav .rghts ul {
+        	margin: 0;
+        	padding-top: 26.6px;
+        	width: 100%;
+        	height: 100%;
+        }
+        .nav .rghts li>a{
+        	text-decoration: none; 
+        	color: #ccc;
+        }
+        .nav .rghts li {
+        	display: inline-block;
+        	width: 10%;
+        	text-align: center;
+        }
+        .nav .rghts li>a:hover {
+        	color: #393939;
+        }
+        .clear {
+        	clear: both;
+        }
+        .tu {
+        	height: 570px;
+        	background: url("../images/link-3.jpg") no-repeat round;
+        }
+        .sanlie	.lefee {
+			  width: 33%;
+			  float: left;
+			  margin-right: 0.5%; 
+			}
+
+		.sanlie	.zhong {
+			  width: 33%;
+			  float: left;
+			  margin-right: 0.5%;
+			}
+
+		.sanlie	.rghtss {
+			  width: 33%;
+			  float: right;
+			}
+		.leg {
+			max-width: 1180px;
+			width: 80%;
+			height: 255px;
+			margin: 0 auto;
+			padding-top: 55px;
+			background-color: #f6f6f6;
+			border-bottom: 1px;
+		}
+		.leg ul {
+            width: 18%;
+            height: 100%;
+            float: left;
+		}
+		.leg li {
+            list-style-type: none;
+            line-height: 28px;
+		}
+		.leg li:first-child{
+			line-height: 48px;
+		}
+		.leg ul>li>a {
+			text-decoration: none;
+			color: #363636;
+		}
+		.lianxi {
+			height: 100%;
+			width: 28%; 
+			float: right;
+			background: no-repeat;
+			padding-top: 35px;
+			padding-left: 47px;
+		}
+		.footer {
+			max-width: 1180px;
+			width: 80%;
+			height: 55px;
+			margin: 0 auto;
+		}
+		.footer .lef {
+			width: 90%;
+			float: left;
+		}
+		.footer .rhg {
+			width: 10%;
+            float: right;
+		}
